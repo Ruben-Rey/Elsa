@@ -1,0 +1,52 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box; 
+}
+
+html{
+    font-size: 62.5%;
+}
+
+.card{
+    border: 0.2rem red solid;
+    background-color: beige;
+    height: 15rem;
+}
+
+.card__multimedia{
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.card__perfiles{
+    display: flex;
+
+}
+
+.circle{
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+}
+.circle-red{
+    background-color: red;
+}
+
+.circle-azul{
+    background-color: blue;
+}
+
+.circle-verde{
+    background-color: green;
+}
+
+
+button{
+    width: 8rem;
+    background-color: rgb(10, 23, 197);
+    color: aliceblue;
+    font-size: 1.9rem;
+    height: 4rem;
+}

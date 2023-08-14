@@ -1,0 +1,25 @@
+*{
+    background-color: aquamarine;
+}
+
+body{
+    background-color: darkcyan;
+}
+
+article{
+    color: blue;
+    font-family: 'Lucida Sans';
+    font-size: 30px;
+}
+
+article .principal .titulo h3{
+    color: rgb(41, 164, 53);
+}
+
+article .titulo span{
+    color: rgb(41, 96, 164);
+}
+
+article .principal{
+    color: rgb(151, 46, 109);
+}

@@ -1,0 +1,199 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    background-color: blanchedalmond;
+    width: 100%;
+    height: 100vh;
+}
+
+
+.article__principal{
+    width: 90%;
+    margin: auto;
+}
+
+.navbar{
+    padding-top: 2rem;
+    width: 100%;
+}
+
+.navbar__multimedia{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.navbar__logo{
+    width: 10rem;
+    height: 10rem;
+    background-image: url(./assets/images/logo.svg);
+    background-repeat: no-repeat;
+}
+
+.navbar__menu{
+    width: 10rem;
+    height: 10rem;
+    background-image: url(./assets/images/icon-menu.svg);
+    background-repeat: no-repeat;
+    background-position: top;
+}
+
+
+.img{
+    width: 100%;
+}
+
+.texto{
+    font-size: 1.9rem;
+    padding: 2.2rem 0;
+}
+
+.texto h1{
+    font-size: 4.9rem;
+    font-weight: 800;
+    margin: 1.5rem 0;
+}
+
+.texto > p{
+    margin: 1.5rem 0;
+}
+
+.text__button{
+    background-color:  #e46454 ;
+    font-size: 1.8rem;
+    color: white;
+    height: 4rem;
+    width: 15rem;
+    margin-top: 2.5rem;
+}
+
+.article__card{
+    background-color: black;
+    color: white;
+    width: 90%;
+    height: 100%;
+    margin: 2.5rem auto;
+    padding: 2rem;
+    
+}
+
+.article__card .card{
+    font-size: 2.5rem;
+    margin: 6rem 0;
+} 
+
+.article__card .card h2{
+    color: darkgoldenrod;
+}
+
+
+.card h3{
+    margin: 1.5rem 0;
+}
+
+
+.section1__card{
+    width: 90%;
+    height: 95rem;
+    margin: auto;
+}
+
+.section1__card .card:first-child {
+    margin-top: 8rem;
+}
+
+.section1__card .card{
+    height: 25rem;
+    display: flex;
+    margin: 7rem 0;
+}
+
+.section1__text{
+    width: 80vw;
+    font-size: 2.2rem;
+    padding: 0 2.5rem 2rem 2rem;
+}
+
+.section1__text h2{
+    font-size: 4rem;
+    opacity: 0.3;
+    font-weight: 800;
+}
+
+@media screen and (min-width: 1000px) {
+    .primer_and_segunda{
+        display: flex;
+        width: 70%;
+        max-height: 50rem;
+        margin: 0 auto;
+    }
+
+    .primer_and_segunda h1{
+        font-size: 3.5rem;
+    }
+
+
+    .article__principal .texto{
+        display: flex;
+        align-items: center;
+    }  
+
+
+    .texto div{
+        width: 80%;
+        padding-right: 5rem;
+     }
+
+     
+    .article__principal .texto p{
+        font-size: 1.5rem;
+    }
+
+
+
+    .article__principal img{
+        width: 90%;
+        max-height: 40rem;
+
+    }
+
+
+
+    .article__card{
+        width: 40%;
+        max-height: 50rem;
+        margin: unset;
+    }
+
+    .article__card .card{
+        font-size: 1.5rem;
+        margin: 2rem 0;
+    }
+
+    .section1__card{
+        display: flex;
+        justify-content: center;
+        width: 70%;
+        height: 30%;
+
+    }
+
+    .section1__card img {
+        max-width: 100%;
+        max-height: 100%;
+    }
+
+    .section1__card .section1__text{
+        width: 50%;
+        font-size: 1.5rem;
+    }
+
+}

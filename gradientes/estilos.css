@@ -1,0 +1,21 @@
+body {
+    height: 100vh;
+    background: linear-gradient(180deg, rgb(71, 69, 69),skyblue, white);
+    
+  }
+
+ img{
+    width: 20rem;
+    filter: grayscale(75%);
+}
+
+img:hover{
+    filter: sepia(1);
+    transform: skew(40deg) ; 
+ }
+
+ div{
+    background-color: brown;
+    height: 500px;
+    max-width: 560px;
+ }
