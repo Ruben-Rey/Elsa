@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./stylos.css">
     <title>ABREGU</title>
+    
 </head>
 
 <body>
@@ -78,22 +79,57 @@
                     <img src="./imagenes/loogoabregu.png"></img>
                 </div>
             </div>
+
             <ul class="nav-links">
-                <li><a href="#">Sobre Nosotros</a></li>
-                <li><a href="#">Maquinas Sublimado</a></li>
-                <li><a href="#">Impresora DTF Textil</a></li>
-                <li><a href="#">Maquinas UV DTF</a></li>
-                <li><a href="#">Contactenos</a></li>
+                <li class="menu-item">
+                    <a href="#">Sobre Nosotros</a>
+                    <div class="submenu">
+                    
+                    </div>
+                </li>
+
+                <li class="menu-item">
+                    <a href="#">Impresora DTF Textil</a>
+                    <div class="machine-modal">
+                        <div class="sublimado-display" id="impDTF-modal"></div>
+                    </div>
+
+                </li>
+
+                <li class="menu-item">
+                    <a href="#">Maquinas UV DTF</a>
+                    <div class="machine-modal impUV">
+                        <div class="sublimado-display" id="maquinaUV-modal"></div>
+                    </div>    
+                </li>
+
+                <li class="menu-item">
+                    <a href="#">Maquinas Sublimado</a>
+                    <div class="machine-modal sublimado" >
+                        <div class="sublimado-display" id="sublimado-modal"></div>
+                    </div>
+
+                </li>
+               
+                <li class="menu-item">
+                    <a href="#">Laser</a>
+                    <div class="machine-modal" id="laser-modal">
+                    </div>
+              
+                    </div>
+                </li>
             </ul>
         </nav>
 
     </header>
 
     <main>
-
     </main>
 
-    <script src="https://kit.fontawesome.com/4250892b33.js" crossorigin="anonymous"></script>
 </body>
+    <script src="https://kit.fontawesome.com/4250892b33.js" crossorigin="anonymous"></script>
+    <script src="./app.js"></script>
+    <script src="./bbdd.json"></script>
+    
 
 </html>

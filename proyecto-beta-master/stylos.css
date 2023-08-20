@@ -1,3 +1,15 @@
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+html{
+    font-size: 62.5%;
+}
 /* Resetear los márgenes y relleno para el cuerpo de la página */
 body, ul {
     margin: 0;
@@ -5,7 +17,7 @@ body, ul {
 }
 
 .container-top{
-    background-color: rgb(138, 138, 137);
+    background-color: #9c0720;
     display: flex;
     justify-content: space-between;
     padding: 1rem 3rem;
@@ -18,9 +30,9 @@ body, ul {
 }
 
 .redes li {
+    font-family: 'Roboto', sans-serif;
     list-style: none;
-    font-size: 20px;
-    font-family: monospace;
+    font-size: 2rem;
 }
 
 .header-left .redes a{
@@ -38,8 +50,7 @@ body, ul {
 
 /* Estilos de la barra de navegación */
 .navbar {
-    background-color: rgb(64, 64, 64);
-    color: white;
+    background-color: #d7a9ab;
 }
 
 /* Centrar y separar el contenido de la barra de navegación */
@@ -47,12 +58,12 @@ body, ul {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    padding: 10px;
+    padding: 1rem;
 }
 
 .logo{
-    width: 70px;
-    height: 70px;
+    width: 7rem;
+    height: 7rem;
 }
 
 /* Estilos para el logo */
@@ -64,17 +75,19 @@ body, ul {
 .nav-links {
     list-style: none;
     display: flex;
-   justify-content: space-around;
-   gap: 30px;
+    justify-content: space-around;
+    gap: 3rem;
 }
 
 .nav-links li {
-    margin-right: 20px;
-    font-size: 20px;
+    font-family: 'Roboto', sans-serif;
+    margin-right: 2rem;
+    font-size: 2.2rem;
+    font-weight: 400;
 }
 
 .nav-links a {
-    color: white;
+    color: #610000;
     text-decoration: none;
 }
 
@@ -84,6 +97,93 @@ body, ul {
     align-items: center;
     /* Otros estilos según tus necesidades */
 }
+
+
+.menu-item {
+    position: relative;
+    margin-right: 20px; /* Espacio entre elementos del menú */
+}
+
+.menu-item:hover .submenu {
+    display: block; /* Mostrar el menú desplegable al pasar el mouse */
+}
+
+.sublimado-display{
+    display: flex;
+    justify-content: space-between;
+    gap: 3rem;
+}
+
+.card-content h2{
+    font-size: 1.5rem;
+    font-weight: 100;
+  }
+
+.card-content img{
+  width: 35rem;
+}
+
+.machine-modal {
+    position: absolute;
+    top: 260%;
+    right: calc(30% - (1492px/2));
+    z-index: 1000;
+    display: none;
+    float: left;
+    min-width: 160px;
+    padding: 5px 0;
+    margin: 0 auto;
+    font-size: 14px;
+    list-style: none;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+    background-clip: padding-box;
+  }
+
+  .impUV{
+    position: absolute;
+    top: 260%;
+    right: calc(140% - (690px/2));
+    z-index: 1000;
+    display: none;
+    float: left;
+    min-width: 160px;
+    padding: 5px 0;
+    margin: 0 auto;
+    font-size: 14px;
+    list-style: none;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+    background-clip: padding-box;
+  }
+
+  .sublimado{
+    position: absolute;
+    top: 260%;
+    right: calc(236% - (732px/2));
+    z-index: 1000;
+    display: none;
+    float: left;
+    min-width: 160px;
+    padding: 5px 0;
+    margin: 0 auto;
+    font-size: 14px;
+    list-style: none;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+    background-clip: padding-box;
+  }
+
+
 
 
 /*.input-holder {
@@ -100,7 +200,24 @@ body, ul {
     border: none;
     background-color: transparent;
     cursor: pointer;
-}
+}machine-modal {
+    position: absolute;
+    top: 260%;
+    right: calc(30% - (1492px/2));
+    z-index: 1000;
+    display: none;
+    float: left;
+    min-width: 160px;
+    padding: 5px 0;
+    margin: 0 auto;
+    font-size: 14px;
+    list-style: none;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+    background-clip: padding-box;
 
 .close {
     cursor: pointer;
