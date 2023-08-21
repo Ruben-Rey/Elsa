@@ -3,28 +3,28 @@
         "maquinas": {
             "DTF_TEXTIL": [
                 {
-                    "nombre": "IMPRESORA ABREGU DTF DE 30 CM",
+                    "nombre": "Impresora ABREGU DTF de 30 cm",
                     "modelo": ": OR-A3 Mini 330 DTF",
                     "cabezal": "2 Cabezales EPSON ORIGINAL F1080",
                     "descripcion": "Para la Transferencia Térmica de Pet Film",
                     "imagen": "https://i.postimg.cc/59wRw8wJ/dtf-pro-30cm.png"
                 },
                 {
-                    "nombre": "IMPRESORA ABREGU DTF DE 30 CM VERDE PRO",
+                    "nombre": "Impresora ABREGU DTF de 30 cm Verde PRO",
                     "modelo": "A3 DTF MACHINE",
                     "cabezal": "2 Cabezales F1080",
                     "descripcion": "Impresión de micro inyección de tinta piezoeléctrica",
                     "imagen": "https://i.postimg.cc/59wRw8wJ/dtf-pro-30cm.png"
                 },
                 {
-                    "nombre": "IMPRESORA ABREGU DTF DE 60 CM",
+                    "nombre": "Impresora ABREGU DTF de 60 cm",
                     "modelo": "i3200-A1",
                     "cabezal": "2 Cabezales",
                     "descripcion": "Para la transferencia térmica del papel",
                     "imagen": "./imagenes/dtf_60cm.png"
                 },
                 {
-                    "nombre": "IMPRESORA DTF DE 60 CM MAX COLOR VERDE",
+                    "nombre": "Impresora DTF de 60 cm Max Color Verde",
                     "modelo": "CNZ A-620",
                     "cabezal": "2 Cabezales",
                     "descripcion": "Inyección de tinta piezoeléctrica",
@@ -33,21 +33,21 @@
             ],
             "DTF_UV": [
                 {
-                    "nombre": "MAQUINA UV DTF 30CM",
+                    "nombre": "Impresora UV DTF 30cm",
                     "modelo": "RF3360",
                     "cabezal": "2 Cabezales",
                     "descripcion": "Maquina de impresión digital UV",
                     "imagen": "No asignado"
                 },
                 {
-                    "nombre": "IMPRESORA A2 CRYSTAL UV DTF PRINTER",
+                    "nombre": "Impresora A2 Crystal UV DTF Printer",
                     "modelo": "T3000-UV",
                     "cabezal": "4 aspersores de alta precision",
                     "descripcion": "Para la transferencia térmica del papel",
                     "imagen": "No asignado"
                 },
                 {
-                    "nombre": "UV DTF 60 X 90CM",
+                    "nombre": "Impresora UV DTF 60 X 90cm",
                     "modelo": "T3000-UV",
                     "cabezal": "4 aspersores de alta precision",
                     "descripcion": "Para la transferencia térmica del papel",
@@ -61,21 +61,21 @@
                     "imagen": "No asignado"
                 },
                 {
-                    "nombre": "IMPRESORA ABREGU DTF DE 60 CM",
+                    "nombre": "Imprsora ABREGU DTF de 60cm",
                     "modelo": "i3200-A1",
                     "cabezal": "2 Cabezales",
                     "descripcion": "Para la transferencia térmica del papel",
                     "imagen": "No asignado"
                 },
                 {
-                    "nombre": "IMPRESORA UV DTF ROLL TO ROLL DE 60 CM",
+                    "nombre": "Impresora UV DTF Roll TO Roll DE 60cm",
                     "modelo": "PREDATHOR PRO UV DTF ",
                     "cabezal": "3 cabezales Epson i3200 – u1",
                     "descripcion": "Para la transferencia térmica del papel",
                     "imagen": "No asignado"
                 },
                 {
-                    "nombre": "IMPRESORA UV DTF HIBRIDA ROLL TO ROLL DE 60 CM",
+                    "nombre": "Impresora UV DTF Híbrida Roll TO Roll DE 60cm",
                     "modelo": "A 600 PRO ",
                     "cabezal": "3 cabezales Epson i3200 – u1",
                     "descripcion": "3 cabezales Epson i3200 – u1 / i1600",
@@ -84,7 +84,7 @@
             ],
             "DTG": [
                 {
-                    "nombre": "MAQUINA DTG DOBLE BANDEJA",
+                    "nombre": "Impresora DTG Doble Bandeja",
                     "modelo": "DTG-3200-AI(EPSON)",
                     "cabezal": "3 cabezales Epson i3200 – u1",
                     "descripcion": "3 cabezales Epson i3200 – u1 / i1600",

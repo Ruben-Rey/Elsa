@@ -54,8 +54,7 @@ function CreateCard(item){
         case 2:
             impSublimado.appendChild(div);
         break;
-    }
-    
+    }  
 }
 
 

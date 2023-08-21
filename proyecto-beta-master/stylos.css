@@ -17,7 +17,7 @@ body, ul {
 }
 
 .container-top{
-    background-color: #9c0720;
+    background-color:rgb(90, 90, 90);
     display: flex;
     justify-content: space-between;
     padding: 1rem 3rem;
@@ -32,7 +32,7 @@ body, ul {
 .redes li {
     font-family: 'Roboto', sans-serif;
     list-style: none;
-    font-size: 2rem;
+    font-size: 1.5rem;
 }
 
 .header-left .redes a{
@@ -46,11 +46,13 @@ body, ul {
     gap: 2rem;
  }
 
-
+.redes > li:hover > a{
+    color: rgb(153, 204, 230);
+}
 
 /* Estilos de la barra de navegación */
 .navbar {
-    background-color: #d7a9ab;
+    background-color: rgba(54, 53, 53, 0.98);
 }
 
 /* Centrar y separar el contenido de la barra de navegación */
@@ -58,7 +60,10 @@ body, ul {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    padding: 1rem;
+}
+
+.nav-links > li:hover > a {
+    color: rgb(153, 204, 230);
 }
 
 .logo div{
@@ -77,38 +82,34 @@ body, ul {
 .logo h2{
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 900;
-    font-size: 2rem;
+    font-size: 3rem;
     font-style: italic;
-    padding-top: 2rem;
+    padding-top: 1.2rem;
+    color: white;
 }
 
 /* Estilos para los elementos de navegación */
 .nav-links {
+    width: 1025px;
+    height: 90px;
     list-style: none;
     display: flex;
     justify-content: space-around;
+    padding: 3rem;
     gap: 3rem;
 }
 
 .nav-links li {
     font-family: 'Roboto', sans-serif;
     margin-right: 2rem;
-    font-size: 2.2rem;
+    font-size: 1.6rem;
     font-weight: 400;
 }
 
 .nav-links a {
-    color: #610000;
+    color: white;
     text-decoration: none;
 }
-
-.styled-form {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    /* Otros estilos según tus necesidades */
-}
-
 
 .menu-item {
     position: relative;
@@ -131,24 +132,22 @@ body, ul {
   }
 
 .card-content img{
-  width: 35rem;
+  width: 25rem;
 }
 
 .machine-modal {
     position: absolute;
-    top: 260%;
-    right: calc(30% - (1492px/2));
+    top: 220%;
+    right: calc(120% - (1492px/2));
     z-index: 1000;
-    display: none;
     float: left;
     min-width: 160px;
     padding: 5px 0;
+    display: none;
     margin: 0 auto;
     font-size: 14px;
     list-style: none;
-    background-color: #fff;
-    border: 1px solid #ccc;
-    border: 1px solid rgba(0, 0, 0, 0.15);
+    background-color: #eae8e8;
     border-radius: 4px;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
     background-clip: padding-box;
@@ -156,10 +155,9 @@ body, ul {
 
   .impUV{
     position: absolute;
-    top: 260%;
+    top: 220%;
     right: calc(140% - (690px/2));
     z-index: 1000;
-    display: none;
     float: left;
     min-width: 160px;
     padding: 5px 0;
@@ -167,8 +165,6 @@ body, ul {
     font-size: 14px;
     list-style: none;
     background-color: #fff;
-    border: 1px solid #ccc;
-    border: 1px solid rgba(0, 0, 0, 0.15);
     border-radius: 4px;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
     background-clip: padding-box;
@@ -176,10 +172,9 @@ body, ul {
 
   .sublimado{
     position: absolute;
-    top: 260%;
+    top: 220%;
     right: calc(236% - (732px/2));
     z-index: 1000;
-    display: none;
     float: left;
     min-width: 160px;
     padding: 5px 0;
@@ -187,8 +182,6 @@ body, ul {
     font-size: 14px;
     list-style: none;
     background-color: #fff;
-    border: 1px solid #ccc;
-    border: 1px solid rgba(0, 0, 0, 0.15);
     border-radius: 4px;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
     background-clip: padding-box;
