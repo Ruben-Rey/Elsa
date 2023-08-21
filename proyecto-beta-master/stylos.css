@@ -62,9 +62,19 @@ body, ul {
     align-items: center;
 }
 
-.nav-links > li:hover > a {
-    color: rgb(153, 204, 230);
+.nav-links li:hover {
+    background-color: aliceblue;
 }
+.nav-links li:hover a{
+    color: aqua;
+}
+
+
+/* element.style {
+    width: 15rem;
+    height: 5rem;
+    margin-top: -1.4rem; */
+
 
 .logo div{
     display: flex;
@@ -95,13 +105,12 @@ body, ul {
     list-style: none;
     display: flex;
     justify-content: space-around;
-    padding: 3rem;
+    align-items: center;
     gap: 3rem;
 }
 
 .nav-links li {
     font-family: 'Roboto', sans-serif;
-    margin-right: 2rem;
     font-size: 1.6rem;
     font-weight: 400;
 }
@@ -113,7 +122,11 @@ body, ul {
 
 .menu-item {
     position: relative;
-    margin-right: 20px; /* Espacio entre elementos del menú */
+    text-align: center;
+    padding-top: 1.7rem;
+    width: 18rem;
+    height: 5rem;
+    /* margin-right: 20px; Espacio entre elementos del menú */
 }
 
 .menu-item:hover .submenu {
