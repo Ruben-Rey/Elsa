@@ -22,7 +22,7 @@ ul {
     background-color: rgb(90, 90, 90);
     display: flex;
     justify-content: space-between;
-    padding: 1rem 3rem;
+    padding: 1rem;
 }
 
 .header-left .redes {
@@ -37,25 +37,46 @@ ul {
     font-size: 1.5rem;
 }
 
-.header-left .redes a {
+.header-left .redes a{
     text-decoration: none;
     color: white;
 }
 
+.header-left .redes:hover a{
+ color: #338ccc;
+}
+/********************************************************************************/
 .header-right .redes {
     display: flex;
     justify-content: left;
     gap: 2rem;
 }
 
-.redes>li:hover>a {
+.header-right .redes a{
+    display: inline-block;
+    width: 30px;
+    background-color: rgba(255, 255, 255, 0.2);
+    text-align: center;
+    border-radius: 50%;
+    color: #FFFFFF;
+    transition: all .5s ease;
+}
+
+.header-right a i {
+    font-size: 1em; 
+    margin: 0.5rem 0.2rem;
+    color: #fdf7f7;
+}
+
+
+.header-right .redes:hover a i{
     color: rgb(153, 204, 230);
 }
 
-/* Estilos para modo */
+/* Estilos para modo *************************************** */
 .app {
     width: 4rem;
-    height: 2.5rem;
+    height: 2rem;
     border-radius: 2rem;
     border: none;
     cursor: pointer;
@@ -67,7 +88,7 @@ ul {
 .app:hover {
     transform: scale(1.2);
 }
-
+/************************************************************************************************************/
 .light-mode {
     background-color: white;
     color: #333;
@@ -90,7 +111,7 @@ ul {
     background-color: #333;
     color: white;
 }
-
+/*******************************************************************************************************************/
 /* Estilos de la barra de navegación */
 .navbar {
     background-color: rgba(54, 53, 53, 0.98);
@@ -103,18 +124,6 @@ ul {
     align-items: center;
 }
 
-.header-right .redes a{
-    display: inline-block;
-    min-height: 20px;
-    width: 30px;
-    background-color: rgba(255, 255, 255, 0.2);
-    text-align: center;
-    line-height: 30px;
-    border-radius: 50%;
-    color: #FFFFFF;
-    transition: all .5s ease;
-}
-
 .nav-links li:hover {
     background-color: #80808080;
 }
@@ -122,13 +131,6 @@ ul {
 .nav-links li:hover a {
     color: rgb(153, 204, 230);
 }
-
-
-/* element.style {
-    width: 15rem;
-    height: 5rem;
-    margin-top: -1.4rem; */
-
 
 .logo div {
     display: flex;
@@ -228,10 +230,28 @@ ul {
 .sublimado {
     right: calc(236% - (732px/2));
 }
+/*****************************************************************************************************************/
+/**************************************************************************************/
+.home-gallery{
+    background: rgb(89, 89, 89);
+    width: 100%;
+    height: 440px;
+    text-align: center;
+    /*padding: 0px 30px 30px*/
+}
+.home-gallery h3 {
+    font-family: SFCompactDisplay-Medium;
+    font-size: 50px;
+    font-weight: normal;
+    font-stretch: normal;
+    line-height: 60px;
+    color: rgb(255, 255, 255);
+    text-transform: capitalize;
+}
 
 /***********************************************************************************************/
 .footer-redes{
-    background-color: cadetblue;
+    background-color: rgb(39, 109, 155);
     width: 100%;
     height: 200px;
     padding: 5rem;
@@ -251,6 +271,11 @@ ul {
     /* padding: 5rem; */
 }
 
+.link-redes a i {
+    font-size: 3em; 
+    margin: 10px; 
+    color: #fdf7f7;
+}
 
 .link-redes a {
     display: inline-block;
@@ -266,14 +291,15 @@ ul {
 }
 
 .link-redes a:hover {
-    background-color: #00C3FF;
+    background-color: #81a8b5;
 }
 
 
-/**************************************************/
+/*****************************************************************************************/
 .footer {
-    background-color: #24262B;
+    background-color: #3e4346;
     padding: 8rem 0;
+    height: 500px;
 }
 
 .container {
@@ -319,7 +345,7 @@ ul {
     color: #FFFFFF;
     margin-bottom: 25px;
     font-weight: 500;
-    border-bottom: 2px solid #00C3FF;
+    border-bottom: 3px solid #00C3FF;
     padding-bottom: 10px;
     display: inline-block;
 }
@@ -334,7 +360,61 @@ ul {
     transition: all .3s ease;
 }
 
+.footer-links ul li a:hover {
+color: #00C3FF;
+transform: scale(1.1);
+
+}
+
 .footer-links {
     width: 100%;
     margin-bottom: 30px;
 }
+
+.footer-column {
+    margin-bottom: 20px;
+  }
+  
+  /* Aumenta el tamaño de los inputs y textarea */
+  .footer-links input[type="text"],
+  .footer-links input[type="email"],
+  .footer-links input[type="phone"],
+  .footer-links textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 0.800px solid rgba(255, 255, 255, 0.2);
+    background-color: #3e4346;
+    box-sizing: border-box;
+    cursor: pointer;
+  }
+  
+  /* Asegúrate de que el botón también tenga suficiente espacio */
+  .btn-toolbar button{
+    width: 100%;
+    margin-bottom: 10px;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    width: 100%;
+    text-transform: capitalize;
+    padding: 10px;
+    background: rgb(55, 148, 205);
+    border-width: 1px;
+    border: 0.800px solid rgba(255, 255, 255, 0.2);
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  .btn-toolbar button:hover{
+    background-color: rgb(28, 28, 33);
+    color: #00aaff; 
+  }
+  
+ 
+  
+  
+  
+  
+  
+
+
