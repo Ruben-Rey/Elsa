@@ -66,17 +66,29 @@ body, ul {
 .app:hover{
    transform: scale(1.2);
 }
- /* Estilos para modo claro */
-.light-mode {
+
+.light-mode{
     background-color: white;
     color: #333;
-  }
-  
-  /* Estilos para modo oscuro */
-  .dark-mode {
+}
+
+ /* Estilos para modo claro */
+.light-mode .machine-modal {
+    background-color: white;
+    color: #333;
+}
+
+/* Estilos para modo oscuro */
+.dark-mode {
     background-color: #333;
     color: white;
-  }
+}
+
+/* Estilos para modo oscuro */
+.dark-mode .machine-modal {
+    background-color: #333;
+    color: white;
+}
   
 /* Estilos de la barra de navegación */
 .navbar {
@@ -129,7 +141,6 @@ body, ul {
 /* Estilos para los elementos de navegación */
 .nav-links {
     width: 1025px;
-    height: 90px;
     list-style: none;
     display: flex;
     justify-content: space-around;
@@ -151,13 +162,13 @@ body, ul {
 .menu-item {
     position: relative;
     text-align: center;
-    padding-top: 1.7rem;
+    padding-top: 2.5rem;
     width: 18rem;
-    height: 5rem;
+    height: 6.8rem;
     /* margin-right: 20px; Espacio entre elementos del menú */
 }
 
-.menu-item:hover .submenu {
+.menu-item:hover {
     display: block; /* Mostrar el menú desplegable al pasar el mouse */
 }
 
@@ -178,11 +189,12 @@ body, ul {
 
 .machine-modal {
     position: absolute;
-    top: 150%;
+    top: 100%;
     right: calc(110% - (1492px/2));
     z-index: 1000;
     float: left;
-    min-width: 160px;
+    min-width: 16rem;
+    height: 25rem;
     padding: 5px 0;
     display: none;
     margin: 0 auto;
@@ -195,75 +207,12 @@ body, ul {
   }
 
   .impUV{
-    position: absolute;
-    top: 150%;
     right: calc(140% - (690px/2));
-    z-index: 1000;
-    float: left;
-    min-width: 160px;
-    padding: 5px 0;
-    margin: 0 auto;
-    font-size: 14px;
-    list-style: none;
-    background-color: #eae8e8;
-    border-radius: 4px;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
-    background-clip: padding-box;
   }
 
   .sublimado{
-    position: absolute;
-    top: 150%;
     right: calc(236% - (732px/2));
-    z-index: 1000;
-    float: left;
-    min-width: 160px;
-    padding: 5px 0;
-    margin: 0 auto;
-    font-size: 14px;
-    list-style: none;
-    background-color: #eae8e8;
-    border-radius: 4px;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
-    background-clip: padding-box;
   }
 
 
 
-
-/*.input-holder {
-    flex-grow: 1;
-    display: flex;
-    align-items: center;
-}
-
-.input-holder li{
-
-}
-
-.search-icon {
-    border: none;
-    background-color: transparent;
-    cursor: pointer;
-}machine-modal {
-    position: absolute;
-    top: 260%;
-    right: calc(30% - (1492px/2));
-    z-index: 1000;
-    display: none;
-    float: left;
-    min-width: 160px;
-    padding: 5px 0;
-    margin: 0 auto;
-    font-size: 14px;
-    list-style: none;
-    background-color: #fff;
-    border: 1px solid #ccc;
-    border: 1px solid rgba(0, 0, 0, 0.15);
-    border-radius: 4px;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
-    background-clip: padding-box;
-
-.close {
-    cursor: pointer;
-}
