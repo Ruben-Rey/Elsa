@@ -410,8 +410,9 @@ transform: scale(1.1);
     color: #00aaff; 
   }
   
- 
-  
+  .icono-mapa{
+    background-image: url(./imagenes/mapa.png);
+  }  
   
   
   

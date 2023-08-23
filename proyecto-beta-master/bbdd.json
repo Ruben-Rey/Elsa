@@ -10,13 +10,6 @@
                     "imagen": "https://i.postimg.cc/59wRw8wJ/dtf-pro-30cm.png"
                 },
                 {
-                    "nombre": "Impresora ABREGU DTF de 30 cm Verde PRO",
-                    "modelo": "A3 DTF MACHINE",
-                    "cabezal": "2 Cabezales F1080",
-                    "descripcion": "Impresión de micro inyección de tinta piezoeléctrica",
-                    "imagen": "https://i.postimg.cc/59wRw8wJ/dtf-pro-30cm.png"
-                },
-                {
                     "nombre": "Impresora ABREGU DTF de 60 cm",
                     "modelo": "i3200-A1",
                     "cabezal": "2 Cabezales",
@@ -37,49 +30,29 @@
                     "modelo": "RF3360",
                     "cabezal": "2 Cabezales",
                     "descripcion": "Maquina de impresión digital UV",
-                    "imagen": "No asignado"
+                    "imagen": "./imagenes/UV_DTF_30CM.png"
                 },
                 {
                     "nombre": "Impresora A2 Crystal UV DTF Printer",
                     "modelo": "T3000-UV",
                     "cabezal": "4 aspersores de alta precision",
                     "descripcion": "Para la transferencia térmica del papel",
-                    "imagen": "No asignado"
+                    "imagen": "./imagenes/T3000-UV.png"
                 },
                 {
                     "nombre": "Impresora UV DTF 60 X 90cm",
                     "modelo": "T3000-UV",
                     "cabezal": "4 aspersores de alta precision",
                     "descripcion": "Para la transferencia térmica del papel",
-                    "imagen": "No asignado"
+                    "imagen": "./imagenes/dtf_uv_60por90_2.png"
                 },
-                {
-                    "nombre": "Epson i1600-U1",
-                    "modelo": "I1600-U1/I3200",
-                    "cabezal": "1 aspersores de alta precision",
-                    "descripcion": "Para la transferencia térmica del papel",
-                    "imagen": "No asignado"
-                },
-                {
-                    "nombre": "Imprsora ABREGU DTF de 60cm",
-                    "modelo": "i3200-A1",
-                    "cabezal": "2 Cabezales",
-                    "descripcion": "Para la transferencia térmica del papel",
-                    "imagen": "No asignado"
-                },
+        
                 {
                     "nombre": "Impresora UV DTF Roll TO Roll DE 60cm",
                     "modelo": "PREDATHOR PRO UV DTF ",
                     "cabezal": "3 cabezales Epson i3200 – u1",
                     "descripcion": "Para la transferencia térmica del papel",
-                    "imagen": "No asignado"
-                },
-                {
-                    "nombre": "Impresora UV DTF Híbrida Roll TO Roll DE 60cm",
-                    "modelo": "A 600 PRO ",
-                    "cabezal": "3 cabezales Epson i3200 – u1",
-                    "descripcion": "3 cabezales Epson i3200 – u1 / i1600",
-                    "imagen": "No asignado"
+                    "imagen": "./imagenes/dtf60_rolloarollo.png"
                 }
             ],
             "DTG": [
@@ -118,3 +91,6 @@
         }
     }
 }
+
+
+
