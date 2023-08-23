@@ -414,8 +414,36 @@ transform: scale(1.1);
     background-image: url(./imagenes/mapa.png);
   }  
   
-  
-  
-  
+  /*redes de la izquierda de main*/
+.elements-lists{
+    height: 0px;
+}
 
+span.elements-social-icon a, span.elements-social-icon {
+    color: rgb(255, 255, 255);
+    float: start;
+    position: relative;
+    text-align: center;
+    line-height: 53px;
+    font-size: 40px;
+    transition: all 0.5s ease 0s;
+    cursor: pointer;
+    border-radius: 0 10px 10px 0;  
+}
 
+/*span.elements-social-icon a, span.elements-social-icon {
+   
+    height: 53px;
+    color: #fff;
+    float: left;
+    position: relative;
+    text-align: center;
+    line-height: 53px;
+    font-size: 30px;
+    -webkit-transition: all 0.5s ease 0s;
+    -moz-transition: all 0.5s ease 0s;
+    transition: all 0.5s ease 0s;
+    cursor: pointer;
+   
+    display: block;
+}
