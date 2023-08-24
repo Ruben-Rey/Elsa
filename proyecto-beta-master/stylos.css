@@ -473,7 +473,7 @@ span.elements-social-icon a, span.elements-social-icon {
 /* Slider CSS */
 .home-gallery {
     width: 100%;
-    max-width: 80%;
+    max-width: 100%;
     margin: 0 auto;
     text-align: center;
     overflow-x: hidden;
@@ -504,7 +504,7 @@ span.elements-social-icon a, span.elements-social-icon {
     justify-content: space-around;
     align-items: center;
     padding: 0 80px 80px;
-    gap: 10px;
+    gap: 5px;
   }
 
   .swiper-slide {
