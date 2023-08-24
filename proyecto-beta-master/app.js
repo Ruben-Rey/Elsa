@@ -74,7 +74,7 @@ menuItems.forEach((menuItem) => {
 
 
 document.addEventListener('DOMContentLoaded', function () {
-    var mySwiper = new Swiper('.swiper-container', {
+    let mySwiper = new Swiper('.swiper-container', {
         slidesPerView: 3, // Muestra 3 videos a la vez
         spaceBetween: 10, // Espacio entre los videos
         loop: true, // Crea un bucle de desplazamiento
@@ -83,17 +83,6 @@ document.addEventListener('DOMContentLoaded', function () {
             disableOnInteraction: false, // Permite que el autoplay continúe después de la interacción del usuario
         },
     });
-});
-
-/* galery de videos 
-let swiper = new Swiper('.swiper-container', {
-    slidesPerView: 'auto',
-    spaceBetween: 20,
-    loop: true,
-    navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-    },
 });
 
 
