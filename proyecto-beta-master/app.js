@@ -72,6 +72,19 @@ menuItems.forEach((menuItem) => {
   });
 });
 
+
+document.addEventListener('DOMContentLoaded', function () {
+    var mySwiper = new Swiper('.swiper-container', {
+        slidesPerView: 3, // Muestra 3 videos a la vez
+        spaceBetween: 10, // Espacio entre los videos
+        loop: true, // Crea un bucle de desplazamiento
+        autoplay: {
+            delay: 3000, // Cambia los videos cada 3 segundos
+            disableOnInteraction: false, // Permite que el autoplay continúe después de la interacción del usuario
+        },
+    });
+});
+
 /* galery de videos 
 let swiper = new Swiper('.swiper-container', {
     slidesPerView: 'auto',
