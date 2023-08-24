@@ -63,7 +63,7 @@ ul {
 }
 
 .header-right a i {
-    font-size: 1em; 
+    font-size: 1em;
     margin: 0.5rem 0.2rem;
     color: #fdf7f7;
 }
@@ -260,7 +260,7 @@ ul {
 .footer-redes h3{
     text-align: center;
     font-size: 40px;
-    color: white;  
+    color: white;
 
 }
 
@@ -272,8 +272,8 @@ ul {
 }
 
 .link-redes a i {
-    font-size: 3em; 
-    margin: 10px; 
+    font-size: 3em;
+    margin: 10px;
     color: #fdf7f7;
 }
 
@@ -374,7 +374,7 @@ transform: scale(1.1);
 .footer-column {
     margin-bottom: 20px;
   }
-  
+
   /* Aumenta el tamaño de los inputs y textarea */
   .footer-links input[type="text"],
   .footer-links input[type="email"],
@@ -388,7 +388,7 @@ transform: scale(1.1);
     box-sizing: border-box;
     cursor: pointer;
   }
-  
+
   /* Asegúrate de que el botón también tenga suficiente espacio */
   .btn-toolbar button{
     width: 100%;
@@ -404,19 +404,20 @@ transform: scale(1.1);
     cursor: pointer;
     transition: background-color 0.3s, color 0.3s;
   }
-  
+
   .btn-toolbar button:hover{
     background-color: rgb(28, 28, 33);
-    color: #00aaff; 
+    color: #00aaff;
   }
-  
+
   .icono-mapa{
     background-image: url(./imagenes/mapa.png);
-  }  
-  
+  }
+
   /*redes de la izquierda de main*/
 .elements-lists{
     height: 0px;
+    position: fixed;
 }
 
 span.elements-social-icon a, span.elements-social-icon {
@@ -425,14 +426,91 @@ span.elements-social-icon a, span.elements-social-icon {
     position: relative;
     text-align: center;
     line-height: 53px;
-    font-size: 40px;
-    transition: all 0.5s ease 0s;
+    font-size: 5rem;
+    transition: all 0.5s ease;
     cursor: pointer;
-    border-radius: 0 10px 10px 0;  
+    border-radius: 0 10px 10px 0;
 }
 
+.elements-social-icon {
+    position: relative;
+    display: inline-block;
+    padding: 0 0.5rem 0 0 ;
+    line-height: 53px;
+    font-size: 5rem;
+    cursor: pointer;
+    border-radius: 0 10px 10px 0;
+    overflow: visible; /* Ajusta el overflow para mostrar la franja */
+}
+
+.elements-social-icon a {
+    color: rgb(255, 255, 255);
+    text-align: center;
+    display: block;
+    z-index: 2; /* Coloca el enlace por encima de la franja */
+}
+
+.elements-social-icon .button-text {
+    font-size: 2rem;
+    border-radius: 0 10px 10px 0;
+    position: absolute;
+    top: 0;
+    left: -200px; /* Posición inicial fuera de la vista */
+    width: 200px;
+    height: 100%;
+    background-color: rgb(46, 184, 117);
+    color: #fff;
+    line-height: 53px;
+    text-align: center;
+    transition: left 1s ease;
+    z-index: 1; /* Coloca la franja por encima del enlace */
+}
+
+.elements-social-icon .button-text2{
+    background-color:  rgb(49, 154, 196);
+}
+
+
+.elements-social-icon .button-text3{
+    background-color:  rgb(208, 81, 67);
+}
+
+.elements-social-icon:hover .button-text {
+    left: 0; /* Muestra la franja al pasar el mouse */
+    transition: left 1s ease; /* Elimina el delay en la vuelta */
+}
+
+
+
+
+/* 
+
+.elements-social-icon:hover .button-text{
+    display: inline-block;
+    transition: all 1s ease 5s;
+}
+
+.button-text{
+    display: none;
+}
+
+.button-text::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: -100%;
+    width: 100px;
+    height: 100%;
+    background-color: #e74c3c;
+    transition: left 1s ease 5s;
+    z-index: -1;
+}
+
+ */
+
+
 /*span.elements-social-icon a, span.elements-social-icon {
-   
+
     height: 53px;
     color: #fff;
     float: left;
@@ -444,6 +522,6 @@ span.elements-social-icon a, span.elements-social-icon {
     -moz-transition: all 0.5s ease 0s;
     transition: all 0.5s ease 0s;
     cursor: pointer;
-   
+
     display: block;
 }
