@@ -231,6 +231,78 @@ ul {
     right: calc(236% - (732px/2));
 }
 /*****************************************************************************************************************/
+/**SLIDERSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS*/
+
+.slider-container {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    overflow: hidden;
+  }
+  
+  .slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  .slider img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .slider-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+  }
+  .navegadores {
+    display: flex;
+    color: #d91313;
+    bottom: 20px;
+    width: 100%;
+  }
+  
+  .prev-btn{
+    font-size: 24px;
+    height: 60px;
+    width: 10;
+    position: absolute;
+    left: 0;
+    top: 50%;
+  }
+  .next-btn{
+    font-size: 24px;
+    height: 60px;
+    width: 10;
+    position: absolute;
+    right: 0;
+    top: 50%;
+  }
+  
+  .slider-dots {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #eee6e6;
+    cursor: pointer;
+  }
+  
+  .dot.active {
+    background-color: #69bacd;
+  }
+
+
+
+
+
 /**************************************************************************************/
 .home-gallery{
     background: rgb(89, 89, 89);
@@ -238,15 +310,6 @@ ul {
     height: 440px;
     text-align: center;
     /*padding: 0px 30px 30px*/
-}
-.home-gallery h3 {
-    font-family: SFCompactDisplay-Medium;
-    font-size: 50px;
-    font-weight: normal;
-    font-stretch: normal;
-    line-height: 60px;
-    color: rgb(255, 255, 255);
-    text-transform: capitalize;
 }
 
 /***********************************************************************************************/
@@ -311,6 +374,10 @@ ul {
 .footer-column {
     flex-basis: calc(25% - 20px);
     padding: 20px;
+}
+
+.footer-column h3{
+    color: white;
 }
 
 .footer-about div{
@@ -402,7 +469,7 @@ transform: scale(1.1);
     background-image: url(./imagenes/mapa.png);
   }
 
-  /*redes de la izquierda de main*/
+  /*redes de la izquierda de main***********************************************************************/
 .elements-lists{
     height: 0px;
     position: fixed;
@@ -469,6 +536,16 @@ span.elements-social-icon a, span.elements-social-icon {
 }
  
 /*GALERIA DE VIDEOS*/
+.home-gallery h3 {
+    font-family: SFCompactDisplay-Medium;
+    font-size: 50px;
+    margin: 2rem;
+    font-weight: normal;
+    font-stretch: normal;
+    line-height: 60px;
+    color: rgb(255, 255, 255);
+    text-transform: capitalize;
+}
 
 /* Slider CSS */
 .home-gallery {
@@ -480,14 +557,13 @@ span.elements-social-icon a, span.elements-social-icon {
   }
 
 .swiper-container {
-    width: 100%;
+    width: 90%;
     height: 60%;
 }
 
-  
-
 .swiper-slide video {
     max-width: 100%;
+    cursor: pointer;
 }
 
 .swiper-slide {
@@ -503,7 +579,8 @@ span.elements-social-icon a, span.elements-social-icon {
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    padding: 0 80px 80px;
+    padding: 0 80px;
+    margin-top: 30px;
     gap: 5px;
   }
 
@@ -542,3 +619,77 @@ span.elements-social-icon a, span.elements-social-icon {
   .next-btn {
     border-radius: 5px 0 0 5px;
   }
+
+  /*BUSCAR POR CATEGORIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/*****************************************************************/
+/* Slider CSS */
+
+/* Slider CSS */
+.categorias {
+    padding: 35px 70px;
+    background: rgb(28, 28, 33);
+    width: 100%;
+    text-align: center;
+}
+
+.categorias h3 {
+    color: white;
+    font-size: 2.5rem;
+}
+
+.categorias a{
+    padding: 6px 30px;
+    font-size: 10px;
+    font-weight: normal;
+    font-stretch: normal;
+    letter-spacing: 0px;
+    background: linear-gradient(rgb(46, 138, 184) 0%, rgb(67, 152, 208) 100%) rgb(46, 138, 184);
+    display: inline-block;
+    border-right: 1px solid rgb(77, 77, 77);
+    color: rgb(255, 255, 255);
+    margin: 40px;
+    transition: background-color 0.3s color  rgb(77, 77, 77); 
+}
+
+.contenedor-cartas {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.cartas {
+    width: 23%;
+    margin-bottom: 20px;
+}
+
+.cartas img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    margin-top: 10px;
+    background-color: #7d7b7b;
+    object-fit: contain;  
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -86,6 +86,10 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 
+/***SLIDERRRRRRRRRRRRRRRRRRRRRRRRRRR************************************RRRRRRRRRRRRRRR******************* */
+
+
+
 /*modo oscuro y claro
 const themeToggle = document.getElementById('theme-toggle');
 const body = document.body;
