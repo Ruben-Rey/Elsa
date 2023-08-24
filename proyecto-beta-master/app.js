@@ -72,11 +72,23 @@ menuItems.forEach((menuItem) => {
   });
 });
 
-/*modo oscuro y claro*/
+/* galery de videos 
+let swiper = new Swiper('.swiper-container', {
+    slidesPerView: 'auto',
+    spaceBetween: 20,
+    loop: true,
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+});
+
+
+/*modo oscuro y claro
 const themeToggle = document.getElementById('theme-toggle');
 const body = document.body;
 
 themeToggle.addEventListener('click', () => {
   body.classList.toggle('dark-mode');
   body.classList.toggle('light-mode');
-});
+})*/

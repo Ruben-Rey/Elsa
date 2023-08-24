@@ -4,12 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
-      crossorigin="anonymous"/>
-    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous" />
+
     <link rel="stylesheet" href="./stylos.css">
     <title>ABREGU</title>
 
@@ -111,27 +108,17 @@
     </header>
     <!--------------------------------------------------------------------->
     <main>
-        <section class="home-gallery">
-            <h3>Galeria De VIDEOS</h3>
-            <div>
-
-            </div>
-        </section>
         <section>
-
             <div class="elements-lists-wrap">
                 <ul class="elements-lists">
-                    <li id="elements-social-whatsapp"
-                        class="elements-social-whatsapp ">
-                        <span class="elements-social-icon"
-                            style="background: rgb(46, 184, 117);">
+                    <li id="elements-social-whatsapp" class="elements-social-whatsapp ">
+                        <span class="elements-social-icon" style="background: rgb(46, 184, 117);">
                             <a href="https://api.whatsapp.com/send?phone=927254362" target="_blank"><i
                                     class="fab fa-whatsapp"></i></a>
                             <span class="button-text">whatsapp</span>
                         </span>
                     </li>
-                    <li id="elements-social-skype"
-                        class="elements-social-skype">
+                    <li id="elements-social-skype" class="elements-social-skype">
                         <span class="elements-social-icon" style="background: rgb(49, 154, 196);">
                             <a href="https://www.skype.com/es/" target="_blank">
                                 <i class="fab fa-skype"></i>
@@ -139,8 +126,7 @@
                             <span class="button-text button-text2">skipe</span>
                         </span>
                     </li>
-                    <li id="elements-social-envelope"
-                        class="elements-social-envelope">
+                    <li id="elements-social-envelope" class="elements-social-envelope">
                         <span class="elements-social-icon"
                             style="background: rgb(208, 81, 67); border-radius: 0px  10px 10px 0px;">
                             <a href="mailto:vrabregu@outlook.com">
@@ -151,11 +137,51 @@
                     </li>
                 </ul>
             </div>
+        </section>
+     <!--------------------------------------------------------------------->
 
+        <section class="home-gallery">
+            <h3>Galeria de VIDEOS</h3>
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <video controls>
+                            <source src="video1.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="swiper-slide">
+                        <video controls>
+                            <source src="video2.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="swiper-slide">
+                        <video controls>
+                            <source src="video3.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="swiper-slide">
+                        <video controls>
+                            <source src="video4.mp4" type="video/mp4">
+
+                        </video>
+                    </div>
+                    <div class="swiper-slide">
+                        <video controls>
+                            <source src="video5.mp4" type="video/mp4">
+
+                        </video>
+                    </div>
+                    <div class="swiper-slide">
+                        <video controls>
+                            <source src="video6.mp4" type="video/mp4">
+
+                        </video>
+                    </div>
+                </div>
+            </div>
         </section>
 
-
-
+     <!----------------------------------------------------------------------------------------------------------------------------------------->
         <section>
             <div class="footer-redes">
                 <h3>SIGUENOS</h3>
@@ -240,16 +266,14 @@
 
 </body>
 
-<script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
-      crossorigin="anonymous"
-    ></script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+    crossorigin="anonymous"></script>
 
 <script src="https://maps.googleapis.com/maps/api/js?key=TU_CLAVE_DE_API"></script>
 <script src="https://kit.fontawesome.com/4250892b33.js" crossorigin="anonymous"></script>
 <script src="./app.js"></script>
 <script src="./bbdd.json"></script>
-
 
 </html>

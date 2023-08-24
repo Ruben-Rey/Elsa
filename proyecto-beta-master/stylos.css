@@ -339,18 +339,6 @@ ul {
     list-style: none;
 }
 
-
-.footer-links h3 {
-    font-size: 20px;
-    color: #FFFFFF;
-    margin-bottom: 25px;
-    font-weight: 500;
-    border-bottom: 3px solid #00C3FF;
-    padding-bottom: 10px;
-    display: inline-block;
-}
-
-
 .footer-links ul li a {
     font-size: 18px;
     text-decoration: none;
@@ -479,49 +467,63 @@ span.elements-social-icon a, span.elements-social-icon {
     left: 0; /* Muestra la franja al pasar el mouse */
     transition: left 1s ease; /* Elimina el delay en la vuelta */
 }
+ 
+/*GALERIA DE VIDEOS*/
 
+/* Slider CSS */
+.home-gallery {
+    width: 100%;
+    height: 400px;
+  }
 
+  .swiper-container {
+    width: 100%;
+    height: 100%;
+  }
 
+  .swiper-wrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0 80px 80px;
+    gap: 10px;
+  }
 
-/* 
-
-.elements-social-icon:hover .button-text{
-    display: inline-block;
-    transition: all 1s ease 5s;
-}
-
-.button-text{
-    display: none;
-}
-
-.button-text::before {
-    content: "";
+  .swiper-slide {
+    width: 33.33%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .swiper-slide video {
+    width: 100%;
+    height: 100%;
+  }
+  .navegadores {
     position: absolute;
     bottom: 0;
-    left: -100%;
-    width: 100px;
-    height: 100%;
-    background-color: #e74c3c;
-    transition: left 1s ease 5s;
-    z-index: -1;
-}
-
- */
-
-
-/*span.elements-social-icon a, span.elements-social-icon {
-
-    height: 53px;
+    left: 0;
+    width: 100%;
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .prev-btn,
+  .next-btn {
+    width: 50px;
+    height: 30px;
     color: #fff;
-    float: left;
-    position: relative;
-    text-align: center;
-    line-height: 53px;
-    font-size: 30px;
-    -webkit-transition: all 0.5s ease 0s;
-    -moz-transition: all 0.5s ease 0s;
-    transition: all 0.5s ease 0s;
+    font-size: 24px;
     cursor: pointer;
-
-    display: block;
-}
+  }
+  .prev-btn {
+    border-radius: 0 5px 5px 0;
+  }
+  .next-btn {
+    border-radius: 5px 0 0 5px;
+  }
