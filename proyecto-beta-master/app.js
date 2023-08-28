@@ -81,6 +81,7 @@ function CreateCard(item){
     let content = `
         <img src="${item.imagen}" alt="">
         <h2>${item.nombre}</h2>
+        <p>${item.descripcion}</p>
     `;
 
     div.innerHTML= content;
