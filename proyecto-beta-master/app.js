@@ -116,21 +116,23 @@ menuItems.forEach((menuItem) => {
 });
 
 
-document.addEventListener('DOMContentLoaded', function () {
-    let mySwiper = new Swiper('.swiper-container', {
-        slidesPerView: 3, // Muestra 3 videos a la vez
-        spaceBetween: 10, // Espacio entre los videos
-        loop: true, // Crea un bucle de desplazamiento
-        autoplay: {
-            delay: 3000, // Cambia los videos cada 3 segundos
-            disableOnInteraction: false, // Permite que el autoplay continúe después de la interacción del usuario
-        },
-    });
+const mySwiper = new Swiper('.swiper-container', {
+    slidesPerView: 3,
+    loop: true,
+    spaceBetween: 20,
+    autoplay: {
+        delay: 5000 // Cambiar cada 5 segundos
+    },
+    on: {
+        slideChange: function () {
+            // Detener la reproducción de videos al cambiar de diapositiva
+            const videos = document.querySelectorAll('.swiper-slide video');
+            videos.forEach(video => {
+                video.pause();
+            });
+        }
+    }
 });
-
-
-
-
 
 /*modo oscuro y claro
 const themeToggle = document.getElementById('theme-toggle');

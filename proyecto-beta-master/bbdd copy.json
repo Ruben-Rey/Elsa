@@ -138,19 +138,19 @@
             "PLANCHAS_TRANSFER" :[
                 {
                     "id": 16,
+                    "nombre": "PLANCHA NEUMATICA UNA BANDEJA",
+                    "modelo": "",
+                    "bandeja": "",
+                    "descripcion": "",
+                    "imagen": "" 
+                },
+                {
+                    "id": 17,
                     "nombre": "Plancha neumàtica doble bandeja",
                     "modelo": "PN-02B",
                     "bandeja": "",
                     "descripcion": "2 estaciones de trabajo<br>Sistema hidràulico neumàtico<br>Bandeja de 40 x 50 cm",
                     "imagen": "" 
-                },
-                {
-                    "id": 17,
-                    "nombre": "",
-                    "modelo": "",
-                    "bandeja": "",
-                    "descripcion": "",
-                    "imagen": "https://i.postimg.cc/SNwFY3cR/PLANCHAS-TRANS.png" 
                 },
                 {
                     "id": 18,

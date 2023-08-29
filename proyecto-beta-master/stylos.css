@@ -546,90 +546,6 @@ span.elements-social-icon a, span.elements-social-icon {
     transition: left 1s ease; /* Elimina el delay en la vuelta */
 }
  
-/*GALERIA DE VIDEOS*/
-.home-gallery h3 {
-    font-family: SFCompactDisplay-Medium;
-    font-size: 50px;
-    margin: 2rem;
-    font-weight: normal;
-    font-stretch: normal;
-    line-height: 60px;
-    color: rgb(255, 255, 255);
-    text-transform: capitalize;
-}
-
-/* Slider CSS */
-.home-gallery {
-    width: 100%;
-    max-width: 100%;
-    margin: 0 auto;
-    text-align: center;
-    overflow-x: hidden;
-  }
-
-.swiper-container {
-    width: 90%;
-    height: 60%;
-}
-
-.swiper-slide video {
-    max-width: 100%;
-    cursor: pointer;
-}
-
-.swiper-slide {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.swiper-wrapper {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    padding: 0 80px;
-    margin-top: 30px;
-    gap: 5px;
-  }
-
-  .swiper-slide {
-    width: 33.33%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .swiper-slide video {
-    width: 100%;
-    height: 100%;
-  }
-  .navegadores {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 40px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  .prev-btn,
-  .next-btn {
-    width: 50px;
-    height: 30px;
-    color: #fff;
-    font-size: 24px;
-    cursor: pointer;
-  }
-  .prev-btn {
-    border-radius: 0 5px 5px 0;
-  }
-  .next-btn {
-    border-radius: 5px 0 0 5px;
-  }
 
   /*BUSCAR POR CATEGORIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/*****************************************************************/
 
@@ -680,10 +596,33 @@ span.elements-social-icon a, span.elements-social-icon {
     object-fit: contain;  
 }
 
+/* ****************************************************************** */
 
+.swiper-container {
+    width: 100%;
+    overflow: hidden;
+    background-color: rgb(107, 181, 246); /* Color de fondo */
+}
 
+.swiper-wrapper {
+    display: flex;
+    transition: transform 0.5s ease-in-out; /* Ajusta la duración de la transición */
+}
 
+.swiper-slide {
+    flex: 0 0 calc(100% / 3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    text-align: center;
+}
 
+.swiper-slide iframe,
+.swiper-slide video {
+    max-width: 100%;
+    max-height: 100%;
+}
 
 
 
