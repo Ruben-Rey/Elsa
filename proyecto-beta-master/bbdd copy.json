@@ -139,18 +139,18 @@
                 {
                     "id": 16,
                     "nombre": "PLANCHA NEUMATICA UNA BANDEJA",
-                    "modelo": "",
-                    "bandeja": "",
+                    "modelo": "PN-01B",
+                    "bandeja": "una bandeja",
                     "descripcion": "",
-                    "imagen": "" 
+                    "imagen": "https://i.postimg.cc/8PSCy99k/PN-01B.png" 
                 },
                 {
                     "id": 17,
                     "nombre": "Plancha neumàtica doble bandeja",
                     "modelo": "PN-02B",
-                    "bandeja": "",
+                    "bandeja": "doble bandeja",
                     "descripcion": "2 estaciones de trabajo<br>Sistema hidràulico neumàtico<br>Bandeja de 40 x 50 cm",
-                    "imagen": "" 
+                    "imagen": "https://i.postimg.cc/JnHhgLR0/PN-02B.png" 
                 },
                 {
                     "id": 18,
@@ -182,11 +182,11 @@
             "CALANDRA": [
                     {
                         "id": 21,
-                        "nombre": "",
-                        "modelo": "",
+                        "nombre": "CALANDRA 200 X 1700mm",
+                        "modelo": "CL-2017",
                         "bandeja": "",
-                        "descripcion": "",
-                        "imagen": "https://i.postimg.cc/qRshXDrs/Calandra42pg.png"
+                        "descripcion": "Mesa de trabajo: 1.5m<br>Potencia: 6kw<br>Presiòn de trabajo: 0-8 KG/cm2",
+                        "imagen": "https://i.postimg.cc/k4dTBWfy/CL-2017.png"
                     },
                     {
                         "id": 22,
@@ -194,7 +194,7 @@
                         "modelo": "",
                         "bandeja": "",
                         "descripcion": "",
-                        "imagen": "https://i.postimg.cc/762nzrmm/PD-1800-420.png"
+                        "imagen": ""
                     }
             ]
         },
@@ -232,54 +232,46 @@
             "insumos_UV_DTF": [
                 {
                     "nombre": "Tinta black 1lt",
-                    "imagen": ""
+                    "imagen": "https://i.postimg.cc/L8vMJyw5/black-uvdtf.png"
                 },
                 {
                     "nombre": "Tinta cyan 1lt",
-                    "imagen": ""
+                    "imagen": "https://i.postimg.cc/d1bbbgkH/cyan-uvdtf.png"
                 },
                 {
                     "nombre": "Tinta magenta 1lt",
-                    "imagen": ""
+                    "imagen": "https://i.postimg.cc/kM83QMzk/magenta-uvdtf.png"
                 },
                 {
                     "nombre": "Tinta yellow 1lt",
-                    "imagen": ""
+                    "imagen": "https://i.postimg.cc/tCj02QH7/yellow-uvdtf.png"
                 },
                 {
                     "nombre": "Tinta white 1lt",
-                    "imagen": ""
-                },
-                {
-                    "nombre": "",
-                    "imagen": ""
-                },
-                {
-                    "nombre": "",
-                    "imagen": ""
+                    "imagen": "https://i.postimg.cc/vHLJKqQh/white-uvdtf.png"
                 }
             ],
             "insumos_DTG":[
                 
                 {
                     "nombre": "Tinta black 1lt",
-                    "imagen": ""
+                    "imagen": "https://i.postimg.cc/Y9MgdC8b/black-dtg.png"
                 },
                 {
                     "nombre": "Tinta cyan 1lt",
-                    "imagen": ""
+                    "imagen": "https://i.postimg.cc/Vs7MF1tW/cyan-dtg.png"
                 },
                 {
                     "nombre": "Tinta magenta 1lt",
-                    "imagen": ""
+                    "imagen": "https://i.postimg.cc/0jHw5dvB/magenta-dtg.png"
                 },
                 {
                     "nombre": "Tinta yellow 1lt",
-                    "imagen": ""
+                    "imagen": "https://i.postimg.cc/26GWMNKm/yellow-dtg.png"
                 },
                 {
                     "nombre": "Tinta white 1lt",
-                    "imagen": ""
+                    "imagen": "https://i.postimg.cc/3NwGHfsG/white-dtg.png"
                 },
                 {
                     "nombre": "Liquido pretratamiento",
