@@ -159,6 +159,7 @@ ul {
         height: 400px;
     }
 }
+
 /* Estilos para modo *************************************** */
 .app {
     width: 4rem;
@@ -603,7 +604,7 @@ ul {
     color: white;
     text-align: center;
     font-size: 2rem;
-    margin: 1rem 0 ;
+    margin: 1rem 0;
 }
 
 .home-gallery h3 {
@@ -617,10 +618,10 @@ ul {
     line-height: 25px;
     color: rgb(255, 255, 255);
     padding: 5px 30px;
-    background: rgb(80, 159, 211)   
+    background: rgb(80, 159, 211)
 }
 
-.home-gallery button:hover{
+.home-gallery button:hover {
     background-color: #333;
 }
 
@@ -648,4 +649,55 @@ ul {
 .swiper-slide video {
     max-width: 100%;
     max-height: 100%;
+}
+
+/***************SOBRE NOSOTROS**************************************************************/
+.swiper-video-nosotros {
+    position: relative;
+}
+
+.swiper-video {
+    position: relative;
+}
+
+.video-overlay {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 40px;
+    text-align: center;
+}
+
+.video-overlay h1 {
+    margin-bottom: 10px;
+}
+/****HISTORY ABREGU**********/
+
+.container-historia {
+    width: 85%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+}
+
+/* Estilos para cada sección */
+.historia, .cont-text, .conta-equipo, .conta-trabajo {
+    margin: 2rem 4rem; /* Agregar margen superior e inferior */
+}
+
+/* Estilos para los títulos */
+.container-historia h2 {
+    font-size: 2rem;
+    margin-bottom: 4rem; /* Espacio entre el título y el párrafo */
+}
+
+/* Estilos para los párrafos */
+.container-historia p {
+    text-align: left;
+    font-size: 2rem;
+    line-height: 1.5; /* Ajustar espacio entre las líneas del párrafo */
 }

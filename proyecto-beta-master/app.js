@@ -133,6 +133,16 @@ const mySwiper = new Swiper('.swiper-container', {
     }
 });
 
+/*video de sobre nosotros
+function playVideo() {
+    var video = document.getElementById("video");
+    video.play();
+    video.muted = true;
+}*/
+
+
+
+
 /*modo oscuro y claro
 const themeToggle = document.getElementById('theme-toggle');
 const body = document.body;
