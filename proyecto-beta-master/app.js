@@ -100,7 +100,6 @@ function CreateCard(item){
     }  
 }
 
-
 const menuItems = document.querySelectorAll('.menu-item');
 
 menuItems.forEach((menuItem) => {

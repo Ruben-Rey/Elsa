@@ -37,14 +37,15 @@ ul {
     font-size: 1.5rem;
 }
 
-.header-left .redes a{
+.header-left .redes a {
     text-decoration: none;
     color: white;
 }
 
-.header-left .redes:hover a{
- color: #338ccc;
+.header-left .redes:hover a {
+    color: #338ccc;
 }
+
 /********************************************************************************/
 .header-right .redes {
     display: flex;
@@ -52,7 +53,7 @@ ul {
     gap: 2rem;
 }
 
-.header-right .redes a{
+.header-right .redes a {
     display: inline-block;
     width: 30px;
     background-color: rgba(255, 255, 255, 0.2);
@@ -69,13 +70,13 @@ ul {
 }
 
 
-.header-right .redes:hover a i{
+.header-right .redes:hover a i {
     color: rgb(153, 204, 230);
 }
 
 /*sliderrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr*/
 
-.slider{
+.slider {
     width: 100%;
     max-width: 100vw;
     height: 500px;
@@ -83,7 +84,8 @@ ul {
     position: relative;
     overflow: hidden;
 }
-.slider .list{
+
+.slider .list {
     position: absolute;
     width: max-content;
     height: 100%;
@@ -92,13 +94,15 @@ ul {
     display: flex;
     /*transition: 1s;*/
 }
-.slider .list img{
+
+.slider .list img {
     width: 100%;
     max-width: 100vw;
     height: 100%;
     object-fit: cover;
 }
-.slider .buttons{
+
+.slider .buttons {
     position: absolute;
     top: 45%;
     left: 5%;
@@ -106,7 +110,8 @@ ul {
     display: flex;
     justify-content: space-between;
 }
-.slider .buttons button{
+
+.slider .buttons button {
     width: 50px;
     height: 50px;
     border-radius: 50%;
@@ -118,12 +123,12 @@ ul {
     /*transition: all .5s;*/
 }
 
-.slider .buttons button:hover{
+.slider .buttons button:hover {
     background-color: #595858;
     /*transition: all .5s;*/
 }
 
-.slider .dots{
+.slider .dots {
     position: absolute;
     bottom: 10px;
     left: 0;
@@ -134,7 +139,8 @@ ul {
     display: flex;
     justify-content: center;
 }
-.slider .dots li{
+
+.slider .dots li {
     list-style: none;
     width: 10px;
     height: 10px;
@@ -143,16 +149,16 @@ ul {
     border-radius: 20px;
     /*transition: 0.5s;*/
 }
-.slider .dots li.active{
+
+.slider .dots li.active {
     width: 30px;
 }
-@media screen and (max-width: 768px){
-    .slider{
+
+@media screen and (max-width: 768px) {
+    .slider {
         height: 400px;
     }
 }
-
-
 /* Estilos para modo *************************************** */
 .app {
     width: 4rem;
@@ -168,6 +174,7 @@ ul {
 .app:hover {
     transform: scale(1.2);
 }
+
 /************************************************************************************************************/
 .light-mode {
     background-color: white;
@@ -191,6 +198,7 @@ ul {
     background-color: #333;
     color: white;
 }
+
 /*******************************************************************************************************************/
 /* Estilos de la barra de navegación */
 .navbar {
@@ -311,31 +319,22 @@ ul {
     right: calc(236% - (732px/2));
 }
 
-/**************************************************************************************/
-.home-gallery{
-    background: rgb(89, 89, 89);
-    width: 100%;
-    height: 440px;
-    text-align: center;
-    /*padding: 0px 30px 30px*/
-}
-
 /***********************************************************************************************/
-.footer-redes{
+.footer-redes {
     background-color: rgb(39, 109, 155);
     width: 100%;
     height: 200px;
     padding: 5rem;
 }
 
-.footer-redes h3{
+.footer-redes h3 {
     text-align: center;
     font-size: 40px;
     color: white;
 
 }
 
-.link-redes{
+.link-redes {
     display: flex;
     justify-content: center;
     color: white;
@@ -384,33 +383,33 @@ ul {
     padding: 20px;
 }
 
-.footer-column h3{
+.footer-column h3 {
     color: white;
 }
 
-.footer-about div{
+.footer-about div {
     display: flex;
     justify-content: flex-start;
     margin: -1.5rem 0rem 3.6rem 1rem;
     padding-left: 1rem;
 }
 
-.footer-about div h4{
+.footer-about div h4 {
     color: aliceblue;
     font-size: 2rem;
     padding: 1.8rem 0 0 0.5rem;
 }
 
-.footer-about img{
+.footer-about img {
     width: 20%;
 }
 
-.footer-links{
+.footer-links {
     width: 20%;
     padding: 0 15px;
 }
 
-.footer-links li{
+.footer-links li {
     list-style: none;
 }
 
@@ -424,8 +423,8 @@ ul {
 }
 
 .footer-links ul li a:hover {
-color: #00C3FF;
-transform: scale(1.1);
+    color: #00C3FF;
+    transform: scale(1.1);
 
 }
 
@@ -436,13 +435,13 @@ transform: scale(1.1);
 
 .footer-column {
     margin-bottom: 20px;
-  }
+}
 
-  /* Aumenta el tamaño de los inputs y textarea */
-  .footer-links input[type="text"],
-  .footer-links input[type="email"],
-  .footer-links input[type="phone"],
-  .footer-links textarea {
+/* Aumenta el tamaño de los inputs y textarea */
+.footer-links input[type="text"],
+.footer-links input[type="email"],
+.footer-links input[type="phone"],
+.footer-links textarea {
     width: 100%;
     padding: 10px;
     margin-bottom: 10px;
@@ -450,10 +449,10 @@ transform: scale(1.1);
     background-color: #3e4346;
     box-sizing: border-box;
     cursor: pointer;
-  }
+}
 
-  /* Asegúrate de que el botón también tenga suficiente espacio */
-  .btn-toolbar button{
+/* Asegúrate de que el botón también tenga suficiente espacio */
+.btn-toolbar button {
     width: 100%;
     margin-bottom: 10px;
     text-align: center;
@@ -466,54 +465,38 @@ transform: scale(1.1);
     border: 0.800px solid rgba(255, 255, 255, 0.2);
     cursor: pointer;
     transition: background-color 0.3s, color 0.3s;
-  }
-
-  .btn-toolbar button:hover{
-    background-color: rgb(28, 28, 33);
-    color: #00aaff;
-  }
-
-  .icono-mapa{
-    background-image: url(./imagenes/mapa.png);
-  }
-
-  /*redes de la izquierda de main***********************************************************************/
-.elements-lists{
-    height: 0px;
-    position: fixed;
-    bottom: 20rem;
-
 }
 
-span.elements-social-icon a, span.elements-social-icon {
-    color: rgb(255, 255, 255);
-    float: start;
-    position: relative;
-    text-align: center;
-    line-height: 53px;
-    font-size: 5rem;
-    transition: all 0.5s ease;
-    cursor: pointer;
-    border-radius: 0 10px 10px 0;
-    
+.btn-toolbar button:hover {
+    background-color: rgb(28, 28, 33);
+    color: #00aaff;
+}
+
+/*redes de la izquierda de main***********************************************************************/
+.elements-lists {
+    position: fixed;
+    top: 25rem;
 }
 
 .elements-social-icon {
     position: relative;
     display: inline-block;
-    padding: 0 0.5rem 0 0 ;
-    line-height: 53px;
-    font-size: 5rem;
+    padding: 0 0.5rem 0 0;
+    line-height: 45px;
+    width: 40px;
+    font-size: 3.5rem;
     cursor: pointer;
     border-radius: 0 10px 10px 0;
-    overflow: visible; /* Ajusta el overflow para mostrar la franja */
+    overflow: visible;
+    transition: all 0.5s ease;
 }
 
 .elements-social-icon a {
     color: rgb(255, 255, 255);
     text-align: center;
+    font-size: 20px;
     display: block;
-    z-index: 2; /* Coloca el enlace por encima de la franja */
+    z-index: 1;
 }
 
 .elements-social-icon .button-text {
@@ -521,33 +504,30 @@ span.elements-social-icon a, span.elements-social-icon {
     border-radius: 0 10px 10px 0;
     position: absolute;
     top: 0;
-    left: -200px; /* Posición inicial fuera de la vista */
-    width: 200px;
+    left: -200px;
+    width: 150px;
     height: 100%;
     background-color: rgb(46, 184, 117);
     color: #fff;
-    line-height: 53px;
     text-align: center;
     transition: left 1s ease;
-    z-index: 1; /* Coloca la franja por encima del enlace */
+    z-index: -1;
 }
 
-.elements-social-icon .button-text2{
-    background-color:  rgb(49, 154, 196);
+.elements-social-icon .button-text2,
+.elements-social-icon .button-text3 {
+    background-color: rgb(49, 154, 196);
 }
 
-
-.elements-social-icon .button-text3{
-    background-color:  rgb(208, 81, 67);
+.elements-social-icon .button-text3 {
+    background-color: rgb(208, 81, 67);
 }
 
 .elements-social-icon:hover .button-text {
-    left: 0; /* Muestra la franja al pasar el mouse */
-    transition: left 1s ease; /* Elimina el delay en la vuelta */
+    left: 0;
 }
- 
 
-  /*BUSCAR POR CATEGORIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/*****************************************************************/
+/*BUSCAR POR CATEGORIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/*****************************************************************/
 
 /*CATEGORIAS CSS */
 .categorias {
@@ -562,18 +542,21 @@ span.elements-social-icon a, span.elements-social-icon {
     font-size: 2.5rem;
 }
 
-.categorias a{
+.categorias .ver-todos {
     padding: 6px 30px;
-    font-size: 10px;
-    font-weight: normal;
-    font-stretch: normal;
-    letter-spacing: 0px;
+    font-size: 20px;
     background: linear-gradient(rgb(46, 138, 184) 0%, rgb(67, 152, 208) 100%) rgb(46, 138, 184);
     display: inline-block;
     border-right: 1px solid rgb(77, 77, 77);
     color: rgb(255, 255, 255);
     margin: 40px;
-    transition: background-color 0.3s color  rgb(77, 77, 77); 
+    transition: 0.3s color rgb(77, 77, 77);
+}
+
+.categorias .ver-todos:hover {
+    color: rgb(28, 28, 33);
+    background: linear-gradient(to right, #5ab0ed, #a3d8e9);
+    transform: scale(1.1);
 }
 
 .contenedor-cartas {
@@ -583,8 +566,13 @@ span.elements-social-icon a, span.elements-social-icon {
 }
 
 .cartas {
-    width: 23%;
-    margin-bottom: 20px;
+    width: 28%;
+    margin: 1.5rem 1rem;
+}
+
+
+.nombre {
+    margin-top: 1rem;
 }
 
 .cartas img {
@@ -593,20 +581,58 @@ span.elements-social-icon a, span.elements-social-icon {
     object-fit: cover;
     margin-top: 10px;
     background-color: #7d7b7b;
-    object-fit: contain;  
+    object-fit: contain;
 }
 
-/* ****************************************************************** */
+.cartas a {
+    text-decoration: none;
+    font: 100 1.6rem rocoto;
+    color: white;
+    transition: 0.3s;
+}
+
+.cartas a:hover {
+    color: #00C3FF;
+}
+
+/* ******GALERIA DE VIDEOS************************************************************ */
+.home-gallery {
+    background: rgb(147, 146, 146);
+    width: 100%;
+    height: 550px;
+    color: white;
+    text-align: center;
+    font-size: 2rem;
+    margin: 1rem 0 ;
+}
+
+.home-gallery h3 {
+    font-family: SFCompactDisplay-Medium;
+    font-size: 56px;
+}
+
+.home-gallery button {
+    border: none;
+    font-size: 18px;
+    line-height: 25px;
+    color: rgb(255, 255, 255);
+    padding: 5px 30px;
+    background: rgb(80, 159, 211)   
+}
+
+.home-gallery button:hover{
+    background-color: #333;
+}
 
 .swiper-container {
     width: 100%;
     overflow: hidden;
-    background-color: rgb(107, 181, 246); /* Color de fondo */
 }
 
 .swiper-wrapper {
     display: flex;
-    transition: transform 0.5s ease-in-out; /* Ajusta la duración de la transición */
+    transition: transform 0.5s ease-in-out;
+    /* Ajusta la duración de la transición */
 }
 
 .swiper-slide {
@@ -623,22 +649,3 @@ span.elements-social-icon a, span.elements-social-icon {
     max-width: 100%;
     max-height: 100%;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
