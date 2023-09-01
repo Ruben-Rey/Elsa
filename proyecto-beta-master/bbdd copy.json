@@ -110,29 +110,29 @@
                 {
                     "id": 13,
                     "nombre": "Laser de fibra",
-                    "modelo": "TW-640",
+                    "modelo": "LTES-3D Doble cabezal",
                     "potencia": "250w",
                     "cabezal" : "1 cabezal",
                     "descripcion": "Tamaño del punto laser de hasta 0.2mm - 0.30mm<br>Cabezal galvo dinàmico 3B<br>Àrea de trabajo 80 x 80 cm",
-                    "imagen": "" 
+                    "imagen": "https://i.postimg.cc/YSzRrmXv/LTES-3-D-DOBLE-CABEZAL.png" 
                 },
                 {
                     "id": 14,
                     "nombre": "",
-                    "modelo": "",
+                    "modelo": "DG-9060",
                     "potencia": "",
                     "cabezal" : "",
                     "descripcion": "",
-                    "imagen": "" 
+                    "imagen": "https://i.postimg.cc/65fcdPJ8/DG-9060.png" 
                 },
                 {
                     "id": 15,
                     "nombre": "",
-                    "modelo": "",
+                    "modelo": "LASER-200W",
                     "potencia": "",
                     "cabezal" : "",
                     "descripcion": "",
-                    "imagen": "" 
+                    "imagen": "https://i.postimg.cc/NFrVsk51/LASER-200-W.png" 
                 }
             ],
             "PLANCHAS_TRANSFER" :[
@@ -165,18 +165,18 @@
                     {
                         "id": 19,
                         "nombre": "",
-                        "modelo": "",
+                        "modelo": "L-17",
                         "bandeja": "",
                         "descripcion": "",
-                        "imagen": ""
+                        "imagen": "https://i.postimg.cc/7PdhKP4c/L-17.png"
                     },
                     {
                         "id": 20,
                         "nombre": "",
-                        "modelo": "",
+                        "modelo": "L-17 PRO",
                         "bandeja": "",
                         "descripcion": "",
-                        "imagen": ""
+                        "imagen": "https://i.postimg.cc/x8hPdwWC/L-17-PRO.png"
                     }
             ],
             "CALANDRA": [
@@ -194,7 +194,7 @@
                         "modelo": "",
                         "bandeja": "",
                         "descripcion": "",
-                        "imagen": ""
+                        "imagen": "https://i.postimg.cc/5yg3MPV7/CL-2718.png"
                     }
             ]
         },
