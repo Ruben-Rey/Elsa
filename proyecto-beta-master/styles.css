@@ -79,7 +79,7 @@ ul {
 .slider {
     width: 100%;
     max-width: 100vw;
-    height: 500px;
+    height: 580px;
     margin: auto;
     position: relative;
     overflow: hidden;
@@ -175,31 +175,6 @@ ul {
 .app:hover {
     transform: scale(1.2);
 }
-
-/************************************************************************************************************/
-.light-mode {
-    background-color: white;
-    color: #333;
-}
-
-/* Estilos para modo claro */
-.light-mode .machine-modal {
-    background-color: white;
-    color: #333;
-}
-
-/* Estilos para modo oscuro */
-.dark-mode {
-    background-color: #333;
-    color: white;
-}
-
-/* Estilos para modo oscuro */
-.dark-mode .machine-modal {
-    background-color: #333;
-    color: white;
-}
-
 /*******************************************************************************************************************/
 /* Estilos de la barra de navegación */
 .navbar {
@@ -369,11 +344,18 @@ ul {
 /*****************************************************************************************/
 .footer {
     background-color: #3e4346;
-    padding: 8rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 8rem 2rem;
     height: 500px;
 }
 
 .container {
+    width: 100%;
+    margin-top: 50px;
+    max-width: 1200px;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -382,97 +364,97 @@ ul {
 .footer-column {
     flex-basis: calc(25% - 20px);
     padding: 20px;
+    margin-bottom: 20px;
+    text-align: center;
 }
 
-.footer-column h3 {
-    color: white;
-}
-
-.footer-about div {
+.footer-about div{
     display: flex;
-    justify-content: flex-start;
-    margin: -1.5rem 0rem 3.6rem 1rem;
+    align-items: center;
+    margin: -1.5rem 0 3.6rem 1rem;
     padding-left: 1rem;
 }
 
-.footer-about div h4 {
+.footer-about div h4{
     color: aliceblue;
     font-size: 2rem;
     padding: 1.8rem 0 0 0.5rem;
 }
 
-.footer-about img {
+.footer-about img{
     width: 20%;
 }
 
-.footer-links {
-    width: 20%;
-    padding: 0 15px;
+.footer-links, .btn-toolbar{
+    width: 100%;
+   margin-bottom: 30px;
 }
 
-.footer-links li {
+.footer-links li{
     list-style: none;
 }
 
+.footer-links h3 {
+    font-size: 20px;
+    color: #FFFFFF;
+    margin-bottom: 25px;
+    font-weight: 500;
+    border-bottom: 3px solid #00C3FF;
+    padding-bottom: 10px;
+    display: inline-block;
+}
+
+.footer-links .navegetor{
+   padding-left: 5rem;
+}
+
 .footer-links ul li a {
-    font-size: 18px;
+    font-size: 19px;
     text-decoration: none;
     color: #BBBBBB;
     display: block;
+    text-align: left;
     margin-bottom: 15px;
     transition: all .3s ease;
 }
 
 .footer-links ul li a:hover {
-    color: #00C3FF;
-    transform: scale(1.1);
+color: #00C3FF;
+transform: scale(1.1);
 
 }
-
-.footer-links {
-    width: 100%;
-    margin-bottom: 30px;
-}
-
-.footer-column {
-    margin-bottom: 20px;
-}
-
-/* Aumenta el tamaño de los inputs y textarea */
-.footer-links input[type="text"],
-.footer-links input[type="email"],
-.footer-links input[type="phone"],
-.footer-links textarea {
+  /* Aumenta el tamaño de los inputs y textarea */
+  .footer-links input[type="text"],
+  .footer-links input[type="email"],
+  .footer-links input[type="phone"],
+  .footer-links textarea {
     width: 100%;
     padding: 10px;
     margin-bottom: 10px;
-    border: 0.800px solid rgba(255, 255, 255, 0.2);
-    background-color: #3e4346;
+    border: 0.900px solid rgba(243, 238, 238, 0.2);
+    background-color: #3a3c3d;
     box-sizing: border-box;
     cursor: pointer;
-}
-
-/* Asegúrate de que el botón también tenga suficiente espacio */
-.btn-toolbar button {
+  }
+  /* Asegúrate de que el botón también tenga suficiente espacio */
+  .btn-toolbar button{
     width: 100%;
     margin-bottom: 10px;
     text-align: center;
     color: rgb(255, 255, 255);
-    width: 100%;
     text-transform: capitalize;
     padding: 10px;
     background: rgb(55, 148, 205);
     border-width: 1px;
-    border: 0.800px solid rgba(255, 255, 255, 0.2);
+    border: 0.800px solid rgba(65, 65, 65, 0.2);
     cursor: pointer;
-    transition: background-color 0.3s, color 0.3s;
-}
+    transition: 0.3s, color 0.3s;
+  }
 
-.btn-toolbar button:hover {
+  .btn-toolbar button:hover{
     background-color: rgb(28, 28, 33);
     color: #00aaff;
-}
-
+  }
 /*redes de la izquierda de main***********************************************************************/
 .elements-lists {
     position: fixed;
@@ -512,11 +494,10 @@ ul {
     color: #fff;
     text-align: center;
     transition: left 1s ease;
-    z-index: -1;
+    z-index:-1;
 }
 
-.elements-social-icon .button-text2,
-.elements-social-icon .button-text3 {
+.elements-social-icon .button-text2, .elements-social-icon .button-text3 {
     background-color: rgb(49, 154, 196);
 }
 
@@ -662,7 +643,7 @@ ul {
 
 .video-overlay {
     position: absolute;
-    top: 40%;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     color: white;
@@ -676,23 +657,25 @@ ul {
 /****HISTORY ABREGU**********/
 
 .container-historia {
-    width: 85%;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: flex-start; /* Alinea el contenido a la izquierda */
     height: 100vh;
+    padding: 20rem; /* Agrega espacio en la parte superior e inferior */
     text-align: center;
+    margin-top: 8rem;
 }
 
 /* Estilos para cada sección */
 .historia, .cont-text, .conta-equipo, .conta-trabajo {
-    margin: 2rem 4rem; /* Agregar margen superior e inferior */
+    margin-top: 2rem; /* Agregar margen superior entre secciones */
 }
 
 /* Estilos para los títulos */
 .container-historia h2 {
     font-size: 2rem;
-    margin-bottom: 4rem; /* Espacio entre el título y el párrafo */
+    margin-bottom: 1.5rem; /* Espacio entre el título y el párrafo */
 }
 
 /* Estilos para los párrafos */
@@ -701,3 +684,22 @@ ul {
     font-size: 2rem;
     line-height: 1.5; /* Ajustar espacio entre las líneas del párrafo */
 }
+
+.conta-equipo {
+    text-align: center; /* Centrar el contenido horizontalmente */
+}
+
+.equipo-img {
+    height: 200px;
+    display: flex; /* Usar flexbox para centrar y espaciar las imágenes */
+    justify-content: center; /* Centrar horizontalmente las imágenes */
+    gap: 60px; /* Agregar espacio entre las imágenes */
+}
+
+.equipo-img img {
+    border-radius: 50%;
+    max-width: 100%; /* Asegurarse de que las imágenes no sean más anchas que su contenedor */
+
+}
+/****************CONTACTANOSSS S **************************************/
+
