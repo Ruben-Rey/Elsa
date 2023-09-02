@@ -1,7 +1,7 @@
 let impDTFtextil = document.getElementById("impDTF-modal");
 let impDTFuv = document.getElementById("maquinaUV-modal");
 let impSublimado = document.getElementById("sublimado-modal");
-// let laser = document.getElementById("laser-modal");
+let laser = document.getElementById("laser-modal");
 
 /***SLIDERRRRRRRRRRRRRRRRRRRRRRRRRRR************************************RRRRRRRRRRRRRRR******************* */
 let slider = document.querySelector('.slider .list');
@@ -47,22 +47,20 @@ window.onresize = function(event) {
 
 const URL_BBDD = "./bbdd.json";
 
-let impresoras = ["impDTFtextil", "impDTFuv", "impSublimado"]
-
 let cont = 0;
 
 fetch(URL_BBDD)
     .then( (response) => response.json())    
     .then( (data) =>{
         let impDTFtextil = data.articulos.maquinas.DTF_TEXTIL;
-        let impDTFuv = data.articulos.maquinas.DTF_UV;
+        let impDTFuv = data.articulos.maquinas.UV_DTF;
         let impSublimado = data.articulos.maquinas.IMPRESORA_SUBLIMADO;
-        // let laser = data.articulos.maquinas.IMPRESORA_SUBLIMADO;
+        let laser = data.articulos.maquinas.LASER;
+
         RecorrerImpresoras(impDTFtextil);
         RecorrerImpresoras(impDTFuv);
         RecorrerImpresoras(impSublimado);
-        // RecorrerImpresoras(impDTFtextil);
-        
+        RecorrerImpresoras(laser);
     });
 
 function RecorrerImpresoras(data){
@@ -81,7 +79,6 @@ function CreateCard(item){
     let content = `
         <img src="${item.imagen}" alt="">
         <h2>${item.nombre}</h2>
-        <p>${item.descripcion}</p>
     `;
 
     div.innerHTML= content;
@@ -96,6 +93,10 @@ function CreateCard(item){
 
         case 2:
             impSublimado.appendChild(div);
+        break;
+
+        case 3:
+            laser.appendChild(div);
         break;
     }  
 }
