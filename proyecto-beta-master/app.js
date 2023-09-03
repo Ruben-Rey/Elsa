@@ -218,7 +218,7 @@ categoryList.addEventListener("click", (event) => {
     if (event.target.tagName === "LI") {
         // Obtén el ID de la categoría seleccionada
         const categoryId = event.target.id;
-        
+        tituloBanner.innerHTML = categoryId; 
         loadMachinesByCategory(categoryId);
     }
 });
@@ -237,20 +237,20 @@ function loadMachinesByCategory(categoryId) {
 }
 
 
-            const mySwiper = new Swiper('.swiper-container', {
-                slidesPerView: 3,
-                loop: true,
-                spaceBetween: 20,
-                autoplay: {
-                    delay: 5000 // Cambiar cada 5 segundos
-                },
-                on: {
-                    slideChange: function () {
-                        // Detener la reproducción de videos al cambiar de diapositiva
-                        const videos = document.querySelectorAll('.swiper-slide video');
-                        videos.forEach(video => {
-                            video.pause();
-                        });
-                    }
-                }
+const mySwiper = new Swiper('.swiper-container', {
+    slidesPerView: 3,
+    loop: true,
+    spaceBetween: 20,
+    autoplay: {
+        delay: 5000 // Cambiar cada 5 segundos
+    },
+    on: {
+        slideChange: function () {
+            // Detener la reproducción de videos al cambiar de diapositiva
+            const videos = document.querySelectorAll('.swiper-slide video');
+            videos.forEach(video => {
+                video.pause();
             });
+        }
+    }
+});
