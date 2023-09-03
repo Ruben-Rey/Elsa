@@ -708,3 +708,51 @@ transform: scale(1.1);
 }
 
 
+
+
+/********************PAGINA MAQUINAS*********************/
+
+.container-principal{
+    display: flex;
+    justify-content: center;
+    background-color: #7d7b7b;
+    padding: 0;
+
+}
+
+.container-principal li{
+    width: 15rem;
+    font-size: 2rem;
+    color: white;
+    text-align: center;
+    list-style: none;
+    border-right: #000000 1px solid;
+
+}
+
+.card-content-machine{
+    display: flex;
+    justify-content: center;
+}
+
+.card-content-img{
+    width: 30%;
+}
+
+.card-content-img img{
+    width: 100%;
+}
+
+
+.card-content-text{
+    padding: 4rem 0 0 2rem;
+}
+
+.card-content-text h2{
+   font: 600 2.4rem status-bar
+}
+.card-content-text p{
+    margin-top: 2rem;
+    font: 400 2rem roboto;
+}
+

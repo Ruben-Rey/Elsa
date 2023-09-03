@@ -1,49 +1,49 @@
+/***SLIDERRRRRRRRRRRRRRRRRRRRRRRRRRR************************************RRRRRRRRRRRRRRR******************* */
+// let slider = document.querySelector('.slider .list');
+// let items = document.querySelectorAll('.slider .list .item');
+// let next = document.getElementById('next');
+// let prev = document.getElementById('prev');
+// let dots = document.querySelectorAll('.slider .dots li');
+
+// let lengthItems = items.length - 1;
+// let active = 0;
+// next.onclick = function(){
+//     active = active + 1 <= lengthItems ? active + 1 : 0;
+//     reloadSlider();
+// }
+// prev.onclick = function(){
+//     active = active - 1 >= 0 ? active - 1 : lengthItems;
+//     reloadSlider();
+// }
+// let refreshInterval = setInterval(()=> {next.click()}, 3000);
+// function reloadSlider(){
+//     slider.style.left = -items[active].offsetLeft + 'px';
+//     // 
+//     let last_active_dot = document.querySelector('.slider .dots li.active');
+//     last_active_dot.classList.remove('active');
+//     dots[active].classList.add('active');
+
+//     clearInterval(refreshInterval);
+//     refreshInterval = setInterval(()=> {next.click()}, 3000); 
+// }
+
+// dots.forEach((li, key) => {
+//     li.addEventListener('click', ()=>{
+//          active = key;
+//          reloadSlider();
+//     })
+// })
+// window.onresize = function(event) {
+//     reloadSlider();
+// };
+
+
+/********************************************************************************* */
 let impDTFtextil = document.getElementById("impDTF-modal");
 let impDTFuv = document.getElementById("maquinaUV-modal");
 let impSublimado = document.getElementById("sublimado-modal");
 let laser = document.getElementById("laser-modal");
 
-/***SLIDERRRRRRRRRRRRRRRRRRRRRRRRRRR************************************RRRRRRRRRRRRRRR******************* */
-let slider = document.querySelector('.slider .list');
-let items = document.querySelectorAll('.slider .list .item');
-let next = document.getElementById('next');
-let prev = document.getElementById('prev');
-let dots = document.querySelectorAll('.slider .dots li');
-
-let lengthItems = items.length - 1;
-let active = 0;
-next.onclick = function(){
-    active = active + 1 <= lengthItems ? active + 1 : 0;
-    reloadSlider();
-}
-prev.onclick = function(){
-    active = active - 1 >= 0 ? active - 1 : lengthItems;
-    reloadSlider();
-}
-let refreshInterval = setInterval(()=> {next.click()}, 3000);
-function reloadSlider(){
-    slider.style.left = -items[active].offsetLeft + 'px';
-    // 
-    let last_active_dot = document.querySelector('.slider .dots li.active');
-    last_active_dot.classList.remove('active');
-    dots[active].classList.add('active');
-
-    clearInterval(refreshInterval);
-    refreshInterval = setInterval(()=> {next.click()}, 3000); 
-}
-
-dots.forEach((li, key) => {
-    li.addEventListener('click', ()=>{
-         active = key;
-         reloadSlider();
-    })
-})
-window.onresize = function(event) {
-    reloadSlider();
-};
-
-
-/********************************************************************************* */
 
 const URL_BBDD = "./bbdd.json";
 
@@ -114,6 +114,66 @@ menuItems.forEach((menuItem) => {
     popup.style.display = 'none';
   });
 });
+
+/********************************************* */
+let impDTFmachine = document.getElementById("impDTF-machine");
+
+function CreateCardMachine(item){
+    let contenedor = document.createElement("div");
+    contenedor.className = "card-content-machine";
+
+    let imgDIV = document.createElement("div");
+    imgDIV.className = "card-content-img";
+    
+    let contentDIV = document.createElement("div");
+    contentDIV.className = "card-content-text";
+
+    let img = `
+        <img src="${item.imagen}" alt="">
+    `;
+    imgDIV.innerHTML = img;
+
+    let content = `
+        <h2>${item.nombre}</h2>
+        <p>${item.descripcion}</p>
+    `;
+    contentDIV.innerHTML= content; // Usa textContent en lugar de innerHTML
+
+    // Agregar los divs de img y content como hijos de contenedor
+    contenedor.appendChild(imgDIV);
+    contenedor.appendChild(contentDIV);
+
+    impDTFmachine.appendChild(contenedor);
+}
+
+
+
+
+// Función para capturar el data-id y realizar acciones
+    // Realizar alguna acción con el id (por ejemplo, consumir un JSON)
+    
+    fetch(URL_BBDD)
+    .then( (response) => response.json())    
+    .then( (data) =>{
+        let impDTFtextil = data.articulos.maquinas.DTF_TEXTIL;
+        console.log(impDTFtextil);
+        RecorrerMaquinas(impDTFtextil);
+    });
+
+function RecorrerMaquinas(data){
+    data.forEach( item => {
+        CreateCardMachine(item);
+    });
+}
+
+
+
+
+
+
+
+
+
 
 
 const mySwiper = new Swiper('.swiper-container', {
