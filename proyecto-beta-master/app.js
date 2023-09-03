@@ -150,7 +150,7 @@ fetch(URL_BBDD)
 .then((data) => {
     // Aquí, puedes utilizar el ID para obtener la información específica del JSON
     const maquina = data.articulos.maquinas[id];
-    console.log(maquina);
+
     RecorrerMaquinas(maquina);
 
     // Luego, puedes mostrar la información en la página "maquinas.html"
