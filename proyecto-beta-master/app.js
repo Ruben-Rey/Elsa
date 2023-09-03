@@ -116,7 +116,47 @@ menuItems.forEach((menuItem) => {
 });
 
 /********************************************* */
+
 let impDTFmachine = document.getElementById("impDTF-machine");
+
+function RecorrerMaquinas(data){
+    data.forEach( item => {
+        CreateCardMachine(item);
+    });
+}
+function capturarId(event) {
+    event.preventDefault(); // Previene el comportamiento predeterminado del enlace
+
+    // Obtener el data-id del enlace
+    const enlace = event.currentTarget;
+    const id = enlace.getAttribute("data-id");
+
+    // Ahora, puedes abrir la página "maquinas.html" y pasar el ID como parámetro en la URL
+    window.location.href = `maquinas.html?id=${id}`;
+}
+
+// Agregar un evento click a cada enlace de la barra de navegación
+const enlaces = document.querySelectorAll(".nav-links a");
+enlaces.forEach((enlace) => {
+    enlace.addEventListener("click", capturarId);
+});
+
+const urlParams = new URLSearchParams(window.location.search);
+const id = urlParams.get("id");
+
+
+fetch(URL_BBDD)
+.then((response) => response.json())
+.then((data) => {
+    // Aquí, puedes utilizar el ID para obtener la información específica del JSON
+    const maquina = data.articulos.maquinas[id];
+    console.log(maquina);
+    RecorrerMaquinas(maquina);
+
+    // Luego, puedes mostrar la información en la página "maquinas.html"
+});
+
+
 
 function CreateCardMachine(item){
     let contenedor = document.createElement("div");
@@ -137,7 +177,7 @@ function CreateCardMachine(item){
         <h2>${item.nombre}</h2>
         <p>${item.descripcion}</p>
     `;
-    contentDIV.innerHTML= content; // Usa textContent en lugar de innerHTML
+    contentDIV.innerHTML = content; // Usa textContent en lugar de innerHTML
 
     // Agregar los divs de img y content como hijos de contenedor
     contenedor.appendChild(imgDIV);
@@ -145,36 +185,6 @@ function CreateCardMachine(item){
 
     impDTFmachine.appendChild(contenedor);
 }
-
-
-
-
-// Función para capturar el data-id y realizar acciones
-    // Realizar alguna acción con el id (por ejemplo, consumir un JSON)
-    
-    fetch(URL_BBDD)
-    .then( (response) => response.json())    
-    .then( (data) =>{
-        let impDTFtextil = data.articulos.maquinas.DTF_TEXTIL;
-        console.log(impDTFtextil);
-        RecorrerMaquinas(impDTFtextil);
-    });
-
-function RecorrerMaquinas(data){
-    data.forEach( item => {
-        CreateCardMachine(item);
-    });
-}
-
-
-
-
-
-
-
-
-
-
 
 const mySwiper = new Swiper('.swiper-container', {
     slidesPerView: 3,
