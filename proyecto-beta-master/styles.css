@@ -756,3 +756,16 @@ transform: scale(1.1);
     font: 400 2rem roboto;
 }
 
+
+
+.banner{
+    height: 35rem;
+    background-image: url("https://w0.peakpx.com/wallpaper/659/819/HD-wallpaper-the-machinary-machinary-anime-yellow-manga-man-kaitan.jpg");
+}
+
+.banner #titulo-banner{
+    color: aqua;
+    font: 500 10.8rem STATUS-BAR;
+    padding-top: 9rem;
+    text-align: center;
+}

@@ -118,6 +118,7 @@ menuItems.forEach((menuItem) => {
 /********************************************* */
 
 let impDTFmachine = document.getElementById("impDTF-machine");
+let tituloBanner = document.getElementById("titulo-banner");
 
 function RecorrerMaquinas(data){
     data.forEach( item => {
@@ -141,20 +142,32 @@ enlaces.forEach((enlace) => {
     enlace.addEventListener("click", capturarId);
 });
 
+const enlacesCategoria = document.querySelectorAll(".contenedor-cartas a");
+enlacesCategoria.forEach((enlace) => {
+    enlace.addEventListener("click", capturarId);
+});
+
 const urlParams = new URLSearchParams(window.location.search);
 const id = urlParams.get("id");
 
+tituloBanner.innerHTML = id;
 
-fetch(URL_BBDD)
-.then((response) => response.json())
-.then((data) => {
-    // Aquí, puedes utilizar el ID para obtener la información específica del JSON
-    const maquina = data.articulos.maquinas[id];
-
-    RecorrerMaquinas(maquina);
-
-    // Luego, puedes mostrar la información en la página "maquinas.html"
-});
+if(id){
+    
+    fetch(URL_BBDD)
+    .then((response) => response.json())
+    .then((data) => {
+        // Aquí, puedes utilizar el ID para obtener la información específica del JSON
+        const maquina = data.articulos.maquinas[id];
+    
+        RecorrerMaquinas(maquina);
+    
+        // Luego, puedes mostrar la información en la página "maquinas.html"
+    });
+}else{
+    // Aquí puedes manejar el caso en el que no haya un ID en los parámetros de la URL
+    console.error("No se encontró un ID en los parámetros de la URL.");
+}
 
 
 
@@ -186,39 +199,58 @@ function CreateCardMachine(item){
     impDTFmachine.appendChild(contenedor);
 }
 
-const mySwiper = new Swiper('.swiper-container', {
-    slidesPerView: 3,
-    loop: true,
-    spaceBetween: 20,
-    autoplay: {
-        delay: 5000 // Cambiar cada 5 segundos
-    },
-    on: {
-        slideChange: function () {
-            // Detener la reproducción de videos al cambiar de diapositiva
-            const videos = document.querySelectorAll('.swiper-slide video');
-            videos.forEach(video => {
-                video.pause();
-            });
-        }
+
+
+function limpiarContenedor() {
+    const impDTFmachine = document.getElementById("impDTF-machine");
+    while (impDTFmachine.firstChild) {
+        impDTFmachine.removeChild(impDTFmachine.firstChild);
+    }
+}
+
+
+// Obtén una referencia a la lista de categorías
+const categoryList = document.querySelector(".container-principal");
+
+// Agrega un evento de clic a la lista de categorías
+categoryList.addEventListener("click", (event) => {
+    // Comprueba si se hizo clic en un elemento <li> (categoría)
+    if (event.target.tagName === "LI") {
+        // Obtén el ID de la categoría seleccionada
+        const categoryId = event.target.id;
+        
+        loadMachinesByCategory(categoryId);
     }
 });
 
-/*video de sobre nosotros
-function playVideo() {
-    var video = document.getElementById("video");
-    video.play();
-    video.muted = true;
-}*/
+function loadMachinesByCategory(categoryId) {
+    limpiarContenedor();
+    fetch(URL_BBDD)
+    .then((response) => response.json())
+    .then((data) => {
+        let categoria = data.articulos.maquinas[categoryId];
+        RecorrerMaquinas(categoria);
+    })
+    .catch((error) => {
+            console.error("Error al cargar las máquinas:", error);
+        });
+}
 
 
-
-
-/*modo oscuro y claro
-const themeToggle = document.getElementById('theme-toggle');
-const body = document.body;
-
-themeToggle.addEventListener('click', () => {
-  body.classList.toggle('dark-mode');
-  body.classList.toggle('light-mode');
-})*/
+            const mySwiper = new Swiper('.swiper-container', {
+                slidesPerView: 3,
+                loop: true,
+                spaceBetween: 20,
+                autoplay: {
+                    delay: 5000 // Cambiar cada 5 segundos
+                },
+                on: {
+                    slideChange: function () {
+                        // Detener la reproducción de videos al cambiar de diapositiva
+                        const videos = document.querySelectorAll('.swiper-slide video');
+                        videos.forEach(video => {
+                            video.pause();
+                        });
+                    }
+                }
+            });
