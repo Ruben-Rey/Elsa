@@ -175,6 +175,7 @@ ul {
 .app:hover {
     transform: scale(1.2);
 }
+
 /*******************************************************************************************************************/
 /* Estilos de la barra de navegación */
 .navbar {
@@ -368,29 +369,30 @@ ul {
     text-align: center;
 }
 
-.footer-about div{
+.footer-about div {
     display: flex;
     align-items: center;
     margin: -1.5rem 0 3.6rem 1rem;
     padding-left: 1rem;
 }
 
-.footer-about div h4{
+.footer-about div h4 {
     color: aliceblue;
     font-size: 2rem;
     padding: 1.8rem 0 0 0.5rem;
 }
 
-.footer-about img{
+.footer-about img {
     width: 20%;
 }
 
-.footer-links, .btn-toolbar{
+.footer-links,
+.btn-toolbar {
     width: 100%;
-   margin-bottom: 30px;
+    margin-bottom: 30px;
 }
 
-.footer-links li{
+.footer-links li {
     list-style: none;
 }
 
@@ -404,8 +406,8 @@ ul {
     display: inline-block;
 }
 
-.footer-links .navegetor{
-   padding-left: 5rem;
+.footer-links .navegetor {
+    padding-left: 5rem;
 }
 
 .footer-links ul li a {
@@ -419,15 +421,16 @@ ul {
 }
 
 .footer-links ul li a:hover {
-color: #00C3FF;
-transform: scale(1.1);
+    color: #00C3FF;
+    transform: scale(1.1);
 
 }
-  /* Aumenta el tamaño de los inputs y textarea */
-  .footer-links input[type="text"],
-  .footer-links input[type="email"],
-  .footer-links input[type="phone"],
-  .footer-links textarea {
+
+/* Aumenta el tamaño de los inputs y textarea */
+.footer-links input[type="text"],
+.footer-links input[type="email"],
+.footer-links input[type="phone"],
+.footer-links textarea {
     width: 100%;
     padding: 10px;
     margin-bottom: 10px;
@@ -435,9 +438,10 @@ transform: scale(1.1);
     background-color: #3a3c3d;
     box-sizing: border-box;
     cursor: pointer;
-  }
-  /* Asegúrate de que el botón también tenga suficiente espacio */
-  .btn-toolbar button{
+}
+
+/* Asegúrate de que el botón también tenga suficiente espacio */
+.btn-toolbar button {
     width: 100%;
     margin-bottom: 10px;
     text-align: center;
@@ -449,16 +453,29 @@ transform: scale(1.1);
     border: 0.800px solid rgba(65, 65, 65, 0.2);
     cursor: pointer;
     transition: 0.3s, color 0.3s;
-  }
+}
 
-  .btn-toolbar button:hover{
+.btn-toolbar button:hover {
     background-color: rgb(28, 28, 33);
     color: #00aaff;
-  }
+}
+
+.derechos {
+    background-color: #5ab0ed;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    /* Opcional: agrega puntos suspensivos si el texto es demasiado largo */
+    height: 5rem;
+    text-align: center;
+    font: 800 2.5rem Cambria, Cochin;
+    padding: 1rem;
+}
+
 /*redes de la izquierda de main***********************************************************************/
 .elements-lists {
     position: fixed;
-    top: 25rem;
+    top: 45rem;
 }
 
 .elements-social-icon {
@@ -494,10 +511,11 @@ transform: scale(1.1);
     color: #fff;
     text-align: center;
     transition: left 1s ease;
-    z-index:-1;
+    z-index: -1;
 }
 
-.elements-social-icon .button-text2, .elements-social-icon .button-text3 {
+.elements-social-icon .button-text2,
+.elements-social-icon .button-text3 {
     background-color: rgb(49, 154, 196);
 }
 
@@ -639,6 +657,7 @@ transform: scale(1.1);
 
 .swiper-video {
     position: relative;
+    z-index: -1;
 }
 
 .video-overlay {
@@ -647,123 +666,233 @@ transform: scale(1.1);
     left: 50%;
     transform: translate(-50%, -50%);
     color: white;
-    font-size: 40px;
+    font-size: 30px;
     text-align: center;
+    z-index: 1;
 }
 
 .video-overlay h1 {
     margin-bottom: 10px;
 }
-/****HISTORY ABREGU**********/
 
+/****HISTORY ABREGU**********/
 .container-historia {
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: flex-start; /* Alinea el contenido a la izquierda */
-    height: 100vh;
-    padding: 20rem; /* Agrega espacio en la parte superior e inferior */
+    align-items: flex-start;
+    /* Alinea el contenido a la izquierda */
+    padding: 8rem;
+    /* Agrega espacio en la parte superior e inferior */
     text-align: center;
     margin-top: 8rem;
 }
 
-/* Estilos para cada sección */
-.historia, .cont-text, .conta-equipo, .conta-trabajo {
-    margin-top: 2rem; /* Agregar margen superior entre secciones */
+.container-historia .history {
+    font-size: 6rem;
+    margin-bottom: 2rem;
+    /* Espacio entre el título y el párrafo */
 }
 
-/* Estilos para los títulos */
-.container-historia h2 {
-    font-size: 2rem;
-    margin-bottom: 1.5rem; /* Espacio entre el título y el párrafo */
-}
-
-/* Estilos para los párrafos */
-.container-historia p {
+.container-historio, .parrafo {
+    margin-bottom: 4rem;
     text-align: left;
-    font-size: 2rem;
-    line-height: 1.5; /* Ajustar espacio entre las líneas del párrafo */
+    font-size: 2.5rem;
+    line-height: 1.5;
+    /* Ajustar espacio entre las líneas del párrafo */
 }
 
 .conta-equipo {
-    text-align: center; /* Centrar el contenido horizontalmente */
+    text-align: center;
+    /* Centrar el contenido horizontalmente */
 }
 
 .equipo-img {
-    height: 200px;
-    display: flex; /* Usar flexbox para centrar y espaciar las imágenes */
-    justify-content: center; /* Centrar horizontalmente las imágenes */
-    gap: 60px; /* Agregar espacio entre las imágenes */
+    height: 260px;
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    margin-bottom: 5rem;
 }
 
 .equipo-img img {
     border-radius: 50%;
-    max-width: 100%; /* Asegurarse de que las imágenes no sean más anchas que su contenedor */
+    max-width: 100%;
+    /* Asegurarse de que las imágenes no sean más anchas que su contenedor */
 
 }
-/****************CONTACTANOSSS S **************************************/
 
-.container_form{
+/****************CONTACTANOSSSS **************************************/
+.container_form {
     background-image: url("./imagenes/contac-abregu.jpg");
+    height: 900px;
+    display: flex;
+    align-items: center;
 }
+
+.formulary {
+    background-color: rgba(0, 0, 0, 0.6);
+    width: 680px;
+    height: 680px;
+    padding: 20px;
+    margin-left: 110rem;
+}
+
+.formulary .message-text,
+.message {
+    text-align: center;
+    font-size: 24px;
+    margin: 3.5rem;
+    color: white;
+}
+
+.formulary input[type="text"],
+.formulary input[type="email"],
+.formulary input[type="tel"],
+.formulary textarea,
+.formulary input[type="text"],
+.formulary input[type="hidden"] {
+    width: 100%;
+    padding: 20px;
+    margin-bottom: 10px;
+    border: 1px solid rgba(243, 238, 238, 0.2);
+    background-color: #3a3c3d;
+    box-sizing: border-box;
+    color: white;
+    cursor: pointer;
+    gap: 5rem;
+    display: block;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: white;
+    font-size: 1.5rem;
+}
+
+.btn-form button {
+    width: 100%;
+    height: 5rem;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    background-color: #3a3c3d;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    text-transform: capitalize;
+    padding: 10px;
+    background: rgb(55, 148, 205);
+    border-width: 1px;
+    border: 0.800px solid rgba(65, 65, 65, 0.2);
+    cursor: pointer;
+    transition: 0.3s, color 0.3s;
+}
+
+.btn-form button:hover {
+    background-color: rgb(28, 28, 33);
+    color: #00aaff;
+}
+
+.contacte {
+    width: 100%;
+    text-align: center;
+    font: 700 4rem monospace;
+}
+
+.contact-electrony {
+    background-color: #00aaff;
+    height: 750px;
+  }
+
+  .electrony-grid{
+    display: flex;
+    flex-wrap: wrap; /* Permite que las tarjetas se envuelvan en filas */
+    justify-content: space-around;
+  }
+  /* Estilos para las tarjetas (ajusta según tus necesidades) */
+  .phone-card,
+  .email-card,
+  .what-card,
+  .sky-card, 
+  .wechat-card {
+    background-color: #4d5054;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 200px;
+    height: 100px;
+  }
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
 
 /********************PAGINA MAQUINAS*********************/
-
-.container-principal{
+.container-principal {
     display: flex;
     justify-content: center;
     background-color: #7d7b7b;
     padding: 0;
-
 }
 
-.container-principal li{
+.container-principal li {
     width: 15rem;
     font-size: 2rem;
     color: white;
     text-align: center;
     list-style: none;
     border-right: #000000 1px solid;
-
 }
 
-.card-content-machine{
+.card-content-machine {
     display: flex;
     justify-content: center;
 }
 
-.card-content-img{
+.card-content-img {
     width: 30%;
 }
 
-.card-content-img img{
+.card-content-img img {
     width: 100%;
 }
 
-
-.card-content-text{
+.card-content-text {
     padding: 4rem 0 0 2rem;
 }
 
-.card-content-text h2{
-   font: 600 2.4rem status-bar
+.card-content-text h2 {
+    font: 600 2.4rem status-bar;
 }
-.card-content-text p{
+
+.card-content-text p {
     margin-top: 2rem;
     font: 400 2rem roboto;
 }
 
-
-
-.banner{
+.banner {
     height: 35rem;
     background-image: url("https://w0.peakpx.com/wallpaper/659/819/HD-wallpaper-the-machinary-machinary-anime-yellow-manga-man-kaitan.jpg");
 }
 
-.banner #titulo-banner{
+.banner #titulo-banner {
     color: aqua;
     font: 500 10.8rem STATUS-BAR;
     padding-top: 9rem;

@@ -5,143 +5,211 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./styles.css">
-  <title>contctanos</title>
+  <title>contactanos</title>
 </head>
 
 <body>
 
-   
 
-<div class="container_form">
-   
-  <div>
-    <h2>ENVIAR CONSULTAS EN LÍNEA</h2>
-    <p>Envíe su consulta en línea y le responderemos rápidamente</p>
-    <form action="/wp-content/plugins/lanthy-message/updata.php" method="post">
-      <input type="text" name="name" placeholder="Tu nombre *" required="required">
-      <input type="email" name="email" placeholder="Tu correo electrónico *" required="required">
-      <input type="text" name="application" placeholder="TU MÓVIL / WHATSAPP / SKYPE *"
-      required="required">
-      <textarea name="message" rows="6" placeholder="Tu mensaje *" required="required"></textarea>
-      <input type="text" name="product" placeholder="TU FACEBOOK (OPCIONAL)">
-      <input type="hidden" name="post" value="true">
-      <button type="submit" class="btn btn-primary"> enviar </button>
-    </form>
-  </div>
+  <header>
 
-</div>
-
-
-
-
-
-
-<div>
-  <h2><span>CONTACTÉ CON</span> VENTAS DE ABREGU</h2>
-  <div>
-    <div>
-      <a href="tel:+51 927254362">
-        <i></i>
-        <h3>Phone</h3>
-        <p>+51 927254362</p>
-        <span>9 AM – 6 PM<br>
-          Lunes Viernes<br>
-          (GMT-5 Lima, Perú)</span>
-        </a>
+    <div class="container-top">
+      <div class="header-left">
+        <ul class="redes">
+          <li>
+            <a href="mailto:vrabregu@outlook.com">
+              <i class="fa-regular fa-envelope"></i>
+              vrabregu@outlook.com
+            </a>
+          </li>
+          <li>
+            <a href="https://api.whatsapp.com/send?phone=927254362">
+              <i class="fa-brands fa-whatsapp"></i>
+              927254362
+            </a>
+          </li>
+        </ul>
       </div>
-  </div>
-  
-  <div>
-    <div>
-      <a href="mailto:vrabre@outlook.com">
-        <i></i>
-        <h3>Email</h3>
-        <p>vrabre<span class="email-ico">@</span>outlook.com</p>
-        <span>puede esperar nuestra respuesta dentro de las 24 horas</span>
-      </a>
-    </div>
-  </div>
 
+      <button class="app" id="theme-toggle">Modo</button>
 
-  <div>
-    <div>
-      <i class="fab fa-whatsapp"></i>
-      <h3>Whatsapp</h3>
-      
-    </div>
-    <div>
-      <a href="https://wa.me/+51 927254362">
-        <i class="fab fa-whatsapp"></i> +51 927254362 </a>
+      <div class="header-right">
+        <ul class="redes">
+          <li>
+            <a href="https://www.tiktok.com/es/">
+              <i class="fa-brands fa-tiktok"></i>
+            </a>
+
+          </li>
+          <li>
+            <a href="https://www.facebook.com/">
+              <i class="fa-brands fa-facebook"></i>
+            </a>
+          </li>
+          <li>
+            <a href="https://api.whatsapp.com/send?phone=927254362">
+              <i class="fa-solid fa-cart-shopping"></i>
+            </a>
+          </li>
+        </ul>
       </div>
     </div>
-    <div>
-      <div>
-        <i class="fab fa-skype"></i>
-        <h3>Skype</h3>
-        
-      </div>
-      <div>
-        <a href="skype:+51 927254362?chat">
-          <i class="fab fa-skype"></i> +51 927254362 </a>
+
+    <nav class="navbar">
+      <div class="logo">
+        <div>
+          <img src="./imagenes/loogoabregu.png"></img>
+          <h2>ABREGU.</h2>
         </div>
       </div>
-      <div>
-        <div>
-          <i class="fab fa-weixin"></i>
-          <h3>Wechat</h3>
-          
-        </div>
-        <div>
-          <img src="" alt="wechat image">
-        </div>
+
+      <ul class="nav-links">
+        <li class="menu-item">
+          <a href="./nosotros.html">Sobre Nosotros</a>
+          <div class="submenu">
+
+          </div>
+        </li>
+
+        <li class="menu-item">
+          <a href="./maquinas.html" data-id="DTF_TEXTIL">Impresora DTF Textil</a>
+          <div class="machine-modal">
+            <div class="sublimado-display" id="impDTF-modal"></div>
+          </div>
+        </li>
+
+        <li class="menu-item">
+          <a href="./maquinas.html" data-id="UV_DTF">Impresora UV DTF</a>
+          <div class="machine-modal impUV">
+            <div class="sublimado-display" id="maquinaUV-modal"></div>
+          </div>
+        </li>
+
+        <li class="menu-item">
+          <a href="./maquinas.html" data-id="IMPRESORA_SUBLIMADO">Impresora Sublimado</a>
+          <div class="machine-modal sublimado">
+            <div class="sublimado-display" id="sublimado-modal"></div>
+          </div>
+
+        </li>
+
+        <li class="menu-item">
+          <a href="./maquinas.html" data-id="LASER">Laser</a>
+          <div class="machine-modal sublimado">
+            <div class="sublimado-display" id="laser-modal"></div>
+          </div>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+
+
+  <main>
+    <div class="container_form">
+      <div class="formulary">
+        <h2 class="message-text">ENVIAR CONSULTAS EN LÍNEA</h2>
+        <p class="message">Envíe su consulta en línea y le responderemos rápidamente</p>
+        <form action="/wp-content/plugins/lanthy-message/updata.php" method="post">
+          <input type="text" name="name" placeholder="Tu nombre *" required="required">
+          <input type="email" name="email" placeholder="Tu correo electrónico *" required="required">
+          <input type="text" name="application" placeholder="TU MÓVIL / WHATSAPP / SKYPE *" required="required">
+          <textarea name="message" rows="6"
+            placeholder="Tu mensaje * ENVÍE SU INTENSIÓN DE COMPRA O SIMPLEMENTE PÍDENOS CUALQUIER INFORMACIÓN"
+            required="required"></textarea>
+          <input type="text" name="product" placeholder="TU FACEBOOK (OPCIONAL)">
+          <input type="hidden" name="post" value="true">
+          <div class="btn-form">
+            <button type="submit" class="btn btn-primary"> enviar </button>
+          </div>
+        </form>
       </div>
     </div>
-    
-    <div>
-      <h2> SERVICIO <span> TÉCNICO</span></h2>
-      <div>
-        <div>
-          <a target="_blank" href="mailto:vrabregu@outlook.com">
-            <i class="fas fa-envelope"></i>
+    <section>
+      <div class="contact-electrony">
+        <h2 class="contacte">CONTACTÉ CON VENTAS DE ABREGU.</h2>
+        <div clas="electrony-grid">
+          <div class="phone-card">
+            <h3>Phone</h3>
+            <a href="tel:+51 927254362">
+              <p>+51 927254362</p>
+              <span>9 AM – 6 PM<br>
+                Lunes Viernes<br>
+                (Lima, Perú)</span>
+            </a>
+          </div>
+          <div class="email-card">
             <h3>Email</h3>
-            <p>vrabre<span class="email-ico">@</span>outlook.com</p>
-            <span>puede esperar nuestra respuesta dentro de las 24 horas</span>
-          </a>
-    </div>
-  </div>
+            <a href="mailto:vrabre@outlook.com">
+              <p>vrabre<span class="email-ico">@</span>outlook.com</p>
+              <span>puede esperar nuestra respuesta dentro de las 24 horas</span>
+            </a>
+          </div>
+        </div>
 
+        <div class="what-card">
+          <div>
+            <h3>Whatsapp</h3>
+            <i class="fab fa-whatsapp"></i>
+          </div>
+          <div class="face-card">
+            <a href="https://wa.me/+51 927254362">
+              <i class="fab fa-whatsapp"></i> +51 927254362 </a>
+          </div>
+        </div>
+        <div>
+          <div class="sky-card">
+            <h3>Skype</h3>
+            <i class="fab fa-skype"></i>
+            <a href="skype:+51 927254362?chat">
+              <i class="fab fa-skype"></i></a>
+          </div>
+        </div>
+        <div>
+          <div class="wechat-card">
+            <h3>Wechat</h3>
+            <i class="fab fa-weixin"></i>
+            <img src="" alt="wechat image">
+          </div>
+        </div>
+      </div>
+    </section>
 
-  
-  
-  
-  
-  
-  <div>
-    <div>
-      <a target="_blank" href="whatsapp:https://api.whatsapp.com/send?phone=+51 927254362">
-        <i class="fab fa-whatsapp"></i>
-        <h3>Whatsapp</h3>
-        <p>ID:+51 927254362</p>
-      </a>
-    </div>
-  </div>
-  <div>
-    <div>
-      <a target="_blank" href="skype:sanyi_support?chat">
-        <i class="fab fa-skype"></i>
-        <h3>Skype</h3>
-        <p>ID:sanyi_support</p>
-      </a>
-    </div>
-  </div>
-</div>
+    <section>
+      <div>
+        <h2> SERVICIO <span> TÉCNICO</span></h2>
+        <div>
+          <div>
+            <a target="_blank" href="mailto:vrabregu@outlook.com">
+              <i class="fas fa-envelope"></i>
+              <h3>Email</h3>
+              <p>vrabre<span class="email-ico">@</span>outlook.com</p>
+              <span>puede esperar nuestra respuesta dentro de las 24 horas</span>
+            </a>
+          </div>
+        </div>
 
+        <div>
+          <div>
+            <a target="_blank" href="whatsapp:https://api.whatsapp.com/send?phone=+51 927254362">
+              <i class="fab fa-whatsapp"></i>
+              <h3>Whatsapp</h3>
+              <p>ID:+51 927254362</p>
+            </a>
+          </div>
+        </div>
+        <div>
+          <div>
+            <a target="_blank" href="skype:sanyi_support?chat">
+              <i class="fab fa-skype"></i>
+              <h3>Skype</h3>
+              <p>ID:sanyi_support</p>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
 
-
-
- 
-      
-  
     <div class="map" style="background: url(https://i.postimg.cc/43H0HcwT/map2.png);">
       <a href="https://goo.gl/maps/1aQGYNSJieLRoScy7" target="_blank">
         <div class="map-content">
@@ -150,8 +218,112 @@
             Victoria</span>
         </div>
       </a>
-    </div> 
+    </div>
+
+    <section>
+      <div class="elements-lists-wrap">
+        <ul class="elements-lists">
+          <li id="elements-social-whatsapp" class="elements-social-whatsapp ">
+            <span class="elements-social-icon" style="background: rgb(46, 184, 117);">
+              <a href="https://api.whatsapp.com/send?phone=927254362" target="_blank"><i
+                  class="fab fa-whatsapp"></i></a>
+              <span class="button-text">whatsapp</span>
+            </span>
+          </li>
+          <li id="elements-social-skype" class="elements-social-skype">
+            <span class="elements-social-icon" style="background: rgb(49, 154, 196);">
+              <a href="https://www.skype.com/es/" target="_blank">
+                <i class="fab fa-skype"></i>
+              </a>
+              <span class="button-text button-text2">skipe</span>
+            </span>
+          </li>
+          <li id="elements-social-envelope" class="elements-social-envelope">
+            <span class="elements-social-icon" style="background: rgb(208, 81, 67); border-radius: 0px  10px 10px 0px;">
+              <a href="mailto:vrabregu@outlook.com">
+                <i class="fas fa-envelope"></i>
+              </a>
+              <span class="button-text button-text3">Email</span>
+            </span>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer">
+      <div class="container">
+        <div class="footer-column">
+          <div class="footer-about">
+            <div>
+              <img src="./imagenes/loogoabregu.png" alt="">
+              <h4>ABREGU.</h4>
+            </div>
+
+            <div class="footer-links">
+              <ul>
+                <li><a href="#">Jr. San Cristobal 1656 - Tienda La Victoria</a></li>
+                <li><a href="#">Jr. Carlos Gutierrez 233 - La Victoria (Planta)</a></li>
+                <li><a href="mailto:vrabregu@outlook.com">
+                    <i class="fa-regular fa-envelope"></i>
+                    vrabregu@outlook.com
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-column">
+          <div class="footer-links">
+            <h3>NAVEGACIÓN</h3>
+            <ul class="navegetor">
+              <li><a href="#">Inicio</a></li>
+              <li><a href="#">Solución</a></li>
+              <li><a href="#">Sobre Nosotros</a></li>
+              <li><a href="./contactanos.html">Contáctenos</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-column">
+          <div class="footer-links">
+            <h3>PRODUCTOS</h3>
+            <ul>
+              <li><a href="#">Impresora Solvente</a></li>
+              <li><a href="#">Impresora DTG De Remeras</a></li>
+              <li><a href="#">Impresora UV De Rollo A Rollo</a></li>
+              <li><a href="#">Impresora UV De Cama Plana</a></li>
+              <li><a href="#">Impresora UV Hibrida</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-column">
+          <div class="footer-links"><!--footer-form-->
+            <h3>CONTÁCTENOS</h3>
+            <form action="/wp-content/plugins/lanthy-message/updata.php" method="post">
+              <input type="text" name="name" placeholder="Tu nombre *" required="required">
+              <input type="email" name="email" placeholder="Tu correo electrónico *" required="required">
+              <input type="phone" name="phone" placeholder="Tu numero de telefono *">
+              <textarea name="message" rows="6" placeholder="Tu mensaje *" required="required"></textarea>
+              <div class="clearfix"></div>
+              <div class="btn-toolbar">
+                <button type="submit" class="btn btn-primary">Enviar</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <div class="derechos">
+    <p><span>Ⓒ 2023 – Abregu Print – Todos los derechos reservados</span></p>
+  </div>
 
 </body>
+<script src="https://kit.fontawesome.com/4250892b33.js" crossorigin="anonymous"></script>
 
 </html>
