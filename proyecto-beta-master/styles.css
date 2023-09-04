@@ -805,14 +805,11 @@ textarea::placeholder {
 .contact-electrony {
     background-color: #00aaff;
     height: 750px;
-  }
+}
 
-  .electrony-grid{
-    display: flex;
-    flex-wrap: wrap; /* Permite que las tarjetas se envuelvan en filas */
-    justify-content: space-around;
-  }
+
   /* Estilos para las tarjetas (ajusta según tus necesidades) */
+
   .phone-card,
   .email-card,
   .what-card,
@@ -824,20 +821,18 @@ textarea::placeholder {
     text-align: center;
     width: 200px;
     height: 100px;
-  }
+}
   
-  
+.electrony-grid{
+    display: flex;
+    justify-content: center;
+}
 
 
-
-
-
-
-
-
-
-
-
+.redes-sociales{
+    display: flex;
+    justify-content: center;
+}
 
 
 
