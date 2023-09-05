@@ -42,7 +42,7 @@ ul {
     color: white;
 }
 
-.header-left .redes:hover a {
+.header-left, .redes a:hover {
     color: #338ccc;
 }
 
@@ -70,7 +70,7 @@ ul {
 }
 
 
-.header-right .redes:hover a i {
+.header-right .redes a i:hover {
     color: rgb(153, 204, 230);
 }
 
@@ -350,7 +350,7 @@ ul {
     align-items: center;
     justify-content: center;
     padding: 8rem 2rem;
-    height: 500px;
+    height: 420px;
 }
 
 .container {
@@ -475,7 +475,7 @@ ul {
 /*redes de la izquierda de main***********************************************************************/
 .elements-lists {
     position: fixed;
-    top: 30rem;
+    top: 45rem;
 }
 
 .elements-social-icon {
@@ -737,7 +737,7 @@ ul {
     width: 680px;
     height: 680px;
     padding: 20px;
-    margin-left: 75rem;
+    margin-left: 80rem;
 }
 
 .formulary .message-text,
@@ -808,7 +808,7 @@ textarea::placeholder {
 
 .contact-servise {
     background-color: rgb(38, 38, 38);
-    height: 128rem;
+    height: 138rem;
 }
 
 .electrony-grid {
@@ -818,85 +818,94 @@ textarea::placeholder {
     gap: 1rem;
 }
 
-.phone-card,
-.email-card{
+.phone-card {
     background-color: rgb(28, 28, 33);
     color: blanchedalmond;
     width: 550px;
     height: 40rem;
+    transition: 0.3s, color 0.3s; /* Transición suave para el hover */
 }
 
-.phone-card i{
+.phone-card:hover {
+    background-color: #0e37f7; 
+    color: #ffffff; 
+}
+
+.phone-card i {
     margin-top: 8rem;
-    font-size: 45px; 
+    font-size: 45px;
     background-color: #0e37f7;
-    border-radius: 50%; 
-    padding: 15px; 
+    border-radius: 50%;
+    padding: 15px;
 }
 
-
-.phone-card a{
+.phone-card a, .phone-card span {
     font-size: 3rem;
     font-weight: 600;
     color: #00b5ff;
     text-decoration: none;
 }
 
-.phone-card span{
-    font-size: 1.5rem;
-    color: #00b5ff;
+.phone-card a:hover, .phone-card span:hover {
+    color: #ffffff;
 }
 
-
+.phone-card span {
+    font-size: 1.5rem;
+}
+/*********************************************************/
 .red-social {
     display: flex;
     justify-content: center;
 }
 
-.servis{
+.servis {
     margin-top: 5rem;
     text-align: center;
     font: 800 5rem monospace;
     color: white;
 }
 
-.servis-tecnico {   
+.servis-tecnico {
     display: flex;
-    flex-direction: row; 
-   justify-content: center; 
+    flex-direction: row;
+    justify-content: center;
 }
 
-
-.servis-red{ 
+.servis-red {
     background-color: rgb(28, 28, 33);
     height: 320px;
     width: 350px;
     margin: 1rem;
-    text-align: center; 
+    text-align: center;
+    transition: 0.3s, color 0.3s;
+}
+
+.servis-red:hover {
+    background-color: #0e37f7; 
+    color: #ffffff;
+}
+
+.servis-tecnico i,
+.red-social a,
+.servis-tecnico a {
+    font-size: 2rem;
+    text-decoration: none;
+    color: #00b5ff;
 }
 
 .servis-tecnico i {
     margin-top: 8rem;
-    font-size: 45px; 
+    font-size: 45px;
     background-color: #dbe5e8;
-    border-radius: 50%; 
-    padding: 15px; 
+    border-radius: 50%;
+    padding: 15px;
 }
 
-.red-social a{
-    font-size: 2rem;
-    text-decoration: none;
-    color: #00b5ff;
+.servis-tecnico i:hover, .servis-tecnico a:hover {
+    color: #ffffff;
 }
-
-.servis-tecnico a{
-    font-size: 2rem;
-    text-decoration: none;
-    color: #00b5ff;
-}
-
-
-
+/*************MAPAAAAAAAAAAAAAAAAAAAAAAAAAAA*******************************/
 .map{
   
     display: flex; 
@@ -904,7 +913,6 @@ textarea::placeholder {
     align-items: center;
     height: 350px;
 }
-
 
 .map a {
     text-decoration: none;
