@@ -808,38 +808,45 @@ textarea::placeholder {
 
 .contact-servise {
     background-color: rgb(38, 38, 38);
-    height: 1200px;
+    height: 128rem;
 }
 
 .electrony-grid {
     display: flex;
     justify-content: center;
+    text-align: center;
     gap: 1rem;
 }
 
 .phone-card,
 .email-card{
     background-color: rgb(28, 28, 33);
+    color: blanchedalmond;
     width: 550px;
-    height: 300px;
-    display: flex; 
-    justify-content: center; 
-    align-items: center; 
+    height: 40rem;
 }
 
-.what-card,
-.sky-card,
-.wechat-card {
-    background-color: rgb(28, 28, 33);
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-    text-align: center;
-    display: flex; 
-    justify-content: center; 
-    align-items: center; 
-    width: 365px;
-    height: 220px;
-    margin: 0.5rem;
+.phone-card i{
+    margin-top: 8rem;
+    font-size: 45px; 
+    background-color: #0e37f7;
+    border-radius: 50%; 
+    padding: 15px; 
 }
+
+
+.phone-card a{
+    font-size: 3rem;
+    font-weight: 600;
+    color: #00b5ff;
+    text-decoration: none;
+}
+
+.phone-card span{
+    font-size: 1.5rem;
+    color: #00b5ff;
+}
+
 
 .red-social {
     display: flex;
@@ -860,15 +867,14 @@ textarea::placeholder {
 }
 
 
-.servis-red1,
-.servis-red2,
-.servis-red3 { 
+.servis-red{ 
     background-color: rgb(28, 28, 33);
     height: 320px;
     width: 350px;
     margin: 1rem;
     text-align: center; 
 }
+
 .servis-tecnico i {
     margin-top: 8rem;
     font-size: 45px; 
@@ -877,8 +883,16 @@ textarea::placeholder {
     padding: 15px; 
 }
 
+.red-social a{
+    font-size: 2rem;
+    text-decoration: none;
+    color: #00b5ff;
+}
+
 .servis-tecnico a{
     font-size: 2rem;
+    text-decoration: none;
+    color: #00b5ff;
 }
 
 
