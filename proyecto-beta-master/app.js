@@ -67,7 +67,6 @@ fetch(URL_BBDD)
             RecorrerMaquinas(data.articulos.maquinas.PLANCHAS_TRANSFER[0])
             RecorrerMaquinas(data.articulos.maquinas.LAMINADORA[0])
             RecorrerMaquinas(data.articulos.maquinas.CALANDRA[0])
-            RecorrerMaquinas(data.articulos.maquinas.CALANDRA[0])
         }
 
     });
@@ -184,8 +183,6 @@ if(id){
     console.error("No se encontró un ID en los parámetros de la URL.");
 }
 
-
-
 function CreateCardMachine(item){
     let contenedor = document.createElement("div");
     contenedor.className = "card-content-machine";
@@ -222,8 +219,6 @@ function limpiarContenedor() {
         impDTFmachine.removeChild(impDTFmachine.firstChild);
     }
 }
-
-
 // Obtén una referencia a la lista de categorías
 const categoryList = document.querySelector(".container-principal");
 
@@ -237,6 +232,7 @@ categoryList.addEventListener("click", (event) => {
         loadMachinesByCategory(categoryId);
     }
 });
+/*//*************************************************************************************************************************** */
 
 function loadMachinesByCategory(categoryId) {
     limpiarContenedor();
