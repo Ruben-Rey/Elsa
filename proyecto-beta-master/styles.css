@@ -937,6 +937,13 @@ textarea::placeholder {
 
 /* 
 ***************** solo agregar .index__contain a las cards ejemplo */
+
+.index__contain #impDTF-machine {
+    display: flex;
+    flex-direction: column; /* Alinea los elementos verticalmente */
+}
+
+
 .index__contain .card-content-machine {
     display: flex;
     justify-content: center;
@@ -944,9 +951,16 @@ textarea::placeholder {
     border: 2px solid black;
     margin-top: 1.5rem;
 }
+.index__contain .card-content-machine:nth-child(odd) .card-content-text {
+    order: 2; /* Cambia el orden del elemento .card-content-text en divs impares */
+}
+
+.index__contain .card-content-machine:nth-child(odd) .card-content-img {
+    order: 1; /* Cambia el orden del elemento .card-content-img en divs impares */
+}
 
 .index__contain .card-content-img {
-    width: 30%; 
+    width: 30%;
 }
 
 .card-content-img{
