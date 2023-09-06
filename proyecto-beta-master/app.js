@@ -61,10 +61,20 @@ fetch(URL_BBDD)
         RecorrerImpresoras(impDTFuv);
         RecorrerImpresoras(impSublimado);
         RecorrerImpresoras(laser);
+
+        if (window.location.href.includes("index.html")) {
+            RecorrerMaquinas(data.articulos.maquinas.DTG[0]);
+            RecorrerMaquinas(data.articulos.maquinas.PLANCHAS_TRANSFER[0])
+            RecorrerMaquinas(data.articulos.maquinas.LAMINADORA[0])
+            RecorrerMaquinas(data.articulos.maquinas.CALANDRA[0])
+            RecorrerMaquinas(data.articulos.maquinas.CALANDRA[0])
+        }
+
     });
 
-function RecorrerImpresoras(data){
-    data.forEach( item => {
+function RecorrerImpresoras(datas){
+
+      datas.forEach( item => {
         CreateCard(item);
 
     });
@@ -121,9 +131,14 @@ let impDTFmachine = document.getElementById("impDTF-machine");
 let tituloBanner = document.getElementById("titulo-banner");
 
 function RecorrerMaquinas(data){
-    data.forEach( item => {
-        CreateCardMachine(item);
-    });
+
+    if (Array.isArray(data)){
+        data.forEach( item => {
+            CreateCardMachine(item);
+        });
+    }else{
+        CreateCardMachine(data);
+    }
 }
 function capturarId(event) {
     event.preventDefault(); // Previene el comportamiento predeterminado del enlace
