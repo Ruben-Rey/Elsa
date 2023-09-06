@@ -475,7 +475,7 @@ ul {
 /*redes de la izquierda de main***********************************************************************/
 .elements-lists {
     position: fixed;
-    top: 45rem;
+    top: 35rem;
 }
 
 .elements-social-icon {
@@ -612,6 +612,7 @@ ul {
 }
 
 .home-gallery button {
+    margin-top: 3rem;
     border: none;
     font-size: 18px;
     line-height: 25px;
@@ -644,11 +645,18 @@ ul {
     text-align: center;
 }
 
+.swiper-slide, .nombre-impre{
+    margin-top: 2rem;
+}
+
 .swiper-slide iframe,
 .swiper-slide video {
     max-width: 100%;
     max-height: 100%;
 }
+
+
+
 
 /***************SOBRE NOSOTROS**************************************************************/
 .swiper-video-nosotros {
@@ -927,6 +935,79 @@ textarea::placeholder {
 
 
 
+/* 
+***************** solo agregar .index__contain a las cards ejemplo */
+.index__contain .card-content-machine {
+    display: flex;
+    justify-content: center;
+    height: 45rem;
+    border: 2px solid black;
+    margin-top: 1.5rem;
+}
+
+.index__contain .card-content-img {
+    width: 30%; 
+}
+
+.card-content-img{
+    background-color: cadetblue;
+}
+
+.index__contain .card-content-img img {
+    width: 100%;
+}
+
+.index__contain .card-content-text {
+    padding: 5rem 0 0 8rem;
+}
+
+.card-content-text{
+    background-color: indigo;
+}
+
+.index__contain .card-content-text:nth-child(2),
+.index__contain .card-content-text:nth-child(4) { 
+  order: -1; /* Cambia el orden inverso */
+}
+
+.index__contain .card-content-text h2 {
+    font: 600 2.4rem status-bar;
+    line-height: 5rem;
+}
+
+.index__contain .card-content-text p {
+    margin-top: 2rem;
+    font: 400 2rem roboto;
+    line-height: 4rem;
+}
+
+/*.ver-btn{
+    width: 150px;
+    color: #b0afaf;
+    font:100 3rem SFCompactDisplay-Medium;
+    margin-top: 2rem;
+    border-radius: 1rem;
+    border: none;
+    cursor: pointer;
+}
+
+.ver-btn:hover{
+    background: rgb(39, 109, 155);
+    color: rgb(255, 255, 255);
+}
+*/
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -998,31 +1079,3 @@ textarea::placeholder {
     text-align: center;
 }
 
-/* 
-***************** solo agregar .index__contain a las cards ejemplo */
-
-.index__contain .card-content-machine {
-    display: flex;
-    justify-content: center;
-}
-
-.index__contain .card-content-img {
-    width: 30%;
-}
-
-.index__contain .card-content-img img {
-    width: 100%;
-}
-
-.index__contain .card-content-text {
-    padding: 4rem 0 0 2rem;
-}
-
-.index__contain .card-content-text h2 {
-    font: 600 2.4rem status-bar;
-}
-
-.index__contain .card-content-text p {
-    margin-top: 2rem;
-    font: 400 2rem roboto;
-}
