@@ -960,28 +960,28 @@ textarea::placeholder {
     border-right: #000000 1px solid;
 }
 
-.card-content-machine {
+.maqui__contain .card-content-machine {
     display: flex;
     justify-content: center;
 }
 
-.card-content-img {
+.maqui__contain .card-content-img {
     width: 30%;
 }
 
-.card-content-img img {
+.maqui__contain .card-content-img img {
     width: 100%;
 }
 
-.card-content-text {
+.maqui__contain .card-content-text {
     padding: 4rem 0 0 2rem;
 }
 
-.card-content-text h2 {
+.maqui__contain .card-content-text h2 {
     font: 600 2.4rem status-bar;
 }
 
-.card-content-text p {
+.maqui__contain .card-content-text p {
     margin-top: 2rem;
     font: 400 2rem roboto;
 }
@@ -996,4 +996,33 @@ textarea::placeholder {
     font: 500 10.8rem STATUS-BAR;
     padding-top: 9rem;
     text-align: center;
+}
+
+/* 
+***************** solo agregar .index__contain a las cards ejemplo */
+
+.index__contain .card-content-machine {
+    display: flex;
+    justify-content: center;
+}
+
+.index__contain .card-content-img {
+    width: 30%;
+}
+
+.index__contain .card-content-img img {
+    width: 100%;
+}
+
+.index__contain .card-content-text {
+    padding: 4rem 0 0 2rem;
+}
+
+.index__contain .card-content-text h2 {
+    font: 600 2.4rem status-bar;
+}
+
+.index__contain .card-content-text p {
+    margin-top: 2rem;
+    font: 400 2rem roboto;
 }
