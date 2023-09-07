@@ -973,9 +973,6 @@ textarea::placeholder {
 
 .index__contain .card-content-text {
     padding: 5rem 0 0 8rem;
-}
-
-.card-content-text{
     background-color: indigo;
 }
 

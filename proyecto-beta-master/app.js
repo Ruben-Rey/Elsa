@@ -113,15 +113,17 @@ function CreateCard(item){
 const menuItems = document.querySelectorAll('.menu-item');
 
 menuItems.forEach((menuItem) => {
-  const popup = menuItem.querySelector('.machine-modal');
+
+    const popup = menuItem.querySelector('.machine-modal');
   
-  menuItem.addEventListener('mouseenter', () => {
+    menuItem.addEventListener('mouseenter', () => {
     popup.style.display = 'block';
-  });
+    });
   
-  menuItem.addEventListener('mouseleave', () => {
+    menuItem.addEventListener('mouseleave', () => {
     popup.style.display = 'none';
-  });
+
+    });
 });
 
 /********************************************* */
@@ -145,9 +147,16 @@ function capturarId(event) {
     // Obtener el data-id del enlace
     const enlace = event.currentTarget;
     const id = enlace.getAttribute("data-id");
+    console.log(id);
 
-    // Ahora, puedes abrir la página "maquinas.html" y pasar el ID como parámetro en la URL
-    window.location.href = `maquinas.html?id=${id}`;
+    if (id !== "nosotros" && id !== "index") {
+        // Redirigir a la página "maquinas.html" y pasar el ID como parámetro en la URL
+        window.location.href = `maquinas.html?id=${id}`;
+    } else if (id === "nosotros") {
+        window.location.href = "nosotros.html";
+    } else if (id === "index") {
+        window.location.href = "index.html";
+    }
 }
 
 // Agregar un evento click a cada enlace de la barra de navegación
