@@ -38,12 +38,11 @@
 // };
 
 
-/********************************************************************************* */
+/*********************************************************************************/
 let impDTFtextil = document.getElementById("impDTF-modal");
 let impDTFuv = document.getElementById("maquinaUV-modal");
 let impSublimado = document.getElementById("sublimado-modal");
 let laser = document.getElementById("laser-modal");
-
 
 const URL_BBDD = "./bbdd.json";
 
@@ -79,6 +78,7 @@ function RecorrerImpresoras(datas){
     });
     cont = cont + 1;
 }
+
 function CreateCard(item){
     let div = document.createElement("div");
     div.className = "card-content";
@@ -89,7 +89,7 @@ function CreateCard(item){
     `;
 
     div.innerHTML= content;
-    switch(cont){
+    /*switch(cont){
         case 0:
             impDTFtextil.appendChild(div);
         break;
@@ -105,11 +105,11 @@ function CreateCard(item){
         case 3:
             laser.appendChild(div);
         break;
-    }  
+    }  */
 }
-const menuItems = document.querySelectorAll('.menu-item');
+const menuItems = document.querySelectorAll('.index__contain');
 menuItems.forEach((menuItem) => {
-    const popup = menuItem.querySelector('.machine-modal');
+    const popup = menuItem.querySelector('.card-content-machine');
     menuItem.addEventListener('mouseenter', () => {
     popup.style.display = 'block';
     });

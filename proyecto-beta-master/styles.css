@@ -9,15 +9,7 @@
 html {
     font-size: 62.5%;
 }
-
-/* Resetear los márgenes y relleno para el cuerpo de la página */
-body,
-ul {
-    /*transition: background-color 0.4s, color 0.4s;*/
-    margin: 0;
-    padding: 0;
-}
-
+/*CABESERAAAAAAAAA************************************************/
 .container-top {
     background-color: rgb(90, 90, 90);
     display: flex;
@@ -47,7 +39,7 @@ ul {
     color: #338ccc;
 }
 
-/********************************************************************************/
+/******************CABECERA DERECHAaaaaaaa**************************************************************/
 .header-right .redes {
     display: flex;
     justify-content: left;
@@ -77,8 +69,136 @@ ul {
     transform: scale(1.5);
 }
 
-/*sliderrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr*/
 
+/*NABVAR NUEVOOOOOOOOOOOOOOO***********************************/
+.navbar {
+    background-color: #333;
+    text-align: center;
+    justify-content: space-around;
+    display: flex;
+}
+
+.logo div {
+    display: flex;
+    justify-content: center;
+    width: 7rem;
+    height: 7rem;
+    gap: 1rem;
+}
+.logo h2 {
+    font: 900 3rem italic;
+    padding-top: 1.8rem;
+    color: white;
+}
+.nav-links {
+    width: 102rem;
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.navbar a {
+    float: left;
+    font-size: 17px;
+    color: white;
+    text-align: center;
+    padding: 20px 10px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+.navbar a:hover,
+.dropdown:hover .dropbtn {
+    color: rgba(18, 183, 212, 0.911);
+}
+.dropdown {
+    float: left;
+    overflow: hidden;
+}
+/*IMPRESORA*/
+.dropdown .dropbtn {
+    font-size: 17px;
+    border: none;
+    outline: none;
+    color: white;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+    padding: 29px 16px;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f99a;
+    /*PARA PONERLE UN BORDE AL MENU DESPLEGADO*/
+    box-shadow: 0px 2px 20px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    flex-direction: row;
+    left: 5%;
+    width: 90%;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.dropdown-content a {
+    /* float: none; */
+    /*LETRAS DEL OPCIONES DEL MENU DESPLEGADO*/
+    color: black;
+    padding: 12px 0;
+    font: 600 2rem roboto;
+    /* Reducir el relleno vertical */
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+    width: 33.33%;
+    /* Dividir en 3 partes iguales */
+    box-sizing: border-box;
+    /* Incluir padding en el ancho */
+    height: 312px;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 33.33%;
+    box-sizing: border-box;
+}
+
+.dropdown-content a img {
+    max-width: 50%;
+    height: 240px;
+}
+
+.dropdown-content a:hover {
+    color: rgba(18, 183, 212, 0.911);
+    background-color: rgba(231, 231, 231, 0.815);
+}
+/*******************************************************************************************************************/
+/* Centrar y separar el contenido de la barra de navegación */
+/* Estilos para modo *************************************** */
+.app {
+    width: 4rem;
+    height: 2rem;
+    border-radius: 2rem;
+    border: none;
+    cursor: pointer;
+    font-weight: 300;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out, transform 0.3s ease-in-out;
+    background-image: linear-gradient(#444444, #bfbec2);
+}
+
+.app:hover {
+    transform: scale(1.2);
+}
+/*sliderrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr*/
 .slider {
     width: 100%;
     max-width: 100vw;
@@ -163,141 +283,8 @@ ul {
     }
 }
 
-/* Estilos para modo *************************************** */
-.app {
-    width: 4rem;
-    height: 2rem;
-    border-radius: 2rem;
-    border: none;
-    cursor: pointer;
-    font-weight: 300;
-    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out, transform 0.3s ease-in-out;
-    background-image: linear-gradient(#444444, #bfbec2);
-}
 
-.app:hover {
-    transform: scale(1.2);
-}
 
-/*******************************************************************************************************************/
-/* Estilos de la barra de navegación */
-.navbar {
-    background-color: rgba(54, 53, 53, 0.98);
-}
-
-/* Centrar y separar el contenido de la barra de navegación */
-.navbar {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-}
-
-.nav-links li:hover {
-    background-color: #80808080;
-}
-
-.nav-links li:hover a {
-    color: rgb(57, 147, 192);
-}
-
-.logo div {
-    display: flex;
-    justify-content: center;
-    width: 7rem;
-    height: 7rem;
-    gap: 1rem;
-}
-/* Estilos para el logo */
-.logo img {
-    width: 90%;
-}
-
-.logo h2 {
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: 900;
-    font-size: 3rem;
-    font-style: italic;
-    padding-top: 1.2rem;
-    color: white;
-}
-
-/* Estilos para los elementos de navegación */
-.nav-links {
-    width: 1025px;
-    list-style: none;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    gap: 3rem;
-}
-
-.nav-links li {
-    font-family: 'Roboto', sans-serif;
-    font-size: 1.6rem;
-    font-weight: 400;
-}
-
-.nav-links a {
-    color: white;
-    text-decoration: none;
-}
-
-.menu-item {
-    position: relative;
-    text-align: center;
-    padding-top: 2.5rem;
-    width: 18rem;
-    height: 6.8rem;
-    /*transition: transform 0.3s ease;*/
-}
-
-.menu-item:hover {
-    /*transform: scale(1.05); /* Escalar el elemento al 110% del tamaño original */
-    display: block;
-    /* Mostrar el menú desplegable al pasar el mouse */
-}
-
-.sublimado-display {
-    display: flex;
-    justify-content: space-between;
-    gap: 3rem;
-}
-
-.card-content h2 {
-    font-size: 1.5rem;
-    font-weight: 100;
-}
-
-.card-content img {
-    width: 22rem;
-}
-
-.machine-modal {
-    position: absolute;
-    top: 100%;
-    right: calc(110% - (1492px/2));
-    z-index: 1000;
-    float: left;
-    min-width: 16rem;
-    height: 25rem;
-    padding: 5px 0;
-    display: none;
-    margin: 0 auto;
-    font-size: 14px;
-    list-style: none;
-    background-color: #eae8e8;
-    border-radius: 4px;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
-    background-clip: padding-box;
-}
-
-.impUV {
-    right: calc(140% - (690px/2));
-}
-
-.sublimado {
-    right: calc(236% - (732px/2));
-}
 
 /***********************************************************************************************/
 .footer-redes {
