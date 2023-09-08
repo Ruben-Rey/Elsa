@@ -64,9 +64,10 @@ fetch(URL_BBDD)
 
         if (window.location.href.includes("index.html")) {
             RecorrerMaquinas(data.articulos.maquinas.DTG[0]);
-            RecorrerMaquinas(data.articulos.maquinas.PLANCHAS_TRANSFER[0])
-            RecorrerMaquinas(data.articulos.maquinas.LAMINADORA[0])
-            RecorrerMaquinas(data.articulos.maquinas.CALANDRA[0])
+            RecorrerMaquinas(data.articulos.maquinas.LASER[2]);
+            RecorrerMaquinas(data.articulos.maquinas.LASER[0]); 
+            RecorrerMaquinas(data.articulos.maquinas.UV_DTF[2]);
+            RecorrerMaquinas(data.articulos.maquinas.UV_DTF[3])  
         }
 
     });
@@ -75,12 +76,9 @@ function RecorrerImpresoras(datas){
 
       datas.forEach( item => {
         CreateCard(item);
-
     });
-
     cont = cont + 1;
 }
-
 function CreateCard(item){
     let div = document.createElement("div");
     div.className = "card-content";
@@ -109,20 +107,14 @@ function CreateCard(item){
         break;
     }  
 }
-
 const menuItems = document.querySelectorAll('.menu-item');
-
 menuItems.forEach((menuItem) => {
-
     const popup = menuItem.querySelector('.machine-modal');
-  
     menuItem.addEventListener('mouseenter', () => {
     popup.style.display = 'block';
     });
-  
     menuItem.addEventListener('mouseleave', () => {
     popup.style.display = 'none';
-
     });
 });
 
@@ -132,7 +124,6 @@ let impDTFmachine = document.getElementById("impDTF-machine");
 let tituloBanner = document.getElementById("titulo-banner");
 
 function RecorrerMaquinas(data){
-
     if (Array.isArray(data)){
         data.forEach( item => {
             CreateCardMachine(item);
