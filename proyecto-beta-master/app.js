@@ -79,6 +79,7 @@ function RecorrerImpresoras(datas){
     });
     cont = cont + 1;
 }
+/*
 function CreateCard(item){
     let div = document.createElement("div");
     div.className = "card-content";
@@ -107,6 +108,7 @@ function CreateCard(item){
         break;
     }  
 }
+
 const menuItems = document.querySelectorAll('.menu-item');
 menuItems.forEach((menuItem) => {
     const popup = menuItem.querySelector('.machine-modal');
@@ -121,7 +123,7 @@ menuItems.forEach((menuItem) => {
 /********************************************* */
 
 let impDTFmachine = document.getElementById("impDTF-machine");
-let tituloBanner = document.getElementById("titulo-banner");
+//let tituloBanner = document.getElementById("titulo-banner");
 
 function RecorrerMaquinas(data){
     if (Array.isArray(data)){
@@ -132,6 +134,7 @@ function RecorrerMaquinas(data){
         CreateCardMachine(data);
     }
 }
+
 function capturarId(event) {
     event.preventDefault(); // Previene el comportamiento predeterminado del enlace
 
@@ -246,6 +249,17 @@ function loadMachinesByCategory(categoryId) {
             console.error("Error al cargar las máquinas:", error);
         });
 }
+
+
+
+
+
+
+
+
+
+
+
 
 
 const mySwiper = new Swiper('.swiper-container', {
