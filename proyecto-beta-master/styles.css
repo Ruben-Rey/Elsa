@@ -137,6 +137,7 @@ html {
     z-index: 1;
     flex-direction: row;
     left: 5%;
+    top: 12.4rem;
     width: 90%;
     text-align: center;
     box-sizing: border-box;
