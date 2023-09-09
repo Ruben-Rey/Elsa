@@ -121,7 +121,7 @@ menuItems.forEach((menuItem) => {
 
 /********************************************* */
 
-let impDTFmachine = document.getElementById("impDTF-machine");
+let impMachine = document.getElementById("imp-machine");
 let tituloBanner = document.getElementById("titulo-banner");
 
 function RecorrerMaquinas(data){
@@ -184,7 +184,7 @@ if(id){
     console.error("No se encontró un ID en los parámetros de la URL.");
 }
 
-function CreateCardMachine(item){
+function CreateCardMachine(item, cardType){
     let contenedor = document.createElement("div");
     contenedor.className = "card-content-machine";
 
@@ -209,15 +209,15 @@ function CreateCardMachine(item){
     contenedor.appendChild(imgDIV);
     contenedor.appendChild(contentDIV);
 
-    impDTFmachine.appendChild(contenedor);
+    impMachine.appendChild(contenedor);
 }
 
 
 
 function limpiarContenedor() {
-    const impDTFmachine = document.getElementById("impDTF-machine");
-    while (impDTFmachine.firstChild) {
-        impDTFmachine.removeChild(impDTFmachine.firstChild);
+    const impMachine = document.getElementById("imp-machine");
+    while (impMachine.firstChild) {
+        impMachine.removeChild(impMachine.firstChild);
     }
 }
 // Obtén una referencia a la lista de categorías
