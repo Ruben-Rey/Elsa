@@ -979,7 +979,7 @@ textarea::placeholder {
 
 
 .index__contain .card-content-text {
-    padding: 10rem 0 0 8rem;
+    padding: 10rem 10% 0 15%;
     background-color: rgb(255, 255, 255);
     width: 50%;
     text-align: center;
@@ -991,11 +991,13 @@ textarea::placeholder {
 } 
 
 .index__contain .card-content-text h2 {
+    width: 30rem;
     font: 600 2.4rem status-bar;
     line-height: 5rem;
 }
 
 .index__contain .card-content-text p {
+    width: 30rem;
     margin-top: 2rem;
     font: 400 2rem roboto;
     line-height: 4rem;
