@@ -61,13 +61,13 @@ fetch(URL_BBDD)
         RecorrerImpresoras(impSublimado);
         RecorrerImpresoras(laser);
 
-        if (window.location.href.includes("index.html")) {
-            RecorrerMaquinas(data.articulos.maquinas.DTG[0]);
-            RecorrerMaquinas(data.articulos.maquinas.LASER[2]);
-            RecorrerMaquinas(data.articulos.maquinas.LASER[0]); 
-            RecorrerMaquinas(data.articulos.maquinas.UV_DTF[2]);
-            RecorrerMaquinas(data.articulos.maquinas.UV_DTF[3])  
-        }
+        // if (window.location.href.includes("index.html")) {
+        //     RecorrerMaquinas(data.articulos.maquinas.DTG[0]);
+        //     RecorrerMaquinas(data.articulos.maquinas.LASER[2]);
+        //     RecorrerMaquinas(data.articulos.maquinas.LASER[0]); 
+        //     RecorrerMaquinas(data.articulos.maquinas.UV_DTF[2]);
+        //     RecorrerMaquinas(data.articulos.maquinas.UV_DTF[3])  
+        // }
 
     });
 
@@ -121,35 +121,35 @@ menuItems.forEach((menuItem) => {
 
 /********************************************* */
 
-let impMachine = document.getElementById("imp-machine");
-let tituloBanner = document.getElementById("titulo-banner");
+// let impMachine = document.getElementById("imp-machine");
+// let tituloBanner = document.getElementById("titulo-banner");
 
-function RecorrerMaquinas(data){
-    if (Array.isArray(data)){
-        data.forEach( item => {
-            CreateCardMachine(item);
-        });
-    }else{
-        CreateCardMachine(data);
-    }
-}
-function capturarId(event) {
-    event.preventDefault(); // Previene el comportamiento predeterminado del enlace
+// function RecorrerMaquinas(data){
+//     if (Array.isArray(data)){
+//         data.forEach( item => {
+//             CreateCardMachine(item);
+//         });
+//     }else{
+//         CreateCardMachine(data);
+//     }
+// }
+// function capturarId(event) {
+//     event.preventDefault(); // Previene el comportamiento predeterminado del enlace
 
-    // Obtener el data-id del enlace
-    const enlace = event.currentTarget;
-    const id = enlace.getAttribute("data-id");
-    console.log(id);
+//     // Obtener el data-id del enlace
+//     const enlace = event.currentTarget;
+//     const id = enlace.getAttribute("data-id");
+//     console.log(id);
 
-    if (id !== "nosotros" && id !== "index") {
-        // Redirigir a la página "maquinas.html" y pasar el ID como parámetro en la URL
-        window.location.href = `maquinas.html?id=${id}`;
-    } else if (id === "nosotros") {
-        window.location.href = "nosotros.html";
-    } else if (id === "index") {
-        window.location.href = "index.html";
-    }
-}
+//     if (id !== "nosotros" && id !== "index") {
+//         // Redirigir a la página "maquinas.html" y pasar el ID como parámetro en la URL
+//         window.location.href = `maquinas.html?id=${id}`;
+//     } else if (id === "nosotros") {
+//         window.location.href = "nosotros.html";
+//     } else if (id === "index") {
+//         window.location.href = "index.html";
+//     }
+// }
 
 // Agregar un evento click a cada enlace de la barra de navegación
 const enlaces = document.querySelectorAll(".nav-links a");
