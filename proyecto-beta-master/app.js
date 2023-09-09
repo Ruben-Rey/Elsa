@@ -40,9 +40,9 @@
 
 /*********************************************************************************/
 let impDTFtextil = document.getElementById("impDTF-modal");
-let impDTFuv = document.getElementById("maquinaUV-modal");
-let impSublimado = document.getElementById("sublimado-modal");
-let laser = document.getElementById("laser-modal");
+// let impDTFuv = document.getElementById("maquinaUV-modal");
+// let impSublimado = document.getElementById("sublimado-modal");
+// let laser = document.getElementById("laser-modal");
 
 const URL_BBDD = "./bbdd.json";
 
@@ -52,14 +52,14 @@ fetch(URL_BBDD)
     .then( (response) => response.json())    
     .then( (data) =>{
         let impDTFtextil = data.articulos.maquinas.DTF_TEXTIL;
-        let impDTFuv = data.articulos.maquinas.UV_DTF;
-        let impSublimado = data.articulos.maquinas.IMPRESORA_SUBLIMADO;
-        let laser = data.articulos.maquinas.LASER;
+        // let impDTFuv = data.articulos.maquinas.UV_DTF;
+        // let impSublimado = data.articulos.maquinas.IMPRESORA_SUBLIMADO;
+        // let laser = data.articulos.maquinas.LASER;
 
         RecorrerImpresoras(impDTFtextil);
-        RecorrerImpresoras(impDTFuv);
-        RecorrerImpresoras(impSublimado);
-        RecorrerImpresoras(laser);
+        // RecorrerImpresoras(impDTFuv);
+        // RecorrerImpresoras(impSublimado);
+        // RecorrerImpresoras(laser);
 
         if (window.location.href.includes("index.html")) {
             RecorrerMaquinas(data.articulos.maquinas.DTG[0]);
@@ -81,7 +81,7 @@ function RecorrerImpresoras(datas){
 
 function CreateCard(item){
     let div = document.createElement("div");
-    div.className = "card-content";
+    div.className = "contenedor";
 
     let content = `
         <img src="${item.imagen}" alt="">
@@ -89,6 +89,7 @@ function CreateCard(item){
     `;
 
     div.innerHTML= content;
+    impDTFtextil.appendChild(div);
     /*switch(cont){
         case 0:
             impDTFtextil.appendChild(div);
