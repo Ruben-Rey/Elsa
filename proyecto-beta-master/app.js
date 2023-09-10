@@ -50,19 +50,23 @@ let tituloBanner = document.getElementById("titulo-banner");
 const URL_BBDD = "./bbdd.json";
 
 let cont = 0;
-let contador = 0;
+let maquinasJSON; 
 
 // Esta funcion se encarga de obtener la data del JSON
 async function conexion(url){
-
-    const response = await fetch(url);
-    const data = await response.json();
-    return data;
+    try {
+        const response = await fetch(url);
+        const data = await response.json();
+        // Ahora que los datos se han cargado correctamente, puedes ejecutar cualquier código que dependa de maquinasJSON aquí
+        return data;
+    } catch (error) {
+        console.error("Ocurrió un error:", error);
+        throw error; // Propaga el error para que pueda ser manejado en el lugar adecuado
     }
+}
 
 conexion(URL_BBDD)
-    .then( (data) =>{
-
+    .then( (data) =>{   
         let dataDTFtextil = data.articulos.maquinas.DTF_TEXTIL;
         let dataDTFuv = data.articulos.maquinas.UV_DTF;
         let dataSublimado = data.articulos.maquinas.IMPRESORA_SUBLIMADO;
@@ -100,13 +104,6 @@ function RecorrerImpresoras(datas){
     }
 }
 
-
-    //         data.forEach( item => {
-    //             CreateCardMachine(item);
-    //         });
-    //     }else{
-    //         CreateCardMachine(data);
-    //     }
 
 
 function CreateCard(item){
@@ -175,31 +172,6 @@ function CreateCard(item){
         impMachine.appendChild(contenedor);
     }  
 }
-// const menuItems = document.querySelectorAll('.index__contain');
-// menuItems.forEach((menuItem) => {
-//     const popup = menuItem.querySelector('.card-content-machine');
-//     menuItem.addEventListener('mouseenter', () => {
-//     popup.style.display = 'block';
-//     });
-//     menuItem.addEventListener('mouseleave', () => {
-//     popup.style.display = 'none';
-//     });
-// });
-
-/********************************************* */
-
-
-
-// function RecorrerMaquinas(data){
-//     if (Array.isArray(data)){
-//         data.forEach( item => {
-//             CreateCardMachine(item);
-//         });
-//     }else{
-//         CreateCardMachine(data);
-//     }
-// }
-
 
 
 
@@ -227,10 +199,10 @@ enlaces.forEach((enlace) => {
     enlace.addEventListener("click", capturarId);
 });
 
-// const enlacesCategoria = document.querySelectorAll(".contenedor-cartas a");
-// enlacesCategoria.forEach((enlace) => {
-//     enlace.addEventListener("click", capturarId);
-// });
+const enlacesCategoria = document.querySelectorAll(".contenedor-cartas a");
+enlacesCategoria.forEach((enlace) => {
+    enlace.addEventListener("click", capturarId);
+});
 
 const urlParams = new URLSearchParams(window.location.search);
 const id = urlParams.get("id");
@@ -247,6 +219,85 @@ if(id){
     // Aquí puedes manejar el caso en el que no haya un ID en los parámetros de la URL
     console.error("No se encontró un ID en los parámetros de la URL.");
 }
+
+
+
+// Captura todos los enlaces con la clase "ocultar"
+const clickOcultar = document.querySelectorAll(".ocultar");
+
+// Agrega un manejador de eventos para cada enlace
+clickOcultar.forEach((enlace) => {
+  enlace.addEventListener("click", function (event) {
+    event.preventDefault(); // Previene la acción predeterminada del enlace
+
+    // Obtiene el ID del enlace clickeado
+    const idEnlace = this.getAttribute("id");
+    console.log("/***********************/", idEnlace);
+
+    // Realiza una búsqueda en los datos JSON utilizando idCategoria e idEnlace
+    let maquinaEncontrada = null;
+
+    if (maquinasJSON) {
+
+      for (const categoria in maquinasJSON.articulos.maquinas) {
+        maquinaEncontrada = maquinasJSON.articulos.maquinas[categoria].find(
+          (maquina) => maquina.id.toString() === idEnlace
+        );
+        if (maquinaEncontrada) {
+          break;
+        }
+      }
+    }
+
+    // Aquí puedes hacer lo que quieras con la máquina encontrada
+    if (maquinaEncontrada) {
+      // Por ejemplo, aquí puedes mostrar la información en un modal o en algún otro lugar en tu página
+      console.log("Máquina encontrada:", maquinaEncontrada);
+      // Luego, puedes usar maquinaEncontrada para mostrar la información en el lugar deseado en tu página.
+    } else {
+      console.log("Máquina no encontrada");
+    }
+  });
+});
+
+
+// const mySwiper = new Swiper('.swiper-container', {
+//     slidesPerView: 3,
+//     loop: true,
+//     spaceBetween: 20,
+//     autoplay: {
+//         delay: 5000 // Cambiar cada 5 segundos
+//     },
+//     on: {
+//         slideChange: function () {
+//             // Detener la reproducción de videos al cambiar de diapositiva
+//             const videos = document.querySelectorAll('.swiper-slide video');
+//             videos.forEach(video => {
+//                 video.pause();
+//             });
+//         }
+//     }
+// });
+
+
+
+
+
+
+
+// const menuItems = document.querySelectorAll('.index__contain');
+// menuItems.forEach((menuItem) => {
+//     const popup = menuItem.querySelector('.card-content-machine');
+//     menuItem.addEventListener('mouseenter', () => {
+//     popup.style.display = 'block';
+//     });
+//     menuItem.addEventListener('mouseleave', () => {
+//     popup.style.display = 'none';
+//     });
+// });
+
+/********************************************* */
+
 
 
 
@@ -283,33 +334,3 @@ if(id){
 //             console.error("Error al cargar las máquinas:", error);
 //         });
 // }
-
-
-
-
-
-
-
-
-
-
-
-
-
-const mySwiper = new Swiper('.swiper-container', {
-    slidesPerView: 3,
-    loop: true,
-    spaceBetween: 20,
-    autoplay: {
-        delay: 5000 // Cambiar cada 5 segundos
-    },
-    on: {
-        slideChange: function () {
-            // Detener la reproducción de videos al cambiar de diapositiva
-            const videos = document.querySelectorAll('.swiper-slide video');
-            videos.forEach(video => {
-                video.pause();
-            });
-        }
-    }
-});
