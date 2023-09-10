@@ -4,6 +4,7 @@
             "DTF_TEXTIL": [
                 {   
                     "id": 1,
+                    "serie": "SERIE DE EPSON",
                     "nombre": "Impresora ABREGU DTF de 30 cm",
                     "modelo": ": OR-A3 Mini 330 DTF",
                     "cabezal": "2 Cabezales EPSON ORIGINAL F1080",
@@ -12,6 +13,7 @@
                 },
                 {   
                     "id": 2,
+                    "serie": "SERIE DE EPSON",
                     "nombre": "Impresora ABREGU DTF de 30 cm verde Pro",
                     "modelo": "A3-DTF MACHINE",
                     "cabezal": "2 Cabezales F1080",
@@ -20,6 +22,7 @@
                 },
                 {   
                     "id": 3,
+                    "serie": "SERIE DE EPSON",
                     "nombre": "Impresora ABREGU DTF de 60 cm",
                     "modelo": "OR-DTF-60A",
                     "cabezal": "2 Cabezales i3200-A1",
@@ -28,6 +31,7 @@
                 },
                 {
                     "id": 4,
+                    "serie": "SERIE DE EPSON",
                     "nombre": "Impresora DTF de 60 cm verde Pro",
                     "modelo": "CNZ A-620",
                     "cabezal": "2 Cabezales i3200-A1",
@@ -38,6 +42,7 @@
             "UV_DTF": [
                 {   
                     "id": 5,
+                    "serie": "SERIE DE EPSON",
                     "nombre": "Impresora UV DTF 30cm",
                     "modelo": "RF-3360",
                     "cabezal": "2 Cabezales i3200-A1",
@@ -46,6 +51,7 @@
                 },
                 {
                     "id": 6,
+                    "serie": "SERIE DE EPSON",
                     "nombre": "Impresora UV DTF 42 cm Rollo a Rollo",
                     "modelo": "T3000-UV",
                     "cabezal": "2 cabezales de alta presiciòn",
@@ -54,6 +60,7 @@
                 },
                 {
                     "id": 7,
+                    "serie": "SERIE DE EPSON",
                     "nombre": "Impresora UV DTF 60 X 90cm cama plana",
                     "modelo": "CP-60-U1",
                     "cabezal": "2 cabezales Epsom i1600-U1",
@@ -63,6 +70,7 @@
         
                 {
                     "id": 8,
+                    "serie": "SERIE DE EPSON",
                     "nombre": "Impresora UV DTF 60 cm Rollo a Rollo",
                     "modelo": "PREDATHOR PRO UV DTF",
                     "cabezal": "3 cabezales Epson i3200-U1",
@@ -73,6 +81,7 @@
             "DTG": [
                 {
                     "id": 9,
+                    "serie": "SERIE DE EPSON",
                     "nombre": "Impresora DTG 4",
                     "modelo": "i3200 x 4-9C",
                     "cabezal": "4 cabezales i3200-A1",
@@ -81,6 +90,7 @@
                 },
                 {
                     "id": 10,
+                    "serie": "SERIE DE EPSON",
                     "nombre": "Impresora DTG Doble bandeja",
                     "modelo": "DTG-i3200-AI(EPSON)",
                     "cabezal": "2 cabezales i3200-A1",
@@ -91,6 +101,7 @@
             "IMPRESORA_SUBLIMADO": [
                 {
                     "id": 11,
+                    "serie": "SERIE DE EPSON",
                     "nombre": "Impresora sublimaciòn",
                     "modelo": "WJ-740S",
                     "cabezal": "2 Cabezales i3200-A1",
@@ -99,6 +110,7 @@
                 },
                 {
                     "id": 12,
+                    "serie": "SERIE DE EPSON",
                     "nombre": "Impresora de sublimado industrial",
                     "modelo": "PHALCON X3",
                     "cabezal": "3 Cabezales i3200-1-A",
@@ -109,6 +121,7 @@
             "LASER": [
                 {
                     "id": 13,
+                    "serie": "SERIE DE EPSON",
                     "nombre": "LASER DE SUBLIMACION",
                     "modelo": "LTES-3D Doble cabezal",
                     "potencia": "250w",

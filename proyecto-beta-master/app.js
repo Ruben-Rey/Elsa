@@ -73,28 +73,41 @@ conexion(URL_BBDD)
         RecorrerImpresoras(dataSublimado);
         RecorrerImpresoras(datalaser);
 
+        if (window.location.href.includes("index.html")) {
+            RecorrerImpresoras(data.articulos.maquinas.DTG[0]);
+            RecorrerImpresoras(data.articulos.maquinas.LASER[2]);
+            RecorrerImpresoras(data.articulos.maquinas.LASER[0]); 
+            RecorrerImpresoras(data.articulos.maquinas.UV_DTF[2]);
+            RecorrerImpresoras(data.articulos.maquinas.UV_DTF[3])  
+        }
+        
     })
     .catch( (error)=>{
         console.error("Ocurrió un error:", error);
 })
 
 
-// if (window.location.href.includes("index.html")) {
-//     RecorrerMaquinas(data.articulos.maquinas.DTG[0]);
-//     RecorrerMaquinas(data.articulos.maquinas.LASER[2]);
-//     RecorrerMaquinas(data.articulos.maquinas.LASER[0]); 
-//     RecorrerMaquinas(data.articulos.maquinas.UV_DTF[2]);
-//     RecorrerMaquinas(data.articulos.maquinas.UV_DTF[3])  
-// }
-
-
 function RecorrerImpresoras(datas){
+    if (Array.isArray(datas)){
 
-      datas.forEach( item => {
-        CreateCard(item);
-    });
-    cont = cont + 1;
+        datas.forEach( item => {
+            CreateCard(item);
+        });
+
+        cont = cont + 1;
+    }else{
+        CreateCard(datas);
+    }
 }
+
+
+    //         data.forEach( item => {
+    //             CreateCardMachine(item);
+    //         });
+    //     }else{
+    //         CreateCardMachine(data);
+    //     }
+
 
 function CreateCard(item){
     // mejora la condicion
@@ -130,7 +143,8 @@ function CreateCard(item){
             default:
                 console.log("Este caso no existe", cont);
         }
-    }else{
+    }
+    else {
 
         let contenedor = document.createElement("div");
         contenedor.className = "card-content-machine";
@@ -147,8 +161,10 @@ function CreateCard(item){
         imgDIV.innerHTML = img;
 
         let content = `
-            <h2>${item.nombre}</h2>
+            <h2>${item.serie}</h2>
             <p>${item.modelo}</p>
+            <h3>${item.nombre}</h3>
+            <button>Ver video</button>
         `;
         contentDIV.innerHTML = content; // Usa textContent en lugar de innerHTML
 
