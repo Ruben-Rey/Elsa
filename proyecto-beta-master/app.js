@@ -68,7 +68,6 @@ fetch(URL_BBDD)
             RecorrerMaquinas(data.articulos.maquinas.UV_DTF[2]);
             RecorrerMaquinas(data.articulos.maquinas.UV_DTF[3])  
         }
-
     });
 
 function RecorrerImpresoras(datas){
@@ -221,18 +220,18 @@ function limpiarContenedor() {
     }
 }
 // Obtén una referencia a la lista de categorías
-const categoryList = document.querySelector(".container-principal");
+// const categoryList = document.querySelector(".container-principal");
 
-// Agrega un evento de clic a la lista de categorías
-categoryList.addEventListener("click", (event) => {
-    // Comprueba si se hizo clic en un elemento <li> (categoría)
-    if (event.target.tagName === "LI") {
-        // Obtén el ID de la categoría seleccionada
-        const categoryId = event.target.id;
-        tituloBanner.innerHTML = categoryId; 
-        loadMachinesByCategory(categoryId);
-    }
-});
+// // Agrega un evento de clic a la lista de categorías
+// categoryList.addEventListener("click", (event) => {
+//     // Comprueba si se hizo clic en un elemento <li> (categoría)
+//     if (event.target.tagName === "LI") {
+//         // Obtén el ID de la categoría seleccionada
+//         const categoryId = event.target.id;
+//         tituloBanner.innerHTML = categoryId; 
+//         loadMachinesByCategory(categoryId);
+//     }
+// });
 /*//*************************************************************************************************************************** */
 
 function loadMachinesByCategory(categoryId) {
@@ -266,3 +265,53 @@ const mySwiper = new Swiper('.swiper-container', {
         }
     }
 });
+
+
+
+
+// Obtén el enlace y el div que deseas ocultar por su ID
+// const click_ocultar = document.querySelectorAll(".ocultar");
+
+// const divOcultar = document.getElementById("imp-machine");
+
+// click_ocultar.forEach(enlace =>{
+//     // Agrega un controlador de eventos al enlace
+//         enlace.addEventListener("click", function(event) {
+//         // Previene el comportamiento predeterminado del enlace (navegar a una página nueva)
+//         event.preventDefault();
+        
+//         // Oculta el div al establecer su estilo como "display: none"
+//         divOcultar.style.display = "none";
+//         });
+// })
+
+const click_ocultar = document.querySelectorAll(".ocultar");
+
+
+// Agrega un manejador de eventos para cada enlace
+click_ocultar.forEach(enlace => {
+  enlace.addEventListener("click", (event) => {
+    event.preventDefault(); // Previene la acción predeterminada del enlace
+
+    const idEnlace = event.target.getAttribute("id");
+    console.log("idEnlace:", idEnlace);
+  
+    const liElement = event.target.closest("LI");
+    if (liElement) {
+      const idCategoria = liElement.getAttribute("id");
+      console.log("idCategoria:", idCategoria);
+    } else {
+      console.log("No se pudo encontrar el elemento <li> padre.");
+    }
+
+    fetch(URL_BBDD)
+        .then((response) => response.json())
+        .then((data) => {
+            let maquina = data.maquinas[idCategoria][idEnlace];
+            console.log(maquina);
+        });
+    // Aquí puedes hacer lo que quieras con la máquina encontrada
+
+
+  });
+})

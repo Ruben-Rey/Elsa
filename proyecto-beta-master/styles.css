@@ -1073,6 +1073,7 @@ textarea::placeholder {
 */
 
 
+/* ///////////////////////// */
 
 
 
@@ -1100,8 +1101,21 @@ textarea::placeholder {
 
 
 /********************PAGINA MAQUINAS*********************/
-.container-principal {
+.section-principal{
     display: flex;
+    height: 50rem;
+}
+
+.container-maqui-principal{
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(209, 238, 228);
+}
+
+.container-principal {
+    width: 30rem;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     background-color: #7d7b7b;
     padding: 0;
@@ -1113,7 +1127,6 @@ textarea::placeholder {
     color: white;
     text-align: center;
     list-style: none;
-    border-right: #000000 1px solid;
 }
 
 .maqui__contain .card-content-machine {
