@@ -38,6 +38,10 @@
 // };
 
 
+
+
+
+
 /*********************************************************************************/
 let impDTFtextil = document.getElementById("impDTF-modal");
 let impDTFuv = document.getElementById("maquinaUV-modal");
@@ -58,6 +62,7 @@ async function conexion(url){
         const response = await fetch(url);
         const data = await response.json();
         // Ahora que los datos se han cargado correctamente, puedes ejecutar cualquier código que dependa de maquinasJSON aquí
+        maquinasJSON = data;
         return data;
     } catch (error) {
         console.error("Ocurrió un error:", error);
@@ -72,17 +77,17 @@ conexion(URL_BBDD)
         let dataSublimado = data.articulos.maquinas.IMPRESORA_SUBLIMADO;
         let datalaser = data.articulos.maquinas.LASER;
 
-        RecorrerImpresoras(dataDTFtextil);
-        RecorrerImpresoras(dataDTFuv);
-        RecorrerImpresoras(dataSublimado);
-        RecorrerImpresoras(datalaser);
+        RecorrerImpresoras(dataDTFtextil, 1); ///numero 1 es para los navbar
+        RecorrerImpresoras(dataDTFuv, 1);
+        RecorrerImpresoras(dataSublimado, 1);
+        RecorrerImpresoras(datalaser, 1);
 
         if (window.location.href.includes("index.html")) {
-            RecorrerImpresoras(data.articulos.maquinas.DTG[0]);
-            RecorrerImpresoras(data.articulos.maquinas.LASER[2]);
-            RecorrerImpresoras(data.articulos.maquinas.LASER[0]); 
-            RecorrerImpresoras(data.articulos.maquinas.UV_DTF[2]);
-            RecorrerImpresoras(data.articulos.maquinas.UV_DTF[3])  
+            RecorrerImpresoras(data.articulos.maquinas.DTG[0],2); ///numero 2 es lo mismo pero con botones y la serie EPSON 
+            RecorrerImpresoras(data.articulos.maquinas.LASER[2],2);
+            RecorrerImpresoras(data.articulos.maquinas.LASER[0],2); 
+            RecorrerImpresoras(data.articulos.maquinas.UV_DTF[2],2);
+            RecorrerImpresoras(data.articulos.maquinas.UV_DTF[3],2);  
         }
         
     })
@@ -91,25 +96,25 @@ conexion(URL_BBDD)
 })
 
 
-function RecorrerImpresoras(datas){
+function RecorrerImpresoras(datas, tipo){
     if (Array.isArray(datas)){
 
         datas.forEach( item => {
-            CreateCard(item);
+            CreateCard(item, tipo);
         });
 
         cont = cont + 1;
     }else{
-        CreateCard(datas);
+        CreateCard(datas, tipo);
     }
 }
 
 
 
-function CreateCard(item){
+function CreateCard(item, tipo){
     // mejora la condicion
-    if ( cont !== 4){
-
+    console.log(tipo);
+    if (tipo == 1){
         let div = document.createElement("div");
         div.className = "contenedor";
 
@@ -141,7 +146,7 @@ function CreateCard(item){
                 console.log("Este caso no existe", cont);
         }
     }
-    else {
+    else if (tipo == 2) {
 
         let contenedor = document.createElement("div");
         contenedor.className = "card-content-machine";
@@ -170,7 +175,39 @@ function CreateCard(item){
         contenedor.appendChild(contentDIV);
 
         impMachine.appendChild(contenedor);
-    }  
+    }
+    else if (tipo == 3) {
+
+        let contenedor = document.createElement("div");
+        contenedor.className = "card-content-machine";
+
+        let imgDIV = document.createElement("div");
+        imgDIV.className = "card-content-img";
+        
+        let contentDIV = document.createElement("div");
+        contentDIV.className = "card-content-text";
+
+        let img = `
+            <img src="${item.imagen}" alt="">
+        `;
+        imgDIV.innerHTML = img;
+
+        let content = `
+            <h2>${item.serie}</h2>
+            <p>${item.modelo}</p>
+            <button>Ver video</button>
+            <h3>${item.nombre}</h3>
+            <button>MAS INFORMACION</button>
+            
+        `;
+        contentDIV.innerHTML = content; // Usa textContent en lugar de innerHTML
+
+        // Agregar los divs de img y content como hijos de contenedor
+        contenedor.appendChild(imgDIV);
+        contenedor.appendChild(contentDIV);
+
+        impMachine.appendChild(contenedor);
+    }
 }
 
 
@@ -212,7 +249,7 @@ if(id){
     conexion(URL_BBDD)
         .then( (data) =>{
             const maquinas = data.articulos.maquinas[id];
-            RecorrerImpresoras(maquinas);
+            RecorrerImpresoras(maquinas, 3);
         })
 
 }else{
@@ -222,7 +259,26 @@ if(id){
 
 
 
-// Captura todos los enlaces con la clase "ocultar"
+
+
+
+// const divOcultar = document.getElementById("imp-machine");
+
+// // Recorre todos los elementos con la clase "ocultar"
+// clickOcultar.forEach(enlace => {
+    //   // Agrega un manejador de eventos a cada elemento
+    //   enlace.addEventListener("click", function(event) {
+        //     event.preventDefault();
+        //     divOcultar.style.display = "none";
+        //   });
+        // });
+        
+        
+        
+        
+        
+        // Captura todos los enlaces con la clase "ocultar"
+        
 const clickOcultar = document.querySelectorAll(".ocultar");
 
 // Agrega un manejador de eventos para cada enlace
@@ -251,11 +307,12 @@ clickOcultar.forEach((enlace) => {
 
     // Aquí puedes hacer lo que quieras con la máquina encontrada
     if (maquinaEncontrada) {
-      // Por ejemplo, aquí puedes mostrar la información en un modal o en algún otro lugar en tu página
-      console.log("Máquina encontrada:", maquinaEncontrada);
-      // Luego, puedes usar maquinaEncontrada para mostrar la información en el lugar deseado en tu página.
+        // Por ejemplo, aquí puedes mostrar la información en un modal o en algún otro lugar en tu página
+        console.log("Máquina encontrada:", maquinaEncontrada);
+        CreateCard(maquinaEncontrada);
+         // Luego, puedes usar maquinaEncontrada para mostrar la información en el lugar deseado en tu página.
     } else {
-      console.log("Máquina no encontrada");
+        console.log("Máquina no encontrada");
     }
   });
 });
@@ -301,36 +358,51 @@ clickOcultar.forEach((enlace) => {
 
 
 
-// function limpiarContenedor() {
-//     const impMachine = document.getElementById("imp-machine");
-//     while (impMachine.firstChild) {
-//         impMachine.removeChild(impMachine.firstChild);
-//     }
-// }
-// // Obtén una referencia a la lista de categorías
-// const categoryList = document.querySelector(".container-principal");
+function limpiarContenedor() {
+    const impMachine = document.getElementById("imp-machine");
+    while (impMachine.firstChild) {
+        impMachine.removeChild(impMachine.firstChild);
+    }
+}
+// Obtén una referencia a la lista de categorías
+const categoryList = document.querySelector(".container-principal");
 
-// // Agrega un evento de clic a la lista de categorías
-// categoryList.addEventListener("click", (event) => {
-//     // Comprueba si se hizo clic en un elemento <li> (categoría)
-//     if (event.target.tagName === "LI") {
-//         // Obtén el ID de la categoría seleccionada
-//         const categoryId = event.target.id;
-//         tituloBanner.innerHTML = categoryId; 
-//         loadMachinesByCategory(categoryId);
-//     }
-// });
+// Agrega un evento de clic a la lista de categorías
+categoryList.addEventListener("click", (event) => {
+    // Comprueba si se hizo clic en un elemento <a> dentro de un <li>
+    if (event.target.tagName === "A") {
+        event.preventDefault(); // Evita la navegación predeterminada del enlace
+        // Obtén el ID de la categoría seleccionada
+        const categoryId = event.target.parentElement.id;
+        tituloBanner.innerHTML = categoryId;
+        loadMachinesByCategory(categoryId);
+    }
+});
+
+if(id){
+    conexion(URL_BBDD)
+        .then( (data) =>{
+            const maquinas = data.articulos.maquinas[id];
+            RecorrerImpresoras(maquinas, 3);
+        })
+
+}else{
+    // Aquí puedes manejar el caso en el que no haya un ID en los parámetros de la URL
+    console.error("No se encontró un ID en los parámetros de la URL.");
+}
+
 /*//*************************************************************************************************************************** */
 
-// function loadMachinesByCategory(categoryId) {
-//     limpiarContenedor();
-//     fetch(URL_BBDD)
-//     .then((response) => response.json())
-//     .then((data) => {
-//         let categoria = data.articulos.maquinas[categoryId];
-//         RecorrerMaquinas(categoria);
-//     })
-//     .catch((error) => {
-//             console.error("Error al cargar las máquinas:", error);
-//         });
-// }
+function loadMachinesByCategory(categoryId) {
+    limpiarContenedor();
+    
+    conexion(URL_BBDD)
+        .then((data) => {
+            let categoria = data.articulos.maquinas[categoryId];
+            console.log(categoria);
+            RecorrerImpresoras(categoria, 3);
+        })
+        .catch((error) => {
+            console.error("Error al cargar las máquinas:", error);
+        });
+}

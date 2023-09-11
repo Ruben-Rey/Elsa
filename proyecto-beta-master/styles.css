@@ -1047,6 +1047,7 @@ textarea::placeholder {
 
 
 /********************PAGINA MAQUINAS*********************/
+
 .container-principal {
     display: flex;
     justify-content: center;
@@ -1055,12 +1056,14 @@ textarea::placeholder {
 }
 
 .container-principal li {
-    width: 15rem;
+    width: 30rem;
     font-size: 2rem;
     color: white;
     text-align: center;
     list-style: none;
-    border-right: #000000 1px solid;
+}
+.container-principal li a {
+    text-decoration: none;
 }
 
 .maqui__contain .card-content-machine {
@@ -1100,4 +1103,3 @@ textarea::placeholder {
     padding-top: 9rem;
     text-align: center;
 }
-
