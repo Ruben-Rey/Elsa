@@ -201,12 +201,10 @@ function CreateCard(item, tipo){
         imgDIV.innerHTML = img;
 
         let content = `
-            <h2>${item.serie}</h2>
-            <p>${item.modelo}</p>
+            <h2>${item.nombre}</h2>
+            <h3>${item.modelo}</h3>
             <p>${item.descripcion}</p>
-            <h3>${item.nombre}</h3>
-            <button>MAS INFORMACION</button>
-            
+            <button>Mas información ></button>  
         `;
         contentDIV.innerHTML = content; // Usa textContent en lugar de innerHTML
 

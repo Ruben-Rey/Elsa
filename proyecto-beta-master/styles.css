@@ -1199,30 +1199,59 @@ textarea::placeholder {
     color: white;
     text-decoration: none;
 }
-
+/***************************************************************************************************************************************************/
 .maqui__contain .card-content-machine {
     display: flex;
     justify-content: center;
+    cursor: pointer;
+
 }
 
 .maqui__contain .card-content-img {
-    width: 30%;
+    width: 26%;
+    border-bottom: 1px solid rgb(132, 135, 135);
+   
 }
 
 .maqui__contain .card-content-img img {
+    margin: 4rem 0 4rem 0;
     width: 100%;
 }
 
 .maqui__contain .card-content-text {
-    padding: 4rem 0 0 2rem;
+    width: 26%;
+    padding: 5rem 0 0 20rem;    
+    border-bottom: 1px solid rgb(132, 135, 135);
 }
 
 .maqui__contain .card-content-text h2 {
-    font: 600 2.4rem status-bar;
+    margin-top: 2rem;
+    font: 600 3rem status-bar;
 }
+
+.maqui__contain .card-content-text h3{
+    margin-top: 1.5rem;
+    font: 700 2rem monospace;
+} 
 
 .maqui__contain .card-content-text p {
-    margin-top: 2rem;
+    margin-top: 1.5rem; 
     font: 400 2rem roboto;
+    line-height: 3rem;
 }
 
+.maqui__contain .card-content-text button{
+    background-color: #b2b0b0;
+    height: 4.5rem;
+    width: 25rem;
+    font: 700 2.5rem DIN;
+    margin: 2rem 0 2rem 0;
+    border: none;
+    transition: all 1s;
+    cursor: pointer;
+}
+
+.maqui__contain .card-content-text button:hover{
+    color: white;
+    background-color: #3ac0f5;
+}
