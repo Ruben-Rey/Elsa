@@ -1,48 +1,56 @@
 /***SLIDERRRRRRRRRRRRRRRRRRRRRRRRRRR************************************RRRRRRRRRRRRRRR******************* */
-// let slider = document.querySelector('.slider .list');
-// let items = document.querySelectorAll('.slider .list .item');
-// let next = document.getElementById('next');
-// let prev = document.getElementById('prev');
-// let dots = document.querySelectorAll('.slider .dots li');
+let slider = document.querySelector('.slider .list');
+let items = document.querySelectorAll('.slider .list .item');
+let next = document.getElementById('next');
+let prev = document.getElementById('prev');
+let dots = document.querySelectorAll('.slider .dots li');
 
-// let lengthItems = items.length - 1;
-// let active = 0;
-// next.onclick = function(){
-//     active = active + 1 <= lengthItems ? active + 1 : 0;
-//     reloadSlider();
-// }
-// prev.onclick = function(){
-//     active = active - 1 >= 0 ? active - 1 : lengthItems;
-//     reloadSlider();
-// }
-// let refreshInterval = setInterval(()=> {next.click()}, 3000);
-// function reloadSlider(){
-//     slider.style.left = -items[active].offsetLeft + 'px';
-//     // 
-//     let last_active_dot = document.querySelector('.slider .dots li.active');
-//     last_active_dot.classList.remove('active');
-//     dots[active].classList.add('active');
+let lengthItems = items.length - 1;
+let active = 0;
 
-//     clearInterval(refreshInterval);
-//     refreshInterval = setInterval(()=> {next.click()}, 3000); 
-// }
+if (next && prev) {
+    next.onclick = function(){
+        active = active + 1 <= lengthItems ? active + 1 : 0;
+        reloadSlider();
+    }
+    
+    prev.onclick = function(){
+        active = active - 1 >= 0 ? active - 1 : lengthItems;
+        reloadSlider();
+    }
+  
+    let refreshInterval = setInterval(() => {
+        if (next) {
+            next.click();
+        }
+    }, 3000);
+}
 
-// dots.forEach((li, key) => {
-//     li.addEventListener('click', ()=>{
-//          active = key;
-//          reloadSlider();
-//     })
-// })
-// window.onresize = function(event) {
-//     reloadSlider();
-// };
+let refreshInterval = setInterval(()=> {next.click()}, 3000);
+function reloadSlider(){
+    slider.style.left = -items[active].offsetLeft + 'px';
+    // 
+    let last_active_dot = document.querySelector('.slider .dots li.active');
+    last_active_dot.classList.remove('active');
+    dots[active].classList.add('active');
 
+    clearInterval(refreshInterval);
+    refreshInterval = setInterval(()=> {next.click()}, 3000); 
+}
 
-
-
-
+dots.forEach((li, key) => {
+    li.addEventListener('click', ()=>{
+         active = key;
+         reloadSlider();
+    })
+})
+window.onresize = function(event) {
+    reloadSlider();
+};
 
 /*********************************************************************************/
+
+
 let impDTFtextil = document.getElementById("impDTF-modal");
 let impDTFuv = document.getElementById("maquinaUV-modal");
 let impSublimado = document.getElementById("sublimado-modal");
@@ -261,7 +269,6 @@ if(id){
 
 
 
-
 // const divOcultar = document.getElementById("imp-machine");
 
 // // Recorre todos los elementos con la clase "ocultar"
@@ -378,20 +385,6 @@ categoryList.addEventListener("click", (event) => {
         loadMachinesByCategory(categoryId);
     }
 });
-
-if(id){
-    conexion(URL_BBDD)
-        .then( (data) =>{
-            const maquinas = data.articulos.maquinas[id];
-            RecorrerImpresoras(maquinas, 3);
-        })
-
-}else{
-    // Aquí puedes manejar el caso en el que no haya un ID en los parámetros de la URL
-    console.error("No se encontró un ID en los parámetros de la URL.");
-}
-
-/*//*************************************************************************************************************************** */
 
 function loadMachinesByCategory(categoryId) {
     limpiarContenedor();
