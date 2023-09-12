@@ -203,7 +203,7 @@ function CreateCard(item, tipo){
         let content = `
             <h2>${item.serie}</h2>
             <p>${item.modelo}</p>
-            <button>Ver video</button>
+            <p>${item.descripcion}</p>
             <h3>${item.nombre}</h3>
             <button>MAS INFORMACION</button>
             
