@@ -475,7 +475,7 @@ html {
 /*redes de la izquierda de main***********************************************************************/
 .elements-lists {
     position: fixed;
-    top: 35rem;
+    top: 45rem;
 }
 
 .elements-social-icon {
@@ -654,11 +654,8 @@ html {
     max-width: 100%;
     max-height: 100%;
 }
-
-
-
-
 /***************SOBRE NOSOTROS**************************************************************/
+/***************SOBRE NOSOTROS**************************HISTORY ABREGU*************************************************/
 .swiper-video-nosotros {
     position: relative;
 }
@@ -683,13 +680,12 @@ html {
     margin-bottom: 10px;
 }
 
-/****HISTORY ABREGU**********/
 .container-historia {
     height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: flex-start;
+    /*align-items: flex-start;*/
     /* Alinea el contenido a la izquierda */
     padding: 8rem;
     /* Agrega espacio en la parte superior e inferior */
@@ -721,16 +717,66 @@ html {
     height: 260px;
     display: flex;
     justify-content: center;
-    gap: 60px;
+    gap: 4rem;
     margin-bottom: 5rem;
 }
 
 .equipo-img img {
-    border-radius: 50%;
-    max-width: 100%;
+    border-radius: 5%;
+    /* max-width: 100%;*/
     /* Asegurarse de que las imágenes no sean más anchas que su contenedor */
+}
+
+.ctn-img {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+}
+
+.linea {
+    position: absolute;
+    width: 90%;
+    top: 35%;
+    /*Coloca la línea en el centro vertical */
+    transform: translateY(-50%);
+    /* Alinea verticalmente la línea */
+    height: 2px;
+    /* Altura de la línea */
+    background-color: #000;
+    /* Color de la línea */
+    z-index: -1;
+}
+
+.simbolos {
+    text-align: center;
+    margin: 1rem;
+    border-radius: 50%;
+}
+
+.simbolos img {
+    width: 30%;
 
 }
+
+.simbolos img:nth-of-type(5) {
+    width: 10%;
+}
+
+.texto-name {
+    font: 600 2rem Arial;
+    margin-bottom: 5rem;
+    /* Espacio entre la imagen y el texto */
+}
+
+
+
+
+
+
+
+
 
 /****************CONTACTANOSSSS **************************************/
 .container_form {
@@ -745,7 +791,7 @@ html {
     width: 680px;
     height: 680px;
     padding: 20px;
-    margin-left: 80rem;
+    margin-left: 100rem;
 }
 
 .formulary .message-text,
