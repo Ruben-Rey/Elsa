@@ -539,7 +539,7 @@ i {
 }
 
 /* Asegúrate de que el botón también tenga suficiente espacio */
-button {
+.btn-primary {
     width: 100%;
     text-align: center;
     color: rgb(255, 255, 255);
@@ -552,7 +552,7 @@ button {
     transition: 0.3s, color 0.3s;
 }
 
-button:hover {
+.btn-primary:hover {
     background-color: rgb(28, 28, 33);
     color: #00aaff;
 }
