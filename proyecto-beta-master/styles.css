@@ -538,6 +538,25 @@ i {
     padding-right: 10px;
 }
 
+/* Asegúrate de que el botón también tenga suficiente espacio */
+button {
+    width: 100%;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    text-transform: capitalize;
+    padding: 10px;
+    background: rgb(55, 148, 205);
+    border-width: 1px;
+    border: 0.800px solid rgba(65, 65, 65, 0.2);
+    cursor: pointer;
+    transition: 0.3s, color 0.3s;
+}
+
+button:hover {
+    background-color: rgb(28, 28, 33);
+    color: #00aaff;
+}
+
 @media screen and (max-width:1500px) {
     /* .footer-contenedor{
     width:1470px;
@@ -547,7 +566,6 @@ i {
 @media screen and (max-width:1100px) {
     .footer-contenedor {
         width: 1100px;
-
     }
 }
 
