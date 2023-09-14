@@ -121,7 +121,7 @@ function RecorrerImpresoras(datas, tipo){
 
 function CreateCard(item, tipo){
     // mejora la condicion
-    console.log(tipo);
+
     if (tipo == 1){
         let div = document.createElement("div");
         div.className = "contenedor";
@@ -170,8 +170,14 @@ function CreateCard(item, tipo){
         `;
         imgDIV.innerHTML = img;
 
+        let serie = item.serie;
+
+        if (serie == undefined){
+            serie = " ";
+        }
+
         let content = `
-            <h2>${item.serie}</h2>
+            <h2>${serie}</h2>
             <p>${item.modelo}</p>
             <h3>${item.nombre}</h3>
             <button>Ver video</button>
@@ -224,7 +230,6 @@ function capturarId(event) {
     // Obtener el data-id del enlace
     const enlace = event.currentTarget;
     const id = enlace.getAttribute("data-id");
-    console.log(id);
 
     if (id !== "nosotros" && id !== "index") {
         // Redirigir a la página "maquinas.html" y pasar el ID como parámetro en la URL
@@ -249,7 +254,21 @@ enlacesCategoria.forEach((enlace) => {
 
 const urlParams = new URLSearchParams(window.location.search);
 const id = urlParams.get("id");
-tituloBanner.innerHTML = id;
+
+const TITULOS = {
+    "DTF_TEXTIL": "IMPRESORA DTF TEXTIL",
+    "UV_DTF": "IMPRESORA DTF",
+    "DTG": "IMPRESORA DTG",
+    "IMPRESORA_SUBLIMADO": "IMPRESORA SUBLIMADO",
+    "LASER": "LASER",
+    "PLANCHAS TRANSFER": "PLANCHAS TRANSFER",
+    "LAMINADORA": "LAMINADORA",
+    "CALANDRA": "CALANDRA",
+}
+
+let titulo = TITULOS[id];
+
+tituloBanner.innerHTML = titulo;
 
 if(id){
     conexion(URL_BBDD)
@@ -264,9 +283,6 @@ if(id){
 }
 
 
-
-
-
 // const divOcultar = document.getElementById("imp-machine");
 
 // // Recorre todos los elementos con la clase "ocultar"
@@ -277,10 +293,6 @@ if(id){
         //     divOcultar.style.display = "none";
         //   });
         // });
-        
-        
-        
-        
         
         // Captura todos los enlaces con la clase "ocultar"
         
