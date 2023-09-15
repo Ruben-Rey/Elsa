@@ -47,7 +47,6 @@ dots.forEach((li, key) => {
 window.onresize = function(event) {
     reloadSlider();
 };
-
 /*********************************************************************************/
 
 

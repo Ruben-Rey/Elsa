@@ -231,7 +231,6 @@ html {
     left: 0;
     top: 0;
     display: flex;
-    /*transition: 1s;*/
 }
 
 .slider .list img {
@@ -259,12 +258,10 @@ html {
     border: none;
     font-family: monospace;
     font-weight: bold;
-    /*transition: all .5s;*/
 }
 
 .slider .buttons button:hover {
     background-color: #595858;
-    /*transition: all .5s;*/
 }
 
 .slider .dots {
@@ -286,54 +283,8 @@ html {
     background-color: #fff;
     margin: 10px;
     border-radius: 20px;
-    /*transition: 0.5s;*/
 }
-
-.slider .dots li.active {
-    width: 30px;
-}
-
-/* Para pantalla con un ancho de 1500px o más 
-@media screen and (min-width: 1500px) {
-    .slider {
-        height: 600px;
-    }
-}*/
-
-/* Para pantalla con un ancho de 1100px o más 
-@media screen and (min-width: 1100px) {
-    .slider {
-        height: 1000px;
-    }
-}*/
-
-/* Para pantalla con un ancho de 968px o más 
-@media screen and (min-width: 968px) {
-    .slider {
-        height: 900px;
-    }
-}*/
-
-/* Para pantalla con un ancho de 428px o más 
-@media screen and (min-width: 428px) {
-    .slider {
-        height: 350px;
-    }
-}*/
-
-/* Para pantalla con un ancho de 320px o más
-@media screen and (min-width: 320px) {
-    .slider {
-        height: 280px;
-    }
-} */
-
-@media screen and (max-width: 768px) {
-    .slider {
-        height: 400px;
-    }
-}
-
+/*Fin css Slider*/
 /***********************************************************************************************/
 .footer-redes {
     background-color: rgb(39, 109, 155);
@@ -888,7 +839,7 @@ i {
 
 /* ******GALERIA DE VIDEOS************************************************************ */
 .home-gallery {
-    background: rgb(147, 146, 146);
+    background: rgb(217, 216, 216);
     width: 100%;
     height: 750px;
     color: white;
@@ -1430,31 +1381,6 @@ textarea::placeholder {
     color: rgb(255, 255, 255);
 }
 */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
