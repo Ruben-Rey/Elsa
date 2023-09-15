@@ -1,3 +1,31 @@
+
+
+const openMenuIcon = document.getElementById("menu-icon"),
+navbarLinks = document.getElementById("nav-links"),
+closeMenuIcon = document.getElementById("close-icon");
+
+openMenuIcon.addEventListener("click", () => {
+    navbarLinks.classList.add("show-menu");
+
+});
+
+closeMenuIcon.addEventListener("click", () => {
+    navbarLinks.classList.remove("show-menu");
+})
+
+const navLink = document.querySelectorAll(".nav__link");
+function linkAction(){
+    const navbarLinks = document.getElementById("nav-links")
+    navbarLinks.classList.remove("show-menu")
+}
+
+navLink.forEach((item) => item.addEventListener("click", linkAction))
+
+
+
+
+
+
 /***SLIDERRRRRRRRRRRRRRRRRRRRRRRRRRR************************************RRRRRRRRRRRRRRR******************* */
 let slider = document.querySelector('.slider .list');
 let items = document.querySelectorAll('.slider .list .item');
@@ -372,8 +400,6 @@ clickOcultar.forEach((enlace) => {
 /********************************************* */
 
 
-
-
 function limpiarContenedor() {
     const impMachine = document.getElementById("imp-machine");
     while (impMachine.firstChild) {
@@ -408,3 +434,27 @@ function loadMachinesByCategory(categoryId) {
             console.error("Error al cargar las máquinas:", error);
         });
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

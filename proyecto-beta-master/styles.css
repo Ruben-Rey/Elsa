@@ -59,7 +59,7 @@ html {
 }
 
 .header-right a i {
-    font-size: 1em;
+    font-size: 1.2em;
     margin: 0.5rem 0.2rem;
     color: #fdf7f7;
     transition: transform 0.3s ease;
@@ -78,6 +78,7 @@ html {
     text-align: center;
     justify-content: space-around;
     display: flex;
+    align-items: center;
 }
 
 .logo div {
@@ -101,6 +102,50 @@ html {
     justify-content: space-around;
     align-items: center;
 }
+
+.menu-icon{
+    width: 30px;
+    height: 30px;
+    display: none;
+}
+
+.menu-icon-img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+}
+
+@media screen and (max-width:768px) {
+    .nav-links{
+        display: flex;
+        flex-direction: column;
+
+    }
+    .menu-icon{
+        display: block;
+    }
+
+    .container-links{
+        display: none;
+    }
+    
+    .show-menu{
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        z-index: 20;
+        background-color: #000;
+    }
+  
+}
+
+
+
 
 .navbar a {
     float: left;
@@ -144,7 +189,7 @@ html {
     z-index: 1;
     flex-direction: row;
     left: 5%;
-    top: 12rem;
+    top: 13.2rem;
     width: 90%;
     text-align: center;
     box-sizing: border-box;
@@ -284,6 +329,23 @@ html {
     margin: 10px;
     border-radius: 20px;
 }
+
+@media screen and (max-width: 770px) {
+    .slider {
+        background-color: #00b5ff;
+        height: 25rem;
+    }
+
+    .slider .list img {
+        max-width: 100vw;
+        height: 100%;
+    }
+
+    .slider .buttons {
+        top: 40%;
+    }
+}
+
 /*Fin css Slider*/
 /***********************************************************************************************/
 .footer-redes {
@@ -385,7 +447,7 @@ html {
     padding-left: 1rem;
 }
 
-.footer-columna h4{
+.footer-columna h4 {
     color: aliceblue;
     font-size: 2.5rem;
     padding: 1.8rem 0 0 0.5rem;
@@ -469,6 +531,7 @@ li {
 }
 
 .footer-columna li a
+
 /*,h3*/
     {
     padding: 11px 0;
@@ -898,6 +961,33 @@ i {
     max-height: 100%;
 }
 
+@media screen and (max-width: 768px) {
+    .home-gallery {
+        height: 400px;
+        padding: 1px;
+    }
+
+    .home-gallery h3 {
+        font: 800 3rem Medium;
+    }
+
+    .swiper-wrapper .swiper-slide {
+        height: 260px;
+        margin: 0 0 5rem 0;
+    }
+
+    .nombre-impre {
+        color: #000;
+        margin-top: 1rem;
+        font-size: 1.5rem;
+    }
+
+    .home-gallery button {
+        font-size: 1.5rem;
+        margin: 0.5rem;
+    }
+}
+
 /***************SOBRE NOSOTROS**************************************************************/
 /***************SOBRE NOSOTROS**************************HISTORY ABREGU*************************************************/
 .swiper-video-nosotros {
@@ -1013,9 +1103,45 @@ i {
     /* Espacio entre la imagen y el texto */
 }
 
+@media screen and (max-width: 768px) {
+    .equipo-img {
+        height: 150px;
+    }
 
+    .ctn-img {
+        display: flex;
+        flex-direction: column;
+    }
 
+    .linea {
+        height: 80%;
+        margin: 8rem 0;
+        left: 50%;
+        /*Coloca la línea en el centro vertical */
+        transform: translateY(-50%);
+        /* Alinea verticalmente la línea */
+        width: 2px;
+        /* Altura de la línea */
+        background-color: #000;
+        /* Color de la línea */
+        z-index: -1;
+    }
+    .texto-name {
+        font: 700 1.5rem Arial;
+        margin-top: 3rem;
+        text-align: start;
+    } 
+}
 
+@media screen and (max-width: 768px) {
+    .swiper-video {
+        position: relative;
+        z-index: -1;
+        width: 100%;
+        height: 80%;
+    }
+
+}
 
 
 
@@ -1223,6 +1349,20 @@ textarea::placeholder {
     font-size: 3.5rem;
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /****IMAGENES PRINCIPALESF************** solo agregar .index__contain a las cards ejemplo */
 .index__contain {
     background-color: #000000;
@@ -1262,7 +1402,6 @@ textarea::placeholder {
     width: 60rem;
     position: absolute;
     left: calc(50% - 400px/2);
-
 }
 
 .index__contain .card-content-machine:nth-child(2n) .card-content-img img,
@@ -1350,7 +1489,49 @@ textarea::placeholder {
 .index__contain .card-content-text button:hover {
     background: rgb(39, 109, 155);
     color: rgb(255, 255, 255);
+}
 
+@media screen and (max-width: 768px) {
+    .index__contain .card-content-machine {
+        height: 30rem;
+    }
+
+    .index__contain .card-content-img img {
+        width: 30rem;
+        left: calc(35% - 200px/2);
+    }
+
+    .index__contain .card-content-text {
+        width: 56%;
+        padding: 0 2% 0 0;
+    }
+
+    .index__contain .card-content-machine:nth-child(2n) .card-content-img img,
+    .index__contain .card-content-machine:nth-child(4n) .card-content-img img {
+        width: 30rem;
+        left: calc(40% - 200px/2);
+    }
+
+    .index__contain .card-content-text h2 {
+        margin-top: 2rem;
+        font: 600 2rem Bold;
+    }
+
+    .index__contain .card-content-text h3 {
+        font: 500 2rem Medium;
+        margin-right: 3rem;
+    }
+
+    .index__contain .card-content-text p {
+        font: 800 3rem Arial;
+    }
+
+    .index__contain .card-content-text button {
+        width: 16rem;
+        height: 4rem;
+        font: 100 3rem Medium;
+        margin: 1rem 0 0 9rem;
+    }
 }
 
 
@@ -1366,21 +1547,16 @@ textarea::placeholder {
 
 
 
-/*.ver-btn{
-    width: 150px;
-    color: #b0afaf;
-    font:100 3rem SFCompactDisplay-Medium;
-    margin-top: 2rem;
-    border-radius: 1rem;
-    border: none;
-    cursor: pointer;
-}
 
-.ver-btn:hover{
-    background: rgb(39, 109, 155);
-    color: rgb(255, 255, 255);
-}
-*/
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1393,9 +1569,9 @@ textarea::placeholder {
 }
 
 .banner #titulo-banner {
-    color: aqua;
+    color: rgb(53, 201, 201);
     font: 500 10.8rem STATUS-BAR;
-    padding-top: 9rem;
+    padding-top: 30rem;
     text-align: center;
 }
 
@@ -1449,7 +1625,7 @@ textarea::placeholder {
 .maqui__contain .card-content-text {
     width: 26%;
     padding: 5rem 0 0 20rem;
-    border-bottom: 1px solid rgb(132, 135, 135);
+    border-bottom: 1px solid rgb(83, 83, 83);
 }
 
 .maqui__contain .card-content-text h2 {
@@ -1469,7 +1645,7 @@ textarea::placeholder {
 }
 
 .maqui__contain .card-content-text button {
-    background-color: #b2b0b0;
+    background-color: #7f7f7f;
     height: 4.5rem;
     width: 25rem;
     font: 700 2.5rem DIN;
@@ -1519,4 +1695,107 @@ textarea::placeholder {
 
 .solution-img img {
     height: 391px;
+}
+
+/*******************************************************INFO-MAQUINASSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS************************************************/
+
+.description-general {
+    background-color: hotpink;
+    width: 100%;
+    height: 50rem;
+    display: flex;
+    justify-content: space-around;
+}
+
+.mini-picture img {
+    height: 5rem;
+    margin-top: 4rem;
+}
+
+.genral {
+    font-size: 3rem;
+}
+
+.presupuesto {
+    width: 130rem;
+    height: 90rem;
+    margin: 1rem 30rem;
+    border: 1px solid gray;
+}
+
+.container-row ul.tables {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.tables li {
+    background: rgb(41, 41, 41);
+}
+
+.tables .active {
+    background: rgb(28, 28, 33);
+}
+
+.container-row ul.tables li {
+    flex: 1;
+    /* Hacer que los elementos ocupen el mismo espacio */
+    text-align: center;
+    height: 6rem;
+    padding: 1.5rem;
+    border-left: 1px solid gray;
+}
+
+.container-row ul.tables li:first-child {
+    border-left: none;
+}
+
+.container-row a {
+    color: rgb(248, 246, 246);
+    text-decoration: none;
+    font: 800 2.3rem bold;
+}
+
+.container-row ul.tables li:nth-child(3) {
+    background-color: rgb(39, 110, 155);
+}
+
+.pdf-content {
+    position: relative;
+    /* Establecer la posición relativa en el contenedor */
+}
+
+.pdf-content {
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    height: 300px;
+    width: 300px;
+    border: 1px solid gray;
+    margin-top: 5rem;
+    border-radius: 5px;
+    left: 70%;
+    cursor: pointer;
+}
+
+.pdf-container {
+    text-align: center;
+}
+
+.pdf-download {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-size: 18px;
+    display: block;
+    margin-bottom: 20px;
+    padding: 10px 20px;
+    background: rgb(39, 110, 155);
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.pdf-download:hover {
+    background-color: rgba(38, 38, 38, 0.8);
 }
