@@ -1,5 +1,4 @@
 
-
 // const openMenuIcon = document.getElementById("menu-icon"),
 // navbarLinks = document.getElementById("nav-links"),
 // closeMenuIcon = document.getElementById("close-icon");
@@ -27,54 +26,54 @@
 
 
 /***SLIDERRRRRRRRRRRRRRRRRRRRRRRRRRR************************************RRRRRRRRRRRRRRR******************* */
-// let slider = document.querySelector('.slider .list');
-// let items = document.querySelectorAll('.slider .list .item');
-// let next = document.getElementById('next');
-// let prev = document.getElementById('prev');
-// let dots = document.querySelectorAll('.slider .dots li');
+let slider = document.querySelector('.slider .list');
+let items = document.querySelectorAll('.slider .list .item');
+let next = document.getElementById('next');
+let prev = document.getElementById('prev');
+let dots = document.querySelectorAll('.slider .dots li');
 
-// let lengthItems = items.length - 1;
-// let active = 0;
+let lengthItems = items.length - 1;
+let active = 0;
 
-// if (next && prev) {
-//     next.onclick = function(){
-//         active = active + 1 <= lengthItems ? active + 1 : 0;
-//         reloadSlider();
-//     }
+if (next && prev) {
+    next.onclick = function(){
+        active = active + 1 <= lengthItems ? active + 1 : 0;
+        reloadSlider();
+    }
     
-//     prev.onclick = function(){
-//         active = active - 1 >= 0 ? active - 1 : lengthItems;
-//         reloadSlider();
-//     }
+    prev.onclick = function(){
+        active = active - 1 >= 0 ? active - 1 : lengthItems;
+        reloadSlider();
+    }
   
-//     let refreshInterval = setInterval(() => {
-//         if (next) {
-//             next.click();
-//         }
-//     }, 3000);
-// }
+    let refreshInterval = setInterval(() => {
+        if (next) {
+            next.click();
+        }
+    }, 3000);
+}
 
-// let refreshInterval = setInterval(()=> {next.click()}, 3000);
-// function reloadSlider(){
-//     slider.style.left = -items[active].offsetLeft + 'px';
-//     // 
-//     let last_active_dot = document.querySelector('.slider .dots li.active');
-//     last_active_dot.classList.remove('active');
-//     dots[active].classList.add('active');
+let refreshInterval = setInterval(()=> {next.click()}, 3000);
+function reloadSlider(){
+    slider.style.left = -items[active].offsetLeft + 'px';
+    // 
+    let last_active_dot = document.querySelector('.slider .dots li.active');
+    last_active_dot.classList.remove('active');
+    dots[active].classList.add('active');
 
-//     clearInterval(refreshInterval);
-//     refreshInterval = setInterval(()=> {next.click()}, 3000); 
-// }
+    clearInterval(refreshInterval);
+    refreshInterval = setInterval(()=> {next.click()}, 3000); 
+}
 
-// dots.forEach((li, key) => {
-//     li.addEventListener('click', ()=>{
-//          active = key;
-//          reloadSlider();
-//     })
-// })
-// window.onresize = function(event) {
-//     reloadSlider();
-// };
+dots.forEach((li, key) => {
+    li.addEventListener('click', ()=>{
+         active = key;
+         reloadSlider();
+    })
+})
+window.onresize = function(event) {
+    reloadSlider();
+};
 /*********************************************************************************/
 
 
@@ -237,7 +236,7 @@ function CreateCard(item, tipo){
             <h2>${item.nombre}</h2>
             <h3>${item.modelo}</h3>
             <p>${item.descripcion}</p>
-            <button data-id="${item.id}">Mas información ></button> 
+            <button type="button" class="boton" data-id="${item.id}">Mas información</button>
         `;
         contentDIV.innerHTML = content; // Usa textContent en lugar de innerHTML
 
@@ -274,13 +273,15 @@ enlaces.forEach((enlace) => {
     enlace.addEventListener("click", capturarId);
 });
 
-const enlacesCategoria = document.querySelectorAll(".contenedor-cartas a");
-enlacesCategoria.forEach((enlace) => {
-    enlace.addEventListener("click", capturarId);
-});
-
+if (!window.location.href.includes("infomaquinas.html")) {
+    const enlacesCategoria = document.querySelectorAll(".contenedor-cartas a");
+    enlacesCategoria.forEach((enlace) => {
+        enlace.addEventListener("click", capturarId);
+    });
+}
 const urlParams = new URLSearchParams(window.location.search);
 const id = urlParams.get("id");
+
 
 const TITULOS = {
     "DTF_TEXTIL": "IMPRESORA DTF TEXTIL",
@@ -319,7 +320,6 @@ clickOcultar.forEach((enlace) => {
 
     // Obtiene el ID del enlace clickeado
     const idEnlace = this.getAttribute("id");
-    console.log("/***********************/", idEnlace);
 
     // Realiza una búsqueda en los datos JSON utilizando idCategoria e idEnlace
     let maquinaEncontrada = null;
@@ -397,6 +397,7 @@ function limpiarContenedor() {
 const categoryList = document.querySelector(".container-principal");
 
 // Agrega un evento de clic a la lista de categorías
+
 categoryList.addEventListener("click", (event) => {
     // Comprueba si se hizo clic en un elemento <a> dentro de un <li>
     if (event.target.tagName === "A") {
@@ -414,7 +415,6 @@ function loadMachinesByCategory(categoryId) {
     conexion(URL_BBDD)
         .then((data) => {
             let categoria = data.articulos.maquinas[categoryId];
-            console.log(categoria);
             RecorrerImpresoras(categoria, 3);
         })
         .catch((error) => {
@@ -425,35 +425,27 @@ function loadMachinesByCategory(categoryId) {
 
 
 
-// ***************************************btn-info
-document.querySelectorAll('button[data-id]').forEach((button) => {
-    button.addEventListener('click', (event) => {
-        // Obtener el valor del atributo data-id
-        alert();
-        const dataId = event.currentTarget.getAttribute('data-id');
+let dataId;
+// ////////////////////////////////////////////////Envio id de los botones por la URL a la pag infoMaquinas
+window.addEventListener("load", function () {
+    // Verifica si estamos en la página maquinas.html
+    if (window.location.href.includes("maquinas.html")) {
+        // Agrega un pequeño retraso (por ejemplo, 1000 milisegundos o 1 segundo) antes de asignar los event listeners
+        setTimeout(function () {
+            // Asigna los event listeners a los botones de esa página
+            let botones = document.querySelectorAll(".boton");
+            
+  
+            botones.forEach((boton) => {
+                boton.addEventListener("click", (event) => {
+                    dataId = event.currentTarget.getAttribute("data-id");
+                    let url = `infomaquinas.html?id=${dataId}`;
         
-        // Construir la URL de destino con el data-id como parámetro
-        const url = `infomaquinas.html?id=${dataId}`;
-        
-        // Redirigir a la página HTML correspondiente con el ID como parámetro
-        window.location.href = url;
-    });
+                    // Redirige a la página HTML correspondiente con el ID como parámetro
+                    window.location.href = url;
+                                   
+                });
+            });
+        }, 1000); // 1000 milisegundos = 1 segundo
+    }
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
