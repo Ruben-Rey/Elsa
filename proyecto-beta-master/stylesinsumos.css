@@ -1,0 +1,15 @@
+.insumos-img img {
+    width: 100%;
+    height: 70rem;
+}
+
+.insumo-title {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font: 600 5rem Arial;
+    text-align: center;
+    z-index: 1;
+}
