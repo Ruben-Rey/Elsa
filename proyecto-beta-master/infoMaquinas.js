@@ -52,7 +52,7 @@ function buscarID(){
 let descripGeneral = document.querySelector(".genral_des");
 let descripImagen = document.querySelector(".genral_img");
 let descripVideo = document.querySelector(".video_pick");
-let descripTitulo = document.querySelector(".description-general .titulo");
+let descripTitulo = document.querySelector(".titulo");
 
 function renderizar(maquina){
     let descripcionGeneral = `
@@ -65,10 +65,10 @@ function renderizar(maquina){
     `
     descripImagen.innerHTML = imagen;
     
-    let descripTitulo = `
-    <h1>${maquina.nombre}, ${maquina.modelo}</h1>
+    let titulo = `
+    <h1>${maquina.nombre}    <br> ${maquina.modelo}</h1>
     `
-    descripTitulo.innerHTML = descripTitulo;
+    descripTitulo.innerHTML = titulo;
 
     let video = `
     <iframe width="1300" height="900" src="${maquina.video}" frameborder="0"
