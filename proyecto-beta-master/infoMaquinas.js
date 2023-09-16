@@ -71,7 +71,7 @@ function renderizar(maquina){
     descripTitulo.innerHTML = titulo;
 
     let video = `
-    <iframe width="1300" height="900" src="${maquina.video}" frameborder="0"
+    <iframe src="${maquina.video}" frameborder="0"
     allowfullscreen></iframe>
     `
     descripVideo.innerHTML = video;

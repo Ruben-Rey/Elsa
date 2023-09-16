@@ -190,7 +190,7 @@ html {
     z-index: 1;
     flex-direction: row;
     left: 5%;
-    top: 13.2rem;
+    top: 12rem;
     width: 90%;
     text-align: center;
     box-sizing: border-box;
@@ -845,18 +845,18 @@ i {
 
 .categorias h3 {
     color: white;
-    font-size: 3rem;
+    font-size: 3.5rem;
 }
 
 .categorias .ver-todos {
     padding: 6px 30px;
-    font-size: 20px;
-    background: linear-gradient(rgb(46, 138, 184) 0%, rgb(67, 152, 208) 100%) rgb(46, 138, 184);
+    font-size: 22px;
+    background: linear-gradient(rgb(46, 138, 184) 0%, rgb(67, 152, 208) 100%);
     display: inline-block;
     border-right: 1px solid rgb(77, 77, 77);
     color: rgb(255, 255, 255);
     margin: 40px;
-    transition: 0.3s color rgb(77, 77, 77);
+    transition: 0.4s;
 }
 
 .categorias .ver-todos:hover {
@@ -888,6 +888,8 @@ i {
     margin-top: 10px;
     background-color: #ccc9c9;
     object-fit: contain;
+    border-radius: 2rem;
+
 }
 
 .cartas a {
@@ -906,7 +908,8 @@ i {
     background: rgb(217, 216, 216);
     width: 100%;
     height: 750px;
-    color: white;
+    font-weight: 800;
+    color: rgb(122, 121, 121);
     text-align: center;
     padding: 4rem 7rem;
 }
@@ -1011,6 +1014,10 @@ i {
     z-index: 1;
 }
 
+.article-nosotros{
+    padding: 0% 12%;
+}
+
 .video-overlay h1 {
     margin-bottom: 10px;
 }
@@ -1020,10 +1027,6 @@ i {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    /*align-items: flex-start;*/
-    /* Alinea el contenido a la izquierda */
-    padding: 8rem;
-    /* Agrega espacio en la parte superior e inferior */
     text-align: center;
     margin-top: 8rem;
 }
@@ -1424,9 +1427,8 @@ textarea::placeholder {
 }
 
 .index__contain .card-content-img {
-    background-color: white;
-    align-items: centen;
     background-color: #fdfdfd;
+    align-items: center;
     width: 50%;
     position: relative;
 }
@@ -1454,8 +1456,8 @@ textarea::placeholder {
 }
 
 .index__contain .card-content-text {
+    background-color: #fdfdfd;
     padding: 10rem 10% 0 15%;
-    background-color: rgb(255, 255, 255);
     width: 50%;
     text-align: center;
 }
@@ -1471,7 +1473,7 @@ textarea::placeholder {
     font: 800 2.5rem Bold;
     line-height: 5rem;
     text-align: center;
-    color: rgb(191, 191, 191);
+    color: rgb(130, 130, 130);
     cursor: pointer;
     transition: all 800ms ease 0s
 }
@@ -1483,7 +1485,7 @@ textarea::placeholder {
 .index__contain .card-content-text p {
     width: 50rem;
     text-align: center;
-    color: rgb(191, 191, 191);
+    color: rgb(130, 130, 130);
     font: 800 5rem Arial;
     cursor: pointer;
     transition: all 800ms ease 0s
@@ -1498,7 +1500,7 @@ textarea::placeholder {
     width: 50rem;
     margin-top: 2rem;
     font: 700 2.3rem Medium;
-    color: rgb(191, 191, 191);
+    color: rgb(150, 150, 150);
     cursor: pointer;
     transition: all 800ms ease 0s
 }
@@ -1508,9 +1510,10 @@ textarea::placeholder {
 }
 
 .index__contain .card-content-text button {
+    background-color: #dbd9d9;
     width: 18rem;
     height: 4rem;
-    color: #b0afaf;
+    color: #838181;
     font: 100 3rem Medium;
     margin: 2rem auto;
     border-radius: 1rem;
@@ -1611,7 +1614,7 @@ textarea::placeholder {
 .container-principal {
     display: flex;
     justify-content: center;
-    background-color: #7d7b7b;
+    background-color: #4c4a4a;
     padding: 0;
     height: 6rem;
 }
@@ -1638,27 +1641,25 @@ textarea::placeholder {
 
 /***************************************************************************************************************************************************/
 .maqui__contain .card-content-machine {
+    box-shadow: 5px 5px 6px 6px #a4a3a3;
     display: flex;
     justify-content: center;
-    cursor: pointer;
-
 }
 
 .maqui__contain .card-content-img {
     width: 26%;
-    border-bottom: 1px solid rgb(132, 135, 135);
-
 }
 
 .maqui__contain .card-content-img img {
     margin: 4rem 0 4rem 0;
     width: 100%;
+    cursor: pointer;
 }
 
 .maqui__contain .card-content-text {
-    width: 26%;
+    width: 35%;
     padding: 5rem 0 0 20rem;
-    border-bottom: 1px solid rgb(83, 83, 83);
+    cursor: pointer;
 }
 
 .maqui__contain .card-content-text h2 {
@@ -1681,15 +1682,16 @@ textarea::placeholder {
     background-color: #7f7f7f;
     height: 4.5rem;
     width: 25rem;
+    color: white;
     font: 700 2.5rem DIN;
     margin: 2rem 0 2rem 0;
     border: none;
+    border-radius: 2rem;
     transition: all 1s;
     cursor: pointer;
 }
 
 .maqui__contain .card-content-text button:hover {
-    color: white;
     background-color: #3ac0f5;
 }
 
@@ -1774,29 +1776,64 @@ textarea::placeholder {
 
 
 /*******************************************************INFO-MAQUINASSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS************************************************/
+.article-infoma{
+    padding: 0 5%;
+}
+
+.titulo{
+    text-align: center;
+    font: 600 2rem system-ui;
+    margin-top: 3rem;
+    background: radial-gradient(#0e37f7, #000);
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;  
+}
 
 .description-general {
-    background-color: hotpink;
     width: 100%;
-    height: 50rem;
+   height: 45rem;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
+}
+
+.genral_des{
+    width: 25%;
+    margin-top: 4%;
+    font: 800 2.5rem monospace;
 }
 
 .genral_img img{
-    width: 300px;
-    height: 300px;
+    height: 35rem;
+    margin: 6% 20% 0% 10%;
+}
+
+.mini-picture{
+    width: 6%;
+    margin: 2% 6%;
 }
 
 .mini-picture img {
-    height: 5rem;
-    margin-top: 4rem;
+    height: 6rem;
+    margin-top: 20%;
+}
+
+.video_pick{
+    width: 100%;
+    margin: auto;
+}
+
+.video_pick iframe{
+    width: 50%;
+    height: 50rem;
+    margin-left: 25%;
 }
 
 .presupuesto {
+    background-color: darksalmon;
     width: 130rem;
     height: 90rem;
-    margin: 1rem 30rem;
+    margin: 4% 12.5%;
     border: 1px solid gray;
 }
 
