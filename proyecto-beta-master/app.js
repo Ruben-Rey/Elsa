@@ -1,25 +1,25 @@
 
 
-const openMenuIcon = document.getElementById("menu-icon"),
-navbarLinks = document.getElementById("nav-links"),
-closeMenuIcon = document.getElementById("close-icon");
+// const openMenuIcon = document.getElementById("menu-icon"),
+// navbarLinks = document.getElementById("nav-links"),
+// closeMenuIcon = document.getElementById("close-icon");
 
-openMenuIcon.addEventListener("click", () => {
-    navbarLinks.classList.add("show-menu");
+// openMenuIcon.addEventListener("click", () => {
+//     navbarLinks.classList.add("show-menu");
 
-});
+// });
 
-closeMenuIcon.addEventListener("click", () => {
-    navbarLinks.classList.remove("show-menu");
-})
+// closeMenuIcon.addEventListener("click", () => {
+//     navbarLinks.classList.remove("show-menu");
+// })
 
-const navLink = document.querySelectorAll(".nav__link");
-function linkAction(){
-    const navbarLinks = document.getElementById("nav-links")
-    navbarLinks.classList.remove("show-menu")
-}
+// const navLink = document.querySelectorAll(".nav__link");
+// function linkAction(){
+//     const navbarLinks = document.getElementById("nav-links")
+//     navbarLinks.classList.remove("show-menu")
+// }
 
-navLink.forEach((item) => item.addEventListener("click", linkAction))
+// navLink.forEach((item) => item.addEventListener("click", linkAction))
 
 
 
@@ -27,54 +27,54 @@ navLink.forEach((item) => item.addEventListener("click", linkAction))
 
 
 /***SLIDERRRRRRRRRRRRRRRRRRRRRRRRRRR************************************RRRRRRRRRRRRRRR******************* */
-let slider = document.querySelector('.slider .list');
-let items = document.querySelectorAll('.slider .list .item');
-let next = document.getElementById('next');
-let prev = document.getElementById('prev');
-let dots = document.querySelectorAll('.slider .dots li');
+// let slider = document.querySelector('.slider .list');
+// let items = document.querySelectorAll('.slider .list .item');
+// let next = document.getElementById('next');
+// let prev = document.getElementById('prev');
+// let dots = document.querySelectorAll('.slider .dots li');
 
-let lengthItems = items.length - 1;
-let active = 0;
+// let lengthItems = items.length - 1;
+// let active = 0;
 
-if (next && prev) {
-    next.onclick = function(){
-        active = active + 1 <= lengthItems ? active + 1 : 0;
-        reloadSlider();
-    }
+// if (next && prev) {
+//     next.onclick = function(){
+//         active = active + 1 <= lengthItems ? active + 1 : 0;
+//         reloadSlider();
+//     }
     
-    prev.onclick = function(){
-        active = active - 1 >= 0 ? active - 1 : lengthItems;
-        reloadSlider();
-    }
+//     prev.onclick = function(){
+//         active = active - 1 >= 0 ? active - 1 : lengthItems;
+//         reloadSlider();
+//     }
   
-    let refreshInterval = setInterval(() => {
-        if (next) {
-            next.click();
-        }
-    }, 3000);
-}
+//     let refreshInterval = setInterval(() => {
+//         if (next) {
+//             next.click();
+//         }
+//     }, 3000);
+// }
 
-let refreshInterval = setInterval(()=> {next.click()}, 3000);
-function reloadSlider(){
-    slider.style.left = -items[active].offsetLeft + 'px';
-    // 
-    let last_active_dot = document.querySelector('.slider .dots li.active');
-    last_active_dot.classList.remove('active');
-    dots[active].classList.add('active');
+// let refreshInterval = setInterval(()=> {next.click()}, 3000);
+// function reloadSlider(){
+//     slider.style.left = -items[active].offsetLeft + 'px';
+//     // 
+//     let last_active_dot = document.querySelector('.slider .dots li.active');
+//     last_active_dot.classList.remove('active');
+//     dots[active].classList.add('active');
 
-    clearInterval(refreshInterval);
-    refreshInterval = setInterval(()=> {next.click()}, 3000); 
-}
+//     clearInterval(refreshInterval);
+//     refreshInterval = setInterval(()=> {next.click()}, 3000); 
+// }
 
-dots.forEach((li, key) => {
-    li.addEventListener('click', ()=>{
-         active = key;
-         reloadSlider();
-    })
-})
-window.onresize = function(event) {
-    reloadSlider();
-};
+// dots.forEach((li, key) => {
+//     li.addEventListener('click', ()=>{
+//          active = key;
+//          reloadSlider();
+//     })
+// })
+// window.onresize = function(event) {
+//     reloadSlider();
+// };
 /*********************************************************************************/
 
 
@@ -237,7 +237,7 @@ function CreateCard(item, tipo){
             <h2>${item.nombre}</h2>
             <h3>${item.modelo}</h3>
             <p>${item.descripcion}</p>
-            <button>Mas información ></button>  
+            <button data-id="${item.id}">Mas información ></button> 
         `;
         contentDIV.innerHTML = content; // Usa textContent en lugar de innerHTML
 
@@ -309,19 +309,6 @@ if(id){
     console.error("No se encontró un ID en los parámetros de la URL.");
 }
 
-
-// const divOcultar = document.getElementById("imp-machine");
-
-// // Recorre todos los elementos con la clase "ocultar"
-// clickOcultar.forEach(enlace => {
-    //   // Agrega un manejador de eventos a cada elemento
-    //   enlace.addEventListener("click", function(event) {
-        //     event.preventDefault();
-        //     divOcultar.style.display = "none";
-        //   });
-        // });
-        
-        // Captura todos los enlaces con la clase "ocultar"
         
 const clickOcultar = document.querySelectorAll(".ocultar");
 
@@ -362,23 +349,23 @@ clickOcultar.forEach((enlace) => {
 });
 
 
-// const mySwiper = new Swiper('.swiper-container', {
-//     slidesPerView: 3,
-//     loop: true,
-//     spaceBetween: 20,
-//     autoplay: {
-//         delay: 5000 // Cambiar cada 5 segundos
-//     },
-//     on: {
-//         slideChange: function () {
-//             // Detener la reproducción de videos al cambiar de diapositiva
-//             const videos = document.querySelectorAll('.swiper-slide video');
-//             videos.forEach(video => {
-//                 video.pause();
-//             });
-//         }
-//     }
-// });
+const mySwiper = new Swiper('.swiper-container', {
+    slidesPerView: 3,
+    loop: true,
+    spaceBetween: 20,
+    autoplay: {
+        delay: 5000 // Cambiar cada 5 segundos
+    },
+    on: {
+        slideChange: function () {
+            // Detener la reproducción de videos al cambiar de diapositiva
+            const videos = document.querySelectorAll('.swiper-slide video');
+            videos.forEach(video => {
+                video.pause();
+            });
+        }
+    }
+});
 
 
 
@@ -438,8 +425,20 @@ function loadMachinesByCategory(categoryId) {
 
 
 
-
-
+// ***************************************btn-info
+document.querySelectorAll('button[data-id]').forEach((button) => {
+    button.addEventListener('click', (event) => {
+        // Obtener el valor del atributo data-id
+        alert();
+        const dataId = event.currentTarget.getAttribute('data-id');
+        
+        // Construir la URL de destino con el data-id como parámetro
+        const url = `infomaquinas.html?id=${dataId}`;
+        
+        // Redirigir a la página HTML correspondiente con el ID como parámetro
+        window.location.href = url;
+    });
+});
 
 
 
