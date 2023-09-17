@@ -25,7 +25,6 @@ async function conexion(url){
 conexion(URL_BBDD)
     .then( () =>{   
         buscarID();
-
 })
 
 function buscarID(){
@@ -40,7 +39,6 @@ function buscarID(){
 
     if (maquinaEncontrada) {
         // Por ejemplo, aquí puedes mostrar la información en un modal o en algún otro lugar en tu página
-        console.log("Máquina encontrada:", maquinaEncontrada);
         renderizar(maquinaEncontrada);
          // Luego, puedes usar maquinaEncontrada para mostrar la información en el lugar deseado en tu página.
     } else {
@@ -53,8 +51,15 @@ let descripGeneral = document.querySelector(".genral_des");
 let descripImagen = document.querySelector(".genral_img");
 let descripVideo = document.querySelector(".video_pick");
 let descripTitulo = document.querySelector(".titulo");
+let insumo = document.querySelector(".insumos");
 
+
+let keyInsumo;
 function renderizar(maquina){
+    
+    keyInsumo = maquina.tipo;
+    let tipoInsumo = maquinasJSON.articulos.insumos[`insumos_${keyInsumo}`];
+    
     let descripcionGeneral = `
     <p>${maquina.descripcion_general}</p>
     `
@@ -64,7 +69,18 @@ function renderizar(maquina){
     <img src="${maquina.imagen}" alt="">
     `
     descripImagen.innerHTML = imagen;
-    
+
+    let contenedorInsumos = document.createElement("div");
+
+
+    let contentInsumo = `
+        <img src=${tipoInsumo[0].imagen} alt="">
+        <p>${tipoInsumo[0].nombre}</p>
+    `
+    contenedorInsumos.innerHTML = contentInsumo;
+    insumo.appendChild(contenedorInsumos);
+
+
     let titulo = `
     <h1>${maquina.nombre}    <br> ${maquina.modelo}</h1>
     `
@@ -76,3 +92,31 @@ function renderizar(maquina){
     `
     descripVideo.innerHTML = video;
 }
+
+// Obtén una referencia al botón para mostrar el modal y al modal
+const botonMostrarModal = document.getElementById('mostrarModal');
+const modal = document.getElementById('myModal');
+
+// Obtén una referencia al botón para cerrar el modal
+const botonCerrarModal = document.getElementById('cerrarModal');
+
+// Agrega un manejador de eventos para mostrar el modal cuando se hace clic en el botón
+botonMostrarModal.addEventListener('click', () => {
+    modal.style.display = 'block'; // Muestra el modal
+    document.body.classList.add("modal-open");
+});
+
+// Agrega un manejador de eventos para cerrar el modal cuando se hace clic en el botón de cerrar
+botonCerrarModal.addEventListener('click', () => {
+    modal.style.display = 'none'; // Oculta el modal
+    document.body.classList.remove("modal-open");
+});
+
+// Agrega un manejador de eventos para cerrar el modal cuando se hace clic fuera del modal
+window.addEventListener('click', (event) => {
+    if (event.target === modal) {
+        modal.style.display = 'none'; // Oculta el modal si se hace clic fuera de él
+    }
+});
+
+

@@ -4,6 +4,7 @@
             "DTF_TEXTIL": [
                 {   
                     "id": 1,
+                    "tipo": "DTF",
                     "serie": "SERIE DE EPSON",
                     "nombre": "Impresora ABREGU DTF de 30 cm",
                     "modelo": "OR-A3 Mini 330 DTF",
@@ -15,6 +16,7 @@
                 },
                 {   
                     "id": 2,
+                    "tipo": "DTF",
                     "serie": "SERIE DE EPSON",
                     "nombre": "Impresora ABREGU DTF de 30 cm verde Pro",
                     "modelo": "A3-DTF MACHINE",
@@ -26,6 +28,7 @@
                 },
                 {   
                     "id": 3,
+                    "tipo": "DTF",
                     "serie": "SERIE DE EPSON",
                     "nombre": "Impresora ABREGU DTF de 60 cm",
                     "modelo": "OR-DTF-60A",
@@ -37,6 +40,7 @@
                 },
                 {
                     "id": 4,
+                    "tipo": "DTF",
                     "serie": "SERIE DE EPSON",
                     "nombre": "Impresora DTF de 60 cm verde Pro",
                     "modelo": "CNZ A-620",
@@ -50,6 +54,7 @@
             "UV_DTF": [
                 {   
                     "id": 5,
+                    "tipo": "UV_DTF",
                     "serie": "SERIE DE EPSON",
                     "nombre": "Impresora UV DTF 30cm",
                     "modelo": "RF-3360",
@@ -61,6 +66,7 @@
                 },
                 {
                     "id": 6,
+                    "tipo": "UV_DTF",
                     "serie": "SERIE DE EPSON",
                     "nombre": "Impresora UV DTF 42 cm Rollo a Rollo",
                     "modelo": "T3000-UV",
@@ -72,6 +78,7 @@
                 },
                 {
                     "id": 7,
+                    "tipo": "UV_DTF",
                     "serie": "SERIE DE EPSON",
                     "nombre": "Impresora UV DTF 60 X 90cm cama plana",
                     "modelo": "CP-60-U1",
@@ -84,6 +91,7 @@
         
                 {
                     "id": 8,
+                    "tipo": "UV_DTF",
                     "serie": "SERIE DE EPSON",
                     "nombre": "Impresora UV DTF 60 cm Rollo a Rollo",
                     "modelo": "PREDATHOR-PRO",
@@ -97,6 +105,7 @@
             "DTG": [
                 {
                     "id": 9,
+                    "tipo": "DTG",
                     "serie": "SERIE DE EPSON",
                     "nombre": "Impresora DTG 4",
                     "modelo": "i3200 x 4-9C",
@@ -108,6 +117,7 @@
                 },
                 {
                     "id": 10,
+                    "tipo": "DTG",
                     "serie": "SERIE DE EPSON",
                     "nombre": "Impresora DTG Doble bandeja",
                     "modelo": "DTG-i3200-AI(EPSON)",
@@ -121,6 +131,7 @@
             "IMPRESORA_SUBLIMADO": [
                 {
                     "id": 11,
+                    "tipo": "sublimacion",
                     "serie": "SERIE DE EPSON",
                     "nombre": "Impresora sublimaciòn",
                     "modelo": "WJ-740S",
@@ -132,6 +143,7 @@
                 },
                 {
                     "id": 12,
+                    "tipo": "sublimacion",
                     "serie": "SERIE DE EPSON",
                     "nombre": "Impresora de sublimado industrial",
                     "modelo": "PHALCON X3",
@@ -145,6 +157,7 @@
             "LASER": [
                 {
                     "id": 13,
+                    "tipo": "DTG",
                     "serie": "SERIE DE EPSON",
                     "nombre": "LASER DE SUBLIMACION",
                     "modelo": "L-LTES-3D",
@@ -362,7 +375,7 @@
                     "imagen": "https://i.postimg.cc/B6CTFjbp/papel-1-60cm.png"
                 }
             ]
-        }
+        }   
     }
 }
 
