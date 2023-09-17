@@ -1,15 +1,62 @@
 .insumos-img img {
     width: 100%;
-    height: 70rem;
+    height: 55rem;
 }
 
 .insumo-title {
     position: absolute;
-    top: 45%;
+    top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
     color: white;
     font: 600 5rem Arial;
     text-align: center;
     z-index: 1;
+}
+
+.insumo-category {
+    background-image: url("");
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 60rem;
+}
+
+.insumo-category .subtitle{
+    height: 8rem;
+    font: 800 4rem bold;
+    text-align: center;
+    margin-top: 3%;
+}
+
+.seccion-insumos {
+    width: 100%;
+    height: 7rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ulconta-principal {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 4rem;
+}
+
+.ulconta-principal li {
+    background-color: #494848;
+    width: auto;
+    padding: 0 2rem;
+    box-shadow: 5px 5px 6px 6px #a4a3a3;
+}
+
+.ulconta-principal li a {
+    font: 800 2.5rem bold;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+}
+
+.ulconta-principal li:hover {
+    background-color: rgb(69, 175, 246);
 }
