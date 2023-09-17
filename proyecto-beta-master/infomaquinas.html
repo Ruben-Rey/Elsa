@@ -167,7 +167,7 @@
                         <li class=""><a href="#">Insumos</a></li>
                         <li class=""><a href="#">Folleto PDF</a></li>
                         <li>
-                            <a href="#" data-target="" data-toggle="modal">
+                            <a href="#" id="mostrarModal" data-target="" data-toggle="modal">
                                 Solicitud de presupuesto
                             </a>
                         </li>
@@ -186,10 +186,11 @@
                 </div>
             </section>
 
-            <section>
+            <section id="myModal" class="modal">
                 <form action="">
                     <div class="">
                         <div class="formulary">
+                            <button type="button" id="cerrarModal" class="close">&times;</button>
                             <h2 class="message-text">ENVIAR CONSULTAS EN LÍNEA</h2>
                             <p class="message">Envíe su consulta en línea y le responderemos rápidamente</p>
                             <form action="/wp-content/plugins/lanthy-message/updata.php" method="post">

@@ -92,3 +92,31 @@ function renderizar(maquina){
     `
     descripVideo.innerHTML = video;
 }
+
+// Obtén una referencia al botón para mostrar el modal y al modal
+const botonMostrarModal = document.getElementById('mostrarModal');
+const modal = document.getElementById('myModal');
+
+// Obtén una referencia al botón para cerrar el modal
+const botonCerrarModal = document.getElementById('cerrarModal');
+
+// Agrega un manejador de eventos para mostrar el modal cuando se hace clic en el botón
+botonMostrarModal.addEventListener('click', () => {
+    modal.style.display = 'block'; // Muestra el modal
+    document.body.classList.add("modal-open");
+});
+
+// Agrega un manejador de eventos para cerrar el modal cuando se hace clic en el botón de cerrar
+botonCerrarModal.addEventListener('click', () => {
+    modal.style.display = 'none'; // Oculta el modal
+    document.body.classList.remove("modal-open");
+});
+
+// Agrega un manejador de eventos para cerrar el modal cuando se hace clic fuera del modal
+window.addEventListener('click', (event) => {
+    if (event.target === modal) {
+        modal.style.display = 'none'; // Oculta el modal si se hace clic fuera de él
+    }
+});
+
+

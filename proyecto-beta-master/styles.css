@@ -1927,9 +1927,26 @@ textarea::placeholder {
 }
 
 
-
-
-
+body.modal-open::before {
+    content: ""; /* Crea un pseudo-elemento antes del contenido */
+    position: fixed; /* Se mantiene fijo en la ventana */
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+    filter: blur(5px); /* Aplica un filtro de desenfoque gaussiano */
+    z-index: -1; /* Coloca el fondo detrás de todo */
+}
+#myModal {
+    z-index: 1000;
+    display: none; /* Oculta el modal por defecto */
+    position: fixed;
+    top: 60%; /* Centra verticalmente en la mitad de la pantalla */
+    left: 20%; /* Centra horizontalmente en la mitad de la pantalla */
+    transform: translate(-50%, -50%); /* Centra exactamente en el centro */
+  }
+  
 
 
 
