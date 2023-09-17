@@ -60,3 +60,7 @@
 .ulconta-principal li:hover {
     background-color: rgb(69, 175, 246);
 }
+
+.renderInsumos {
+    display: flex;
+}

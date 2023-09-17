@@ -395,7 +395,6 @@ function limpiarContenedor() {
 }
 // Obtén una referencia a la lista de categorías
 const categoryList = document.querySelector(".container-principal");
-
 // Agrega un evento de clic a la lista de categorías
 
 categoryList.addEventListener("click", (event) => {

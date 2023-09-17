@@ -268,7 +268,9 @@
         "insumos": {
             "insumos_DTF": [
                 {
-                    "photo_general": "https://png.pngtree.com/thumb_back/fw800/background/20230424/pngtree-many-colorful-dyes-suspended-in-a-dark-background-image_2496031.jpg",
+                    "photo_general": "https://png.pngtree.com/thumb_back/fw800/background/20230424/pngtree-many-colorful-dyes-suspended-in-a-dark-background-image_2496031.jpg"
+                },
+                {
                     "nombre": "Tinta black 1lt",
                     "imagen": "https://i.postimg.cc/PJprbZJk/tinta-black-1litro.png"
                 },
@@ -299,7 +301,9 @@
             ],
             "insumos_UV_DTF": [
                 {
-                    "photo_general": "https://img.lovepik.com/background/20211021/large/lovepik-background-of-technology-conference-for-color-and-image_400142499.jpg",
+                    "photo_general": "https://img.lovepik.com/background/20211021/large/lovepik-background-of-technology-conference-for-color-and-image_400142499.jpg"
+                },
+                {
                     "nombre": "Tinta black 1lt",
                     "imagen": "https://i.postimg.cc/L8vMJyw5/black-uvdtf.png"
                 },
@@ -321,9 +325,10 @@
                 }
             ],
             "insumos_DTG":[
-                
                 {
-                    "photo_general": "https://png.pngtree.com/background/20230410/original/pngtree-splash-ink-color-background-picture-image_2379618.jpg",
+                    "photo_general": "https://png.pngtree.com/background/20230410/original/pngtree-splash-ink-color-background-picture-image_2379618.jpg"
+                },
+                {
                     "nombre": "Tinta black 1lt",
                     "imagen": "https://i.postimg.cc/Y9MgdC8b/black-dtg.png"
                 },
@@ -350,7 +355,9 @@
             ],
             "insumos_sublimacion": [
                 {
-                    "photo_general": "https://w0.peakpx.com/wallpaper/807/821/HD-wallpaper-water-paint-art-colour-explosion-ink-paint-water.jpg",
+                    "photo_general": "https://w0.peakpx.com/wallpaper/807/821/HD-wallpaper-water-paint-art-colour-explosion-ink-paint-water.jpg"
+                },
+                {
                     "nombre": "Tinta black 1lt",
                     "imagen": "https://i.postimg.cc/g2yKvtxm/tinta-black-1litro.png"
                 },
