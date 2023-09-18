@@ -72,7 +72,6 @@ export function iniciar() {
 
         let contenedorInsumos = document.createElement("div");
 
-
         let contentInsumo = `
             <img src=${tipoInsumo[1].imagen} alt="">
             <p>${tipoInsumo[1].nombre}</p>

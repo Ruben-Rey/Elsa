@@ -294,21 +294,37 @@ const TITULOS = {
     "CALANDRA": "CALANDRA",
 }
 
-let titulo = TITULOS[id];
+if (window.location.href.includes('maquinas.html') || window.location.href.includes('maquinas.html')) {
+    let titulo = TITULOS[id];
+    tituloBanner.innerHTML = titulo;
+    if(id){
+        conexion(URL_BBDD)
+            .then( (data) =>{
+                const maquinas = data.articulos.maquinas[id];
+                RecorrerImpresoras(maquinas, 3);
+            })
+    
+    }else{
+        // Aquí puedes manejar el caso en el que no haya un ID en los parámetros de la URL
+        console.error("No se encontró un ID en los parámetros de la URL.");
+    }
 
-tituloBanner.innerHTML = titulo;
+    // Obtén una referencia a la lista de categorías
+    const categoryList = document.querySelector(".container-principal");
+    // Agrega un evento de clic a la lista de categorías
 
-if(id){
-    conexion(URL_BBDD)
-        .then( (data) =>{
-            const maquinas = data.articulos.maquinas[id];
-            RecorrerImpresoras(maquinas, 3);
-        })
-
-}else{
-    // Aquí puedes manejar el caso en el que no haya un ID en los parámetros de la URL
-    console.error("No se encontró un ID en los parámetros de la URL.");
+    categoryList.addEventListener("click", (event) => {
+        // Comprueba si se hizo clic en un elemento <a> dentro de un <li>
+        if (event.target.tagName === "A") {
+            event.preventDefault(); // Evita la navegación predeterminada del enlace
+            // Obtén el ID de la categoría seleccionada
+            const categoryId = event.target.parentElement.id;
+            tituloBanner.innerHTML = categoryId;
+            loadMachinesByCategory(categoryId);
+        }
+    });
 }
+
 
         
 const clickOcultar = document.querySelectorAll(".ocultar");
@@ -368,45 +384,13 @@ const mySwiper = new Swiper('.swiper-container', {
 });
 
 
-
-
-
-
-
-// const menuItems = document.querySelectorAll('.index__contain');
-// menuItems.forEach((menuItem) => {
-//     const popup = menuItem.querySelector('.card-content-machine');
-//     menuItem.addEventListener('mouseenter', () => {
-//     popup.style.display = 'block';
-//     });
-//     menuItem.addEventListener('mouseleave', () => {
-//     popup.style.display = 'none';
-//     });
-// });
-
-/********************************************* */
-
-
 function limpiarContenedor() {
     const impMachine = document.getElementById("imp-machine");
     while (impMachine.firstChild) {
         impMachine.removeChild(impMachine.firstChild);
     }
 }
-// Obtén una referencia a la lista de categorías
-const categoryList = document.querySelector(".container-principal");
-// Agrega un evento de clic a la lista de categorías
 
-categoryList.addEventListener("click", (event) => {
-    // Comprueba si se hizo clic en un elemento <a> dentro de un <li>
-    if (event.target.tagName === "A") {
-        event.preventDefault(); // Evita la navegación predeterminada del enlace
-        // Obtén el ID de la categoría seleccionada
-        const categoryId = event.target.parentElement.id;
-        tituloBanner.innerHTML = categoryId;
-        loadMachinesByCategory(categoryId);
-    }
-});
 
 function loadMachinesByCategory(categoryId) {
     limpiarContenedor();
