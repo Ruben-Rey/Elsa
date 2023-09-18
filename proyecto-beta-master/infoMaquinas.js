@@ -51,7 +51,7 @@ export function iniciar() {
     let descripImagen = document.querySelector(".genral_img");
     let descripVideo = document.querySelector(".video_pick");
     let descripTitulo = document.querySelector(".titulo");
-    let insumo = document.querySelector(".insumos");
+    let insumo = document.querySelector(".info_insumos");
 
 
     let keyInsumo;
@@ -71,7 +71,7 @@ export function iniciar() {
         descripImagen.innerHTML = imagen;
 
         let contenedorInsumos = document.createElement("div");
-
+        contenedorInsumos.className = "card-insumos";
 
         let contentInsumo = `
             <img src=${tipoInsumo[1].imagen} alt="">

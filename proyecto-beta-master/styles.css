@@ -846,23 +846,7 @@ i {
 .categorias h3 {
     color: white;
     font-size: 3.5rem;
-}
-
-.categorias .ver-todos {
-    padding: 6px 30px;
-    font-size: 22px;
-    background: linear-gradient(rgb(46, 138, 184) 0%, rgb(67, 152, 208) 100%);
-    display: inline-block;
-    border-right: 1px solid rgb(77, 77, 77);
-    color: rgb(255, 255, 255);
-    margin: 40px;
-    transition: 0.4s;
-}
-
-.categorias .ver-todos:hover {
-    color: rgb(28, 28, 33);
-    background: linear-gradient(to right, #5ab0ed, #a3d8e9);
-    transform: scale(1.1);
+    margin: 3rem;
 }
 
 .contenedor-cartas {
@@ -873,9 +857,8 @@ i {
 
 .cartas {
     width: 28%;
-    margin: 1.5rem 1rem;
+    margin: 2rem 1.5rem;
 }
-
 
 .nombre {
     margin-top: 1rem;
@@ -907,7 +890,7 @@ i {
 .home-gallery {
     background: rgb(217, 216, 216);
     width: 100%;
-    height: 750px;
+    height: 70rem;
     font-weight: 800;
     color: rgb(122, 121, 121);
     text-align: center;
@@ -1830,7 +1813,6 @@ textarea::placeholder {
 }
 
 .presupuesto {
-    background-color: darksalmon;
     width: 130rem;
     height: 90rem;
     margin: 4% 12.5%;
@@ -1859,7 +1841,7 @@ textarea::placeholder {
     text-align: center;
     height: 6rem;
     padding: 1.5rem;
-    border-left: 1px solid gray;
+    border-left: 2px solid gray;
 }
 
 .container-row ul.tables li:first-child {
@@ -1875,6 +1857,21 @@ textarea::placeholder {
 .container-row ul.tables li:nth-child(3) {
     background-color: rgb(39, 110, 155);
 }
+.card-insumos{
+    width: 30rem;
+    height: 30rem;
+    overflow: hidden; 
+}
+.card-insumos img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.info_insumos p{
+    font: 800 3rem bold;
+    margin-left: 12%;
+}
 
 .pdf-content {
     position: relative;
@@ -1885,10 +1882,9 @@ textarea::placeholder {
     display: flex;
     justify-content: center;
     align-items: end;
-    height: 300px;
-    width: 300px;
+    height: 30%;
+    width: 30rem;
     border: 1px solid gray;
-    margin-top: 5rem;
     border-radius: 5px;
     left: 70%;
     cursor: pointer;
