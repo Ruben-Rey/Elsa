@@ -350,7 +350,7 @@
                 },
                 {
                     "nombre": "Liquido pretratamiento",
-                    "imagen": ""
+                    "imagen": "https://i.postimg.cc/QxhjBny4/TINTA-PRETRATAMIENTO.png"
                 }
             ],
             "insumos_sublimacion": [
@@ -375,11 +375,11 @@
                 },
                 {
                     "nombre": "Papel de sublimaciòn 1.60 cm",
-                    "imagen": "https://i.postimg.cc/B6CTFjbp/papel-1-60cm.png"
+                    "imagen": "https://i.postimg.cc/NMHVkbJ1/papel-90cm.png"
                 },
                 {
                     "nombre": "Papel de sublimaciòn 90 cm",
-                    "imagen": "https://i.postimg.cc/B6CTFjbp/papel-1-60cm.png"
+                    "imagen": "https://i.postimg.cc/SK539HrS/papel-1-60cm.png"
                 }
             ]
         }   

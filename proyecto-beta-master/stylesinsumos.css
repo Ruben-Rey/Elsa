@@ -14,20 +14,35 @@
     z-index: 1;
 }
 
-.insumo-category {
-    background-image: url("");
-    background-repeat: no-repeat;
-    width: 100%;
-    height: 60rem;
-}
-
 .insumo-category .subtitle{
     height: 8rem;
     font: 800 4rem bold;
     text-align: center;
-    margin-top: 3%;
+    margin: 1%;
+}
+/* Estilos CSS para hacer que la imagen ocupe todo el ancho de la pantalla */
+.cad__img {
+    width: 100%;
+    margin: 0;
+    padding: 0;
 }
 
+.cad__img img {
+    width: 100%;
+    height: 70rem;
+}
+/***************************************************************/
+.insumo_imgPortada{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.insumo_imgPortada img{
+    width: 100%;
+    height: 70rem;
+}
+/*esto es la imagen de los productos q se cambian*/
 .seccion-insumos {
     width: 100%;
     height: 7rem;
@@ -60,7 +75,25 @@
 .ulconta-principal li:hover {
     background-color: rgb(69, 175, 246);
 }
-
+/*estos son para las fotos de los insumos*/
 .renderInsumos {
+    height: 50rem;
     display: flex;
+    justify-content: space-between;
+    cursor: pointer;
 }
+
+.renderInsumos img {
+    background-color: aqua;
+    width: 100%; 
+    height: 100%; 
+    object-fit: contain; 
+    cursor: pointer;
+}
+
+.renderInsumos h2 {
+    font-size: 2rem;
+   color: black;
+}
+
+
