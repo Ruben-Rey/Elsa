@@ -75,10 +75,17 @@ export function iniciar() {
 
         let contentInsumo = `
             <img src=${tipoInsumo[1].imagen} alt="">
-            <p>${tipoInsumo[1].nombre}</p>
+            
         `
+        let contenedorTitulo = document.createElement("div");
+        let contentTitulo = `
+            <p>${tipoInsumo[1].nombre}</p>
+            
+        `
+        contenedorTitulo.innerHTML = contentTitulo;
         contenedorInsumos.innerHTML = contentInsumo;
         insumo.appendChild(contenedorInsumos);
+        insumo.appendChild(contenedorTitulo);
 
 
         let titulo = `

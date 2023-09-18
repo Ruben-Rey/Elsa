@@ -46,6 +46,7 @@ export function iniciar() {
             <img src="${tinta.imagen}" alt="">
             <h2>${tinta.nombre}</h2>
         `;
+        
         console.log(content);
         div.innerHTML= content;
 
