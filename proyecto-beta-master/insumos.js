@@ -38,19 +38,25 @@ export function iniciar() {
 
 
     function CreateCard(tinta){
-        
-        let div = document.createElement("div");
-        div.className = "insumo";
+        let divCard = document.createElement("div");
+        let divImagen = document.createElement("div");
+        let divTitulo = document.createElement("div");
+        divImagen.className = "insumo";
 
-        let content = `
-            <img src="${tinta.imagen}" alt="">
-            <h2>${tinta.nombre}</h2>
+        let imagen = `
+            <img src="${tinta.imagen}" alt="">   
         `;
-        
-        console.log(content);
-        div.innerHTML= content;
 
-        insumosRender.appendChild(div);
+        let contentTitulo = `
+            <h2>${tinta.nombre}</h2>     
+        `
+
+        divImagen.innerHTML= imagen;
+        divTitulo.innerHTML= contentTitulo;
+
+        divCard.appendChild(divImagen);
+        divCard.appendChild(divTitulo);
+        insumosRender.appendChild(divCard);
     }
 
     function limpiarContenedor() {
