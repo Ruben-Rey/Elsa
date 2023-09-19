@@ -78,16 +78,16 @@
 /*estos son para las fotos de los insumos*/
 .renderInsumos {
     display: flex;
-    justify-content: space-between;
+    justify-content: center ;
+    flex-wrap: wrap;
     cursor: pointer;
     height: 50rem;
 }
 
 .renderInsumos .insumo{
-    width: 30rem;
-    height: 30rem;
+    width: 25rem;
+    height: 25rem;
     overflow: hidden;
-    background-color: aqua; 
 }
 
 .renderInsumos .insumo img{

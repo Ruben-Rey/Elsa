@@ -75,6 +75,11 @@ export function iniciar() {
 
     }
 
+
+    portadaIMG.innerHTML =`<img src="https://i.postimg.cc/HsLLb49v/pngtree-color-based-inks-in-the-bottom-half-of-a-black-table-picture-image_2711875.png"
+    alt="">`;
+
+
     const insumosList = document.querySelector(".ulconta-principal");
 
     // Agrega un evento de clic a la lista de categorías
