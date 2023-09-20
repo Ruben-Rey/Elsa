@@ -1,5 +1,12 @@
 export function iniciar() {
+
+    let impDTFtextil = document.getElementById("impDTF-modal");
+    let impDTFuv = document.getElementById("maquinaUV-modal");
+    let impSublimado = document.getElementById("sublimado-modal");
+    let laser = document.getElementById("laser-modal");
+
     const URL_BBDD = "./bbdd.json";
+    let cont = 0;
     let maquinasJSON;
 
     const urlParams = new URLSearchParams(window.location.search);
@@ -23,9 +30,66 @@ export function iniciar() {
     let maquinaEncontrada;
 
     conexion(URL_BBDD)
-        .then( () =>{   
+        .then( (data) =>{
+            let dataDTFtextil = data.articulos.maquinas.DTF_TEXTIL;
+            let dataDTFuv = data.articulos.maquinas.UV_DTF;
+            let dataSublimado = data.articulos.maquinas.IMPRESORA_SUBLIMADO;
+            let datalaser = data.articulos.maquinas.LASER;
+            RecorrerImpresoras(dataDTFtextil); ///numero 1 es para los navbar
+            RecorrerImpresoras(dataDTFuv);
+            RecorrerImpresoras(dataSublimado);
+            RecorrerImpresoras(datalaser);
+
             buscarID(id);
     })
+
+    function RecorrerImpresoras(datas){
+        if (Array.isArray(datas)){
+    
+            datas.forEach( item => {
+                CreateCard(item);
+            });
+    
+            cont = cont + 1;
+        }else{
+            CreateCard(datas);
+        }
+    }
+
+
+    function CreateCard(item){
+    // mejora la condicion
+        let div = document.createElement("div");
+        div.className = "contenedor";
+
+        let content = `
+            <img src="${item.imagen}" alt="">
+            <h2>${item.nombre}</h2>
+        `;
+
+        div.innerHTML= content;
+    
+        switch(cont){
+            case 0:
+                impDTFtextil.appendChild(div);
+            break;
+
+            case 1:
+                impDTFuv.appendChild(div);
+            break;
+
+            case 2:
+                impSublimado.appendChild(div);
+            break;
+
+            case 3:
+                laser.appendChild(div);
+            break;
+
+            default:
+                console.log("Este caso no existe", cont);
+        }
+    }
 
     function buscarID(id){
         for (const categoria in maquinasJSON.articulos.maquinas) {

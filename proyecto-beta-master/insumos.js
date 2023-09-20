@@ -1,8 +1,14 @@
 export function iniciar() {
 
+    let impDTFtextil = document.getElementById("impDTF-modal");
+    let impDTFuv = document.getElementById("maquinaUV-modal");
+    let impSublimado = document.getElementById("sublimado-modal");
+    let laser = document.getElementById("laser-modal");
+
     let insumosRender = document.querySelector(".renderInsumos");
     let portadaIMG = document.querySelector(".insumo_imgPortada");
     const URL_BBDD = "./bbdd.json";
+    let cont = 0;
     let insumosJSON;
 
     async function cargarDatos() {
@@ -15,6 +21,15 @@ export function iniciar() {
             // Ahora que los datos se han cargado correctamente, puedes ejecutar cualquier código que dependa de maquinasJSON aquí
             insumosJSON = data.articulos.insumos;
 
+            let dataDTFtextil = data.articulos.maquinas.DTF_TEXTIL;
+            let dataDTFuv = data.articulos.maquinas.UV_DTF;
+            let dataSublimado = data.articulos.maquinas.IMPRESORA_SUBLIMADO;
+            let datalaser = data.articulos.maquinas.LASER;
+            RecorrerImpresoras(dataDTFtextil); ///numero 1 es para los navbar
+            RecorrerImpresoras(dataDTFuv);
+            RecorrerImpresoras(dataSublimado);
+            RecorrerImpresoras(datalaser);
+
             // recorrerInsumos(insumosJSON.insumos_DTF);
 
             // Llamar a una función o hacer algo con los datos cargados
@@ -24,6 +39,56 @@ export function iniciar() {
             // Manejar el error de alguna manera
         }
     }
+
+    function RecorrerImpresoras(datas){
+        if (Array.isArray(datas)){
+    
+            datas.forEach( item => {
+                CreateCardNav(item);
+            });
+    
+            cont = cont + 1;
+        }else{
+            CreateCardNav(datas);
+        }
+    }
+
+
+    function CreateCardNav(item){
+    // mejora la condicion
+        let div = document.createElement("div");
+        div.className = "contenedor";
+
+        let content = `
+            <img src="${item.imagen}" alt="">
+            <h2>${item.nombre}</h2>
+        `;
+
+        div.innerHTML= content;
+    
+        switch(cont){
+            case 0:
+                impDTFtextil.appendChild(div);
+            break;
+
+            case 1:
+                impDTFuv.appendChild(div);
+            break;
+
+            case 2:
+                impSublimado.appendChild(div);
+            break;
+
+            case 3:
+                laser.appendChild(div);
+            break;
+
+            default:
+                console.log("Este caso no existe", cont);
+        }
+    }
+
+
 
     cargarDatos();
 

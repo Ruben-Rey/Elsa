@@ -1461,11 +1461,26 @@ textarea::placeholder {
     position: relative;
 }
 
+/* .index__contain .card-content-img {
+    background-color: #fdfdfd;
+    align-items: center;
+    width: 50%;
+    position: relative;
+} */
+
 .index__contain .card-content-img img {
-    width: 60rem;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
     position: absolute;
     left: calc(50% - 400px/2);
 }
+
+/* .index__contain .card-content-img img {
+    width: 60rem;
+    position: absolute;
+    left: calc(50% - 400px/2);
+} */
 
 .index__contain .card-content-machine:nth-child(2n) .card-content-img img,
 .index__contain .card-content-machine:nth-child(4n) .card-content-img img {
