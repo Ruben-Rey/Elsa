@@ -105,6 +105,45 @@
    color: black;
 }
 
+/*@media screen and (max-width: 1100px){
+    .seccion-insumos {
+        height: 5rem;
+    }
+    
+    .ulconta-principal {
+        gap: 1.5rem;
+    }
+    
+    .ulconta-principal li {
+        padding: 0 1rem;
+        box-shadow: 5px 5px 6px 6px #a4a3a3;
+    }
+    
+    .ulconta-principal li a {
+        font: 400 1.7rem bold;
+    }
+    .renderInsumos {
+        display: flex;
+        flex-direction: row;
+        height: 50rem;
+    }
+
+    .renderInsumos .insumo{
+        width: 18rem;
+        height: 18rem;
+        overflow: hidden;
+    }
+
+    .renderInsumos .insumo img{
+        margin: 5%;
+    }
+    
+    .renderInsumos h2 {
+        margin:1.5rem 3rem;
+        font-size: 1.8rem;
+    }
+    
+}*/
 
 @media screen and (max-width: 768px){
     .seccion-insumos {
