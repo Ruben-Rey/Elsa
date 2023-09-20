@@ -1,26 +1,26 @@
-.insumos-img img {
+/*.insumos-img img {
     width: 100%;
     height: 55rem;
 }
-
 .insumo-title {
     position: absolute;
     top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
     color: white;
-    font: 600 5rem Arial;
+    font: 600 3rem Arial;
     text-align: center;
     z-index: 1;
 }
+*/
 
 .insumo-category .subtitle{
-    height: 8rem;
+    height: 5rem;
     font: 800 4rem bold;
     text-align: center;
     margin: 1%;
 }
-/* Estilos CSS para hacer que la imagen ocupe todo el ancho de la pantalla */
+
 .cad__img {
     width: 100%;
     margin: 0;
@@ -29,7 +29,7 @@
 
 .cad__img img {
     width: 100%;
-    height: 70rem;
+    height: 65rem;
 }
 /***************************************************************/
 .insumo_imgPortada{
@@ -40,7 +40,7 @@
 
 .insumo_imgPortada img{
     width: 100%;
-    height: 70rem;
+    height: 60rem;
 }
 /*esto es la imagen de los productos q se cambian*/
 .seccion-insumos {
@@ -75,13 +75,15 @@
 .ulconta-principal li:hover {
     background-color: rgb(69, 175, 246);
 }
+
+
 /*estos son para las fotos de los insumos*/
 .renderInsumos {
     display: flex;
     justify-content: center ;
     flex-wrap: wrap;
     cursor: pointer;
-    height: 50rem;
+    height: 40rem;
 }
 
 .renderInsumos .insumo{
@@ -97,20 +99,51 @@
     margin: 10%;
     cursor: pointer;
 }
-  
-/* .renderInsumos img {
-    background-color: aqua;
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    margin: 10%;
-    cursor: pointer;
-} */
-
 
 .renderInsumos h2 {
     font-size: 2rem;
    color: black;
+}
+
+
+@media screen and (max-width: 768px){
+    .seccion-insumos {
+        height: 5rem;
+    }
+    
+    .ulconta-principal {
+        gap: 1.5rem;
+    }
+    
+    .ulconta-principal li {
+        padding: 0 1rem;
+        box-shadow: 5px 5px 6px 6px #a4a3a3;
+    }
+    
+    .ulconta-principal li a {
+        font: 400 1.7rem bold;
+    }
+    .renderInsumos {
+        display: flex;
+        flex-direction: row;
+        height: 50rem;
+    }
+
+    .renderInsumos .insumo{
+        width: 18rem;
+        height: 18rem;
+        overflow: hidden;
+    }
+
+    .renderInsumos .insumo img{
+        margin: 5%;
+    }
+    
+    .renderInsumos h2 {
+        margin:1.5rem 3rem;
+        font-size: 1.8rem;
+    }
+    
 }
 
 

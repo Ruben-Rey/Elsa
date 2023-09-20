@@ -552,7 +552,6 @@ li {
 i {
     padding-right: 10px;
 }
-
 /* Asegúrate de que el botón también tenga suficiente espacio */
 .btn-primary {
     width: 100%;
@@ -571,6 +570,19 @@ i {
     background-color: rgb(28, 28, 33);
     color: #00aaff;
 }
+
+.derechos {
+    background-color: #5ab0ed;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: white;
+    height: 5rem;
+    text-align: center;
+    font: 800 2.5rem Cambria, Cochin;
+    padding: 1rem;
+}
+
 
 @media screen and (max-width:1500px) {
     /* .footer-contenedor{
@@ -765,22 +777,20 @@ i {
     }
 }
 
-.derechos {
-    background-color: #5ab0ed;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    color: white;
-    height: 5rem;
-    text-align: center;
-    font: 800 2.5rem Cambria, Cochin;
-    padding: 1rem;
+@media screen and (max-width:320px) {
+    .derechos p{
+        color: white;
+        height: 5rem;
+        text-align: center;
+        font-size: 1rem;
+    }
 }
+
 
 /*redes de la izquierda de main***********************************************************************/
 .elements-lists {
     position: fixed;
-    top: 45rem;
+    top: 55rem;
 }
 
 .elements-social-icon {
@@ -799,9 +809,9 @@ i {
 .elements-social-icon a {
     color: rgb(255, 255, 255);
     text-align: center;
-    font-size: 30px;
+    font-size: 28px;
     display: block;
-    z-index: 1;
+    z-index: 2;
 }
 
 .elements-social-icon .button-text {
@@ -819,6 +829,13 @@ i {
     transition: left 1.5s ease;
     z-index: -1;
 }
+
+@media screen and (max-width: 768px) {
+    .elements-social-icon a {
+        font-size: 20px;
+    }
+}
+
 
 .elements-social-icon .button-text2,
 .elements-social-icon .button-text3 {
@@ -923,7 +940,7 @@ i {
 
 .swiper-wrapper {
     display: flex;
-    transition: transform 0.5s ease-in-out;
+    transition: 0.5s ease-in-out;
     /* Ajusta la duración de la transición */
 }
 
@@ -959,14 +976,20 @@ i {
     }
 
     .swiper-wrapper .swiper-slide {
-        height: 260px;
+        height: 230px;
         margin: 0 0 5rem 0;
+        z-index: -1;
     }
 
     .nombre-impre {
         color: #000;
         margin-top: 1rem;
         font-size: 1.5rem;
+    }
+
+    .swiper-slide {
+        flex: 0 0 calc(100% / 2);
+        right: 3rem;
     }
 
     .home-gallery button {
@@ -997,7 +1020,7 @@ i {
     z-index: 1;
 }
 
-.article-nosotros{
+.article-nosotros {
     padding: 0% 12%;
 }
 
@@ -1017,10 +1040,11 @@ i {
 .container-historia .history {
     font-size: 6rem;
     margin-bottom: 2rem;
+    text-align: center;
     /* Espacio entre el título y el párrafo */
 }
 
-.container-historio,
+.container-historia,
 .parrafo {
     margin-bottom: 4rem;
     text-align: left;
@@ -1091,6 +1115,16 @@ i {
 }
 
 @media screen and (max-width: 768px) {
+    .swiper-video {
+        position: relative;
+        z-index: -1;
+    }
+
+    .video-overlay {
+        color: white;
+        font-size: 20px;
+    }
+
     .equipo-img {
         height: 150px;
     }
@@ -1121,19 +1155,33 @@ i {
     }
 }
 
-@media screen and (max-width: 768px) {
-    .swiper-video {
-        position: relative;
-        z-index: -1;
-        width: 100%;
-        height: 80%;
+@media screen and (max-width: 480px) {
+
+    .video-overlay {
+        font-size: 13px
+    }
+
+    .article-nosotros {
+        padding: 0% 10%;
+    }
+
+    .container-historia .history {
+        font-size: 3rem;
+        margin-bottom: 3rem;
+    }
+
+    .equipo-img {
+        height: 400px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+    }
+    .equipo-img img{
+        width: 110px;
     }
 
 }
-
-
-
-
 
 
 /****************CONTACTANOSSSS **************************************/
@@ -1236,8 +1284,8 @@ textarea::placeholder {
         margin-bottom: 6px;
     }
 
-    
-   
+
+
 }
 
 .contacte {
@@ -1367,6 +1415,7 @@ textarea::placeholder {
     text-decoration: none;
     font-size: 3.5rem;
 }
+
 /****IMAGENES PRINCIPALESF************** solo agregar .index__contain a las cards ejemplo */
 .index__contain {
     background-color: #000000;
@@ -1503,6 +1552,7 @@ textarea::placeholder {
     .index__contain .card-content-img img {
         width: 30rem;
         left: calc(35% - 200px/2);
+        border: none;
     }
 
     .index__contain .card-content-text {
@@ -1566,7 +1616,6 @@ textarea::placeholder {
     padding: 2rem;
     text-align: center;
     list-style: none;
-    border-bottom: 3px solid rgb(52, 156, 225);
     border-left: 2px solid white;
     cursor: pointer;
 }
@@ -1582,9 +1631,9 @@ textarea::placeholder {
 
 /***************************************************************************************************************************************************/
 .maqui__contain .card-content-machine {
-    box-shadow: 5px 5px 6px 6px #a4a3a3;
     display: flex;
     justify-content: center;
+    box-shadow: 5px 5px 6px 6px #a4a3a3;
 }
 
 .maqui__contain .card-content-img {
@@ -1636,6 +1685,35 @@ textarea::placeholder {
     background-color: #3ac0f5;
 }
 
+@media screen and (max-width: 768px) {
+    .banner {
+        width: 100%;
+        height: 60rem;
+    }
+
+    .banner #titulo-banner {
+        font: 500 8rem STATUS-BAR;
+        padding-top: 25rem;
+    }
+
+    .container-principal {
+        width: 100%;
+        height: 6rem;
+    }
+
+    .maqui__contain .card-content-img {
+        width: 35%;
+    }
+
+    .maqui__contain .card-content-img img {
+        margin: 10rem 0 5rem 0;
+    }
+
+    .maqui__contain .card-content-text {
+        width: 35%;
+        padding: 2rem 0 0 3rem;
+    }
+}
 
 /**SOLUCIONNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN**/
 
@@ -1703,39 +1781,39 @@ textarea::placeholder {
 }
 
 /*******************************************************INFO-MAQUINASSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS************************************************/
-.article-infoma{
+.article-infoma {
     padding: 0 5%;
 }
 
-.titulo{
+.titulo {
     text-align: center;
     font: 600 2rem system-ui;
     margin-top: 3rem;
     background: radial-gradient(#0e37f7, #000);
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    -webkit-background-clip: text;  
+    -webkit-background-clip: text;
 }
 
 .description-general {
     width: 100%;
-   height: 45rem;
+    height: 45rem;
     display: flex;
     justify-content: center;
 }
 
-.genral_des{
+.genral_des {
     width: 25%;
     margin-top: 4%;
     font: 800 2.5rem monospace;
 }
 
-.genral_img img{
+.genral_img img {
     height: 35rem;
     margin: 6% 20% 0% 10%;
 }
 
-.mini-picture{
+.mini-picture {
     width: 6%;
     margin: 2% 6%;
 }
@@ -1745,12 +1823,12 @@ textarea::placeholder {
     margin-top: 20%;
 }
 
-.video_pick{
+.video_pick {
     width: 100%;
     margin: auto;
 }
 
-.video_pick iframe{
+.video_pick iframe {
     width: 50%;
     height: 50rem;
     margin-left: 25%;
@@ -1801,12 +1879,14 @@ textarea::placeholder {
 .container-row ul.tables li:nth-child(3) {
     background-color: rgb(39, 110, 155);
 }
-.card-insumos{
+
+.card-insumos {
     width: 30rem;
     height: 30rem;
-    overflow: hidden; 
+    overflow: hidden;
 }
-.card-insumos img{
+
+.card-insumos img {
     width: 100%;
     height: 100%;
     object-fit: contain;
@@ -1814,7 +1894,7 @@ textarea::placeholder {
     cursor: pointer;
 }
 
-.info_insumos p{
+.info_insumos p {
     font: 800 3rem bold;
     margin: 2% 6%;
 }
@@ -1858,67 +1938,86 @@ textarea::placeholder {
 
 @media screen and (max-width: 768px) {
     .description-general {
+        width: 100%;
         height: 40rem;
-        display: flex;
-        flex-direction: column;
     }
-    .mini-picture img {
-        margin-top: 2rem;
+
+    .genral_des {
+        margin-top: 4%;
+        font: 800 1.6rem monospace;
+    }
+
+    .genral_img img {
+        height: 20rem;
+        margin: 15% 20% 0% 10%;
+    }
+
+    .mini-picture {
+        width: 6%;
+        margin: 0 6%;
+    }
+
+    .video_pick iframe {
+        width: 60%;
+        height: 45rem;
+        margin-left: 18%;
+    }
+
+    .presupuesto {
+        width: 90%;
+        height: 90rem;
+        margin: 4% 5%;
+    }
+
+    .container-row a {
+        font: 800 1.6rem bold;
+    }
+
+    .pdf-content {
+        height: 20%;
+        width: 23rem;
+        left: 55%;
+    }
+
+    .pdf-download {
+        font-size: 14px;
+        padding: 10px 20px;
+    }
+
+    .info_insumos p {
+        font: 800 3rem bold;
+        margin: 2% 12%;
     }
 
 }
 
 
 body.modal-open::before {
-    content: ""; /* Crea un pseudo-elemento antes del contenido */
-    position: fixed; /* Se mantiene fijo en la ventana */
+    content: "";
+    /* Crea un pseudo-elemento antes del contenido */
+    position: fixed;
+    /* Se mantiene fijo en la ventana */
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
-    background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
-    filter: blur(5px); /* Aplica un filtro de desenfoque gaussiano */
-    z-index: -1; /* Coloca el fondo detrás de todo */
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Fondo semitransparente */
+    filter: blur(5px);
+    /* Aplica un filtro de desenfoque gaussiano */
+    z-index: -1;
+    /* Coloca el fondo detrás de todo */
 }
+
 #myModal {
     z-index: 1000;
-    display: none; /* Oculta el modal por defecto */
+    display: none;
+    /* Oculta el modal por defecto */
     position: fixed;
-    top: 60%; /* Centra verticalmente en la mitad de la pantalla */
-    left: 20%; /* Centra horizontalmente en la mitad de la pantalla */
-    transform: translate(-50%, -50%); /* Centra exactamente en el centro */
-  }
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    top: 60%;
+    /* Centra verticalmente en la mitad de la pantalla */
+    left: 20%;
+    /* Centra horizontalmente en la mitad de la pantalla */
+    transform: translate(-50%, -50%);
+    /* Centra exactamente en el centro */
+}
