@@ -209,7 +209,7 @@ function CreateCard(item, tipo){
             <h2>${serie}</h2>
             <p>${item.modelo}</p>
             <h3>${item.nombre}</h3>
-            <button>Ver video</button>
+            <button class="ver-video" data-video="${item.video}">Ver video</button>
         `;
         contentDIV.innerHTML = content; // Usa textContent en lugar de innerHTML
 
@@ -429,4 +429,31 @@ document.querySelector("#imp-machine").addEventListener("click", (event) => {
     }
 });
 
+
+
+
+// Obtén una referencia al contenedor principal que contiene todas las cards
+const contenedorPrincipal = document.querySelector("#imp-machine");
+
+// Agrega un evento de clic al contenedor principal utilizando la delegación de eventos
+contenedorPrincipal.addEventListener("click", (event) => {
+  // Comprueba si el clic se hizo en un botón con la clase "ver-video"
+  if (event.target.classList.contains("ver-video")) {
+    // Obtiene la URL del video desde el atributo data-video
+    const videoUrl = event.target.getAttribute("data-video");
+
+    // Crea un elemento iframe para mostrar el video de YouTube
+    const videoIframe = document.createElement("iframe");
+    videoIframe.src = videoUrl;
+    videoIframe.width = "560"; // Ancho del reproductor de video
+    videoIframe.height = "315"; // Alto del reproductor de video
+    videoIframe.allowFullscreen = true;
+
+    // Limpia el contenido actual del contenedor principal
+    contenedorPrincipal.innerHTML = "";
+
+    // Agrega el elemento iframe al contenedor principal para mostrar el video
+    contenedorPrincipal.appendChild(videoIframe);
+  }
+});
 
