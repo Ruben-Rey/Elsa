@@ -2234,3 +2234,12 @@ body.modal-open::before {
     transform: translate(-50%, -50%);
     /* Centra exactamente en el centro */
 }
+
+#imp-machine{
+    width: 100%;
+    max-width: 100vw;
+    /* Relación de aspecto 3:10 (100/30 = 3.33) */
+    margin: auto;
+    position: relative;
+    overflow: hidden;
+}
