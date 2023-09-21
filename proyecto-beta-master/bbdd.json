@@ -159,7 +159,7 @@
                     "id": 13,
                     "tipo": "DTG",
                     "serie": "SERIE DE EPSON",
-                    "nombre": "LASER DE SUBLIMACION",
+                    "nombre": "Laser de sublimación",
                     "modelo": "L-LTES-3D",
                     "potencia": "250w",
                     "cabezal" : "1 cabezal",
@@ -181,7 +181,7 @@
                 },
                 {
                     "id": 15,
-                    "nombre": "LASER DE 200W",
+                    "nombre": "Laser de 200W",
                     "modelo": "LS-200W",
                     "potencia": "200w",
                     "cabezal" : "",
