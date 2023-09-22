@@ -29,8 +29,6 @@
                 </ul>
             </div>
 
-            <button class="app" id="theme-toggle">Modo</button>
-
             <div class="header-right">
                 <ul class="redes">
                     <li>
@@ -59,7 +57,7 @@
                 </div>
             </div>
             <div id="nav-links" class="container-links">
-                <div id="close-icon"></div>
+                <button id="close-icon">🟰</button>
                 <ul class="nav-links">
                     <li class="menu-item">
                         <a class="nav__link" href="./index.html" data-id="index">Inicio</a>
@@ -97,212 +95,212 @@
                 <img id="menu-icon" class="menu-icon-img" src="./slider/menu.png" alt="">
             </div>
         </nav>
-
     </header>
 
-    <main>
-        <section>
-            <div class="elements-lists-wrap">
-                <ul class="elements-lists">
-                    <li id="elements-social-whatsapp" class="elements-social-whatsapp ">
-                        <span class="elements-social-icon" style="background: rgb(46, 184, 117);">
-                            <a href="https://api.whatsapp.com/send?phone=927254362" target="_blank"><i
-                                    class="fab fa-whatsapp"></i></a>
-                            <span class="button-text">whatsapp</span>
-                        </span>
-                    </li>
-                    <li id="elements-social-skype" class="elements-social-skype">
-                        <span class="elements-social-icon" style="background: rgb(49, 154, 196);">
-                            <a href="https://www.skype.com/es/" target="_blank">
-                                <i class="fab fa-skype"></i>
-                            </a>
-                            <span class="button-text button-text2">skipe</span>
-                        </span>
-                    </li>
-                    <li id="elements-social-envelope" class="elements-social-envelope">
-                        <span class="elements-social-icon"
-                            style="background: rgb(208, 81, 67); border-radius: 0px  10px 10px 0px;">
-                            <a href="mailto:vrabregu@outlook.com">
-                                <i class="fas fa-envelope"></i>
-                            </a>
-                            <span class="button-text button-text3">Email</span>
-                        </span>
-                    </li>
-                </ul>
-            </div>
-        </section>
-        <article class="article-infoma">
-
-            <div class="titulo"></div>
-
-            <section class="description-general">
-                <div class="genral_des"></div>
-                <div class="genral_img"></div>
-                <div class="mini-picture">
-                    <li class=""><span class="a-list-item">
-                            <img src="https://m.media-amazon.com/images/I/41tCTzjqkeL._AC_US40_.jpg"></li>
-                    <li class="">
-                        <img src="https://m.media-amazon.com/images/I/41tCTzjqkeL._AC_US40_.jpg">
-                    </li>
-                    <li class="">
-                        <img src="https://m.media-amazon.com/images/I/41tCTzjqkeL._AC_US40_.jpg">
-                    </li>
-                    <li class="">
-                        <img src="https://m.media-amazon.com/images/I/41tCTzjqkeL._AC_US40_.jpg">
-                    </li>
-                </div>
-            </section>
-
+    <article id="page-content">
+        <main>
             <section>
-                <div class="video_pick"></div>
-            </section>
-
-            <section class="presupuesto">
-                <div class="container-row">
-                    <ul class="tables">
-                        <li class=""><a href="./insumos.html">Insumos</a></li>
-                        <li class=""><a href="#">Folleto PDF</a></li>
-                        <li>
-                            <a href="#" id="mostrarModal" data-target="" data-toggle="modal">
-                                Solicitud de presupuesto
-                            </a>
+                <div class="elements-lists-wrap">
+                    <ul class="elements-lists">
+                        <li id="elements-social-whatsapp" class="elements-social-whatsapp ">
+                            <span class="elements-social-icon" style="background: rgb(46, 184, 117);">
+                                <a href="https://api.whatsapp.com/send?phone=927254362" target="_blank"><i
+                                        class="fab fa-whatsapp"></i></a>
+                                <span class="button-text">whatsapp</span>
+                            </span>
                         </li>
+                        <li id="elements-social-skype" class="elements-social-skype">
+                            <span class="elements-social-icon" style="background: rgb(49, 154, 196);">
+                                <a href="https://www.skype.com/es/" target="_blank">
+                                    <i class="fab fa-skype"></i>
+                                </a>
+                                <span class="button-text button-text2">skipe</span>
+                            </span>
+                        </li>
+                        <li id="elements-social-envelope" class="elements-social-envelope">
+                            <span class="elements-social-icon"
+                                style="background: rgb(208, 81, 67); border-radius: 0px  10px 10px 0px;">
+                                <a href="mailto:vrabregu@outlook.com">
+                                    <i class="fas fa-envelope"></i>
+                                </a>
+                                <span class="button-text button-text3">Email</span>
+                            </span>
                         </li>
                     </ul>
-
-                    <div class="info_insumos"></div>
-
-                </div>
-
-                <div class="pdf-content">
-                    <a href="" target="_blank">
-                        <img src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" target="_blank">
-                    </a>
-                    <a class="pdf-download" href="" download="Cortador de Tablero de espuma de PVC  FC-240 PDF"><i
-                            class="fas fa-download"></i> Descargar folleto PDF</a>
                 </div>
             </section>
+            <article class="article-infoma">
 
-            <section id="myModal" class="modal">
-                <form action="">
-                    <div class="">
-                        <div class="formulary">
-                            <button type="button" id="cerrarModal" class="close">&times;</button>
-                            <h2 class="message-text">ENVIAR CONSULTAS EN LÍNEA</h2>
-                            <p class="message">Envíe su consulta en línea y le responderemos rápidamente</p>
-                            <form action="/wp-content/plugins/lanthy-message/updata.php" method="post">
-                                <input type="text" name="name" placeholder="Tu nombre *" required="required">
-                                <input type="email" name="email" placeholder="Tu correo electrónico *"
-                                    required="required">
-                                <input type="text" name="application" placeholder="TU MÓVIL / WHATSAPP / SKYPE *"
-                                    required="required">
-                                <textarea name="message" rows="6"
-                                    placeholder="Tu mensaje * ENVÍE SU INTENSIÓN DE COMPRA O SIMPLEMENTE PÍDENOS CUALQUIER INFORMACIÓN"
-                                    required="required"></textarea>
-                                <input type="text" name="product" placeholder="TU FACEBOOK (OPCIONAL)">
-                                <input type="hidden" name="post" value="true">
-                                <div class="btn-form">
-                                    <button type="submit" class="btn btn-primary"> enviar </button>
-                                </div>
-                            </form>
-                        </div>
+                <div class="titulo"></div>
+
+                <section class="description-general">
+                    <div class="genral_des"></div>
+                    <div class="genral_img"></div>
+                    <div class="mini-picture">
+                        <li class=""><span class="a-list-item">
+                                <img src="https://m.media-amazon.com/images/I/41tCTzjqkeL._AC_US40_.jpg"></li>
+                        <li class="">
+                            <img src="https://m.media-amazon.com/images/I/41tCTzjqkeL._AC_US40_.jpg">
+                        </li>
+                        <li class="">
+                            <img src="https://m.media-amazon.com/images/I/41tCTzjqkeL._AC_US40_.jpg">
+                        </li>
+                        <li class="">
+                            <img src="https://m.media-amazon.com/images/I/41tCTzjqkeL._AC_US40_.jpg">
+                        </li>
+                    </div>
+                </section>
+
+                <section>
+                    <div class="video_pick"></div>
+                </section>
+
+                <section class="presupuesto">
+                    <div class="container-row">
+                        <ul class="tables">
+                            <li class=""><a href="./insumos.html">Insumos</a></li>
+                            <li class=""><a href="#">Folleto PDF</a></li>
+                            <li>
+                                <a href="#" id="mostrarModal" data-target="" data-toggle="modal">
+                                    Solicitud de presupuesto
+                                </a>
+                            </li>
+                            </li>
+                        </ul>
+
+                        <div class="info_insumos"></div>
+
                     </div>
 
-                </form>
-            </section>
-
-
-        </article>
-    </main>
-
-    <footer>
-        <div class="footer">
-            <div class="footer-contenedor">
-                <div class="footer-columna">
-                    <div>
-                        <img src="https://i.postimg.cc/4xnk3SQT/loogoabregu.png" alt="">
-                        <h4>ABREGU.</h4>
+                    <div class="pdf-content">
+                        <a href="" target="_blank">
+                            <img src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" target="_blank">
+                        </a>
+                        <a class="pdf-download" href="" download="Cortador de Tablero de espuma de PVC  FC-240 PDF"><i
+                                class="fas fa-download"></i> Descargar folleto PDF</a>
                     </div>
-                    <ul class="footer-links">
-                        <li><a href="#">🔹Jr. San Cristobal 1656 - Tienda La Victoria</a></li>
-                        <li><a href="#">🔹Jr. Carlos Gutierrez 233 - La Victoria (Planta)</a></li>
-                        <li><a href="mailto:vrabregu@outlook.com">🔹
-                                <i class="fa-regular fa-envelope"></i>
-                                vrabregu@outlook.com
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="footer-columna">
-                    <ul class="footer-links">
-                        <li>
-                            <h3>NAVEGACION</h3>
-                            <!-- <div class="espacio"> <h2>asdsasadsadsadsaa</h2></div> -->
-                        </li>
-                        <li>
-                            <a href="./index.html">
-                                <i class="fa-solid fa-angle-right"></i>Inicio
-                        </li>
-                        </a>
-                        <li> <a href="./solucion.html">
-                                <i class="fa-solid fa-angle-right"></i>Solucion</li>
-                        </a>
-                        <li><a href="/nosotros.html">
-                                <i class="fa-solid fa-angle-right"></i>Sobre Nosotros</li>
-                        </a>
-                        <li><a href="./contactanos.html">
-                                <i class="fa-solid fa-angle-right"></i>Contáctenos</li>
-                        </a>
-                    </ul>
-                </div>
-                <div class="footer-columna">
-                    <ul class="footer-links">
-                        <li>
-                            <h3>PRODUCTOS</h3>
-                        </li>
-                        <li> <a href="#">
-                                <i class="fa-solid fa-angle-right"></i>Impresora Solvente</li>
-                        </a>
-                        <li> <a href="#">
-                                <i class="fa-solid fa-angle-right"></i>Impresora DTG</li>
-                        </a>
-                        <li> <a href="#">
-                                <i class="fa-solid fa-angle-right"></i>Impresora DTG de Remeras</li>
-                        </a>
-                        <li> <a href="#">
-                                <i class="fa-solid fa-angle-right"></i>Impresora DTG de Rollo a Rollo</li>
-                        </a>
-                        <li> <a href="">
-                                <i class="fa-solid fa-angle-right"></i>Impresora UV de Cama Plana</li>
-                        </a>
-                        <li> <a href="#">
-                                <i class="fa-solid fa-angle-right"></i>Impresora UV hibrida</li>
-                        </a>
-                    </ul>
-                </div>
-                <div class="footer-columna">
-                    <h3>CONTÁCTENOS</h3>
+                </section>
+
+                <section id="myModal" class="modal">
                     <form action="">
-                        <input type="text" name="name" placeholder="Tu nombre *" required="required">
-                        <input type="email" name="email" placeholder="Tu correo electrónico *" required="required">
-                        <input type="phone" name="phone" placeholder="Tu numero de telefono *">
-                        <textarea name="message" rows="6" placeholder="Tu mensaje*" required="required"></textarea>
-                        <button type="submit" class="btn btn-primary">Enviar</button>
-                    </form>
+                        <div class="">
+                            <div class="formulary">
+                                <button type="button" id="cerrarModal" class="close">&times;</button>
+                                <h2 class="message-text">ENVIAR CONSULTAS EN LÍNEA</h2>
+                                <p class="message">Envíe su consulta en línea y le responderemos rápidamente</p>
+                                <form action="/wp-content/plugins/lanthy-message/updata.php" method="post">
+                                    <input type="text" name="name" placeholder="Tu nombre *" required="required">
+                                    <input type="email" name="email" placeholder="Tu correo electrónico *"
+                                        required="required">
+                                    <input type="text" name="application" placeholder="TU MÓVIL / WHATSAPP / SKYPE *"
+                                        required="required">
+                                    <textarea name="message" rows="6"
+                                        placeholder="Tu mensaje * ENVÍE SU INTENSIÓN DE COMPRA O SIMPLEMENTE PÍDENOS CUALQUIER INFORMACIÓN"
+                                        required="required"></textarea>
+                                    <input type="text" name="product" placeholder="TU FACEBOOK (OPCIONAL)">
+                                    <input type="hidden" name="post" value="true">
+                                    <div class="btn-form">
+                                        <button type="submit" class="btn btn-primary"> enviar </button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
 
+                    </form>
+                </section>
+
+
+            </article>
+        </main>
+
+        <footer>
+            <div class="footer">
+                <div class="footer-contenedor">
+                    <div class="footer-columna">
+                        <div>
+                            <img src="https://i.postimg.cc/4xnk3SQT/loogoabregu.png" alt="">
+                            <h4>ABREGU.</h4>
+                        </div>
+                        <ul class="footer-links">
+                            <li><a href="#">🔹Jr. San Cristobal 1656 - Tienda La Victoria</a></li>
+                            <li><a href="#">🔹Jr. Carlos Gutierrez 233 - La Victoria (Planta)</a></li>
+                            <li><a href="mailto:vrabregu@outlook.com">🔹
+                                    <i class="fa-regular fa-envelope"></i>
+                                    vrabregu@outlook.com
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer-columna">
+                        <ul class="footer-links">
+                            <li>
+                                <h3>NAVEGACION</h3>
+                                <!-- <div class="espacio"> <h2>asdsasadsadsadsaa</h2></div> -->
+                            </li>
+                            <li>
+                                <a href="./index.html">
+                                    <i class="fa-solid fa-angle-right"></i>Inicio
+                            </li>
+                            </a>
+                            <li> <a href="./solucion.html">
+                                    <i class="fa-solid fa-angle-right"></i>Solucion</li>
+                            </a>
+                            <li><a href="/nosotros.html">
+                                    <i class="fa-solid fa-angle-right"></i>Sobre Nosotros</li>
+                            </a>
+                            <li><a href="./contactanos.html">
+                                    <i class="fa-solid fa-angle-right"></i>Contáctenos</li>
+                            </a>
+                        </ul>
+                    </div>
+                    <div class="footer-columna">
+                        <ul class="footer-links">
+                            <li>
+                                <h3>PRODUCTOS</h3>
+                            </li>
+                            <li> <a href="#">
+                                    <i class="fa-solid fa-angle-right"></i>Impresora Solvente</li>
+                            </a>
+                            <li> <a href="#">
+                                    <i class="fa-solid fa-angle-right"></i>Impresora DTG</li>
+                            </a>
+                            <li> <a href="#">
+                                    <i class="fa-solid fa-angle-right"></i>Impresora DTG de Remeras</li>
+                            </a>
+                            <li> <a href="#">
+                                    <i class="fa-solid fa-angle-right"></i>Impresora DTG de Rollo a Rollo</li>
+                            </a>
+                            <li> <a href="">
+                                    <i class="fa-solid fa-angle-right"></i>Impresora UV de Cama Plana</li>
+                            </a>
+                            <li> <a href="#">
+                                    <i class="fa-solid fa-angle-right"></i>Impresora UV hibrida</li>
+                            </a>
+                        </ul>
+                    </div>
+                    <div class="footer-columna">
+                        <h3>CONTÁCTENOS</h3>
+                        <form action="">
+                            <input type="text" name="name" placeholder="Tu nombre *" required="required">
+                            <input type="email" name="email" placeholder="Tu correo electrónico *" required="required">
+                            <input type="phone" name="phone" placeholder="Tu numero de telefono *">
+                            <textarea name="message" rows="6" placeholder="Tu mensaje*" required="required"></textarea>
+                            <button type="submit" class="btn btn-primary">Enviar</button>
+                        </form>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="derechos">
-            <p><span>Ⓒ 2023 – Abregu Print – Todos los derechos reservados</span></p>
-        </div>
-    </footer>
-  
+            <div class="derechos">
+                <p><span>Ⓒ 2023 – Abregu Print – Todos los derechos reservados</span></p>
+            </div>
+        </footer>
+    </article>
 </body>
 
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 <script src="https://kit.fontawesome.com/4250892b33.js" crossorigin="anonymous"></script>
 <script src="./bbdd.json"></script>
 <script type="module" src="router.js"></script>
+<!--<script src="./app.js"></script>-->
 
 </html>

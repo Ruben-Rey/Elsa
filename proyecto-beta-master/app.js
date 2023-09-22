@@ -1,20 +1,23 @@
 
-// const openMenuIcon = document.getElementById("menu-icon"),
-// navbarLinks = document.getElementById("nav-links"),
-// closeMenuIcon = document.getElementById("close-icon");
-// openMenuIcon.addEventListener("click", () => {
-//     navbarLinks.classList.add("show-menu");
-// });
-// closeMenuIcon.addEventListener("click", () => {
-//     navbarLinks.classList.remove("show-menu");
-// })
-// const navLink = document.querySelectorAll(".nav__link");
-// function linkAction(){
-//     const navbarLinks = document.getElementById("nav-links")
-//     navbarLinks.classList.remove("show-menu")
-// }
+ const openMenuIcon = document.getElementById("menu-icon"),
+ navbarLinks = document.getElementById("nav-links"),
+ closeMenuIcon = document.getElementById("close-icon");
+ pageContent = document.getElementById("page-content");
 
-// navLink.forEach((item) => item.addEventListener("click", linkAction))
+ openMenuIcon.addEventListener("click", () => {
+   navbarLinks.classList.add("show-menu");
+   pageContent.style.transform = "translateY(4%)"; 
+ });
+ closeMenuIcon.addEventListener("click", () => {
+     navbarLinks.classList.remove("show-menu");
+     pageContent.style.transform = "translateY(0)";
+ })
+ const navLink = document.querySelectorAll(".nav__link");
+ function linkAction(){
+    const navbarLinks = document.getElementById("nav-links")
+    navbarLinks.classList.remove("show-menu")
+}
+ navLink.forEach((item) => item.addEventListener("click", linkAction))
 
 
 
