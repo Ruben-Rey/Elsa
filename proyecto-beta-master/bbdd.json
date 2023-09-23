@@ -67,7 +67,8 @@
                     "descripcion": "▪ Sistema HOSON<br>▪ Àrea de impresiòn 33 x 60 cm<br>▪ Resoluciòn 2880 ppp",
                     "descripcion_general":"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio repellendus numquam distinctio quibusdam quo utiusto\n reprehenderit voluptas provident quidem, totam, blanditiis omnis eum aspernatur consequatur natus iure!",
                     "imagen": "https://i.postimg.cc/SNzRRVdr/RF-3360.png",
-                    "video": "https://www.youtube.com/embed/3NMRCS0fx3I"
+                    "video": "https://www.youtube.com/embed/3NMRCS0fx3I",
+                    "folleto": "https://cprmerida.educarex.es/manual.pdf"
                 },
                 {
                     "id": 6,
@@ -79,7 +80,8 @@
                     "descripcion": "▪ Velocidad : 8pasos = 10m/h<br>▪ Sotfaware Rip Maintop 6.0<br>▪ Àrea de impresiòn 60cm0",
                     "descripcion_general":"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio repellendus numquam distinctio quibusdam quo utiusto\n reprehenderit voluptas provident quidem, totam, blanditiis omnis eum aspernatur consequatur natus iure!",
                     "imagen": "https://i.postimg.cc/Nfn7XNRP/T3000-UV.png",
-                    "video": "https://www.youtube.com/embed/3NMRCS0fx3I"
+                    "video": "https://www.youtube.com/embed/3NMRCS0fx3I",
+                    "folleto": "https://cprmerida.educarex.es/manual.pdf"
                 },
                 {
                     "id": 7,
@@ -91,7 +93,8 @@
                     "descripcion": "▪ Àrea de impresiòn 60 x 90 cm<br>▪ Imprime sobre sustratos gruesos<br>▪ Sistema anticolisión, gran velicidad de producciòn",
                     "descripcion_general":"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio repellendus numquam distinctio quibusdam quo utiusto\n reprehenderit voluptas provident quidem, totam, blanditiis omnis eum aspernatur consequatur natus iure!",
                     "imagen": "https://i.postimg.cc/K8NGVWQ0/CP-60-U1.png",
-                    "video": "https://www.youtube.com/embed/3NMRCS0fx3I"
+                    "video": "https://www.youtube.com/embed/3NMRCS0fx3I",
+                    "folleto": "https://cprmerida.educarex.es/manual.pdf"
                 },
         
                 {
@@ -104,7 +107,8 @@
                     "descripcion": "▪ Impresiòn màxima 5 capas con efecto de relieve<br>▪ Diseño riguroso de filtraciòn de tinta<br>▪ Sistema de agitaciòn de tinta",
                     "descripcion_general":"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio repellendus numquam distinctio quibusdam quo utiusto\n reprehenderit voluptas provident quidem, totam, blanditiis omnis eum aspernatur consequatur natus iure!",
                     "imagen": "https://i.postimg.cc/k5jnMhVf/PREDATHOR-PRO-UV-DTF.png",
-                    "video": "https://www.youtube.com/embed/3NMRCS0fx3I"
+                    "video": "https://www.youtube.com/embed/3NMRCS0fx3I",
+                    "folleto": "https://cprmerida.educarex.es/manual.pdf"
                 }
             ],
             "DTG": [
@@ -118,7 +122,8 @@
                     "descripcion": "▪ Gama de 9 colores intensos.<br>▪ Velocidad de impresiòn 2m para tamaño completo A3.<br>▪ Altura de cabezal de impresiòn 20 cm màximo.",
                     "descripcion_general":"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio repellendus numquam distinctio quibusdam quo utiusto\n reprehenderit voluptas provident quidem, totam, blanditiis omnis eum aspernatur consequatur natus iure!",
                     "imagen": "https://i.postimg.cc/jj87VcRr/i3200-x-4-9-C.png",
-                    "video": "https://www.youtube.com/embed/3NMRCS0fx3I"
+                    "video": "https://www.youtube.com/embed/3NMRCS0fx3I",
+                    "folleto": "https://cprmerida.educarex.es/manual.pdf"
                 },
                 {
                     "id": 10,
@@ -130,7 +135,8 @@
                     "descripcion": "▪ Resoluciòn de impresiòn màxima 2400Dpi.<br>▪ Velocidad de 1m para A4.<br>▪ Tamaño de impresiòn 30 x 40 cm.",
                     "descripcion_general":"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio repellendus numquam distinctio quibusdam quo utiusto\n reprehenderit voluptas provident quidem, totam, blanditiis omnis eum aspernatur consequatur natus iure!",
                     "imagen": "https://i.postimg.cc/HWN98YDC/DTG-i3200-AI-EPSON.png",
-                    "video": "https://www.youtube.com/embed/3NMRCS0fx3I"
+                    "video": "https://www.youtube.com/embed/3NMRCS0fx3I",
+                    "folleto": "https://cprmerida.educarex.es/manual.pdf"
                 }
             ],
             "IMPRESORA_SUBLIMADO": [
@@ -144,7 +150,8 @@
                     "descripcion": "▪ Tamaño màximo de impresiòn 1.8m<br>▪ Velocidad de impresiòn 30 m2/h<br>▪ Color de tinta C,M,Y,K",
                     "descripcion_general":"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio repellendus numquam distinctio quibusdam quo utiusto\n reprehenderit voluptas provident quidem, totam, blanditiis omnis eum aspernatur consequatur natus iure!",
                     "imagen": "https://i.postimg.cc/W46hjnj4/WJ-740S.png",
-                    "video": "https://www.youtube.com/embed/3NMRCS0fx3I"
+                    "video": "https://www.youtube.com/embed/3NMRCS0fx3I",
+                    "folleto": "https://cprmerida.educarex.es/manual.pdf"
                 },
                 {
                     "id": 12,
@@ -156,7 +163,8 @@
                     "descripcion": "▪ Tamaño màximo de impesiòn 1.80m<br>▪ Aplicaciòn : Papel de transparencia de color<br>▪ Velocidad de impresiòn 46m2/h",
                     "descripcion_general":"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio repellendus numquam distinctio quibusdam quo utiusto\n reprehenderit voluptas provident quidem, totam, blanditiis omnis eum aspernatur consequatur natus iure!",
                     "imagen": "https://i.postimg.cc/NffVxfLC/PHALCON-X3.png",
-                    "video": "https://www.youtube.com/embed/3NMRCS0fx3I"
+                    "video": "https://www.youtube.com/embed/3NMRCS0fx3I",
+                    "folleto": "https://cprmerida.educarex.es/manual.pdf"
                 }
             ],
             "LASER": [
@@ -171,7 +179,8 @@
                     "descripcion": "▪ Área de escaneo de la cámara 1600 mm x 800 mm<br>▪ Potencia de laser 150w.<br>▪ Velocidad cortante 0-800mm/s",
                     "descripcion_general":"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio repellendus numquam distinctio quibusdam quo utiusto\n reprehenderit voluptas provident quidem, totam, blanditiis omnis eum aspernatur consequatur natus iure!",
                     "imagen": "https://i.postimg.cc/FKvghypg/1.png",
-                    "video": "https://www.youtube.com/embed/3NMRCS0fx3I" 
+                    "video": "https://www.youtube.com/embed/3NMRCS0fx3I",
+                    "folleto": "https://cprmerida.educarex.es/manual.pdf" 
                 },
                 {
                     "id": 14,
@@ -182,7 +191,8 @@
                     "descripcion": "▪ Velocidad de corte 0-50 m/minuto.<br>▪ Temperatura de trabajo 5% - 95.<br>▪ Voltaje de trabajo AC22V +- 10% 50HZ.",
                     "descripcion_general":"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio repellendus numquam distinctio quibusdam quo utiusto\n reprehenderit voluptas provident quidem, totam, blanditiis omnis eum aspernatur consequatur natus iure!",
                     "imagen": "https://i.postimg.cc/65fcdPJ8/DG-9060.png",
-                    "video": "https://www.youtube.com/embed/3NMRCS0fx3I" 
+                    "video": "https://www.youtube.com/embed/3NMRCS0fx3I",
+                    "folleto": "https://cprmerida.educarex.es/manual.pdf" 
                 },
                 {
                     "id": 15,
@@ -193,7 +203,8 @@
                     "descripcion": "▪ Carácter de función 3D.<br>▪ Voltaje de trabajo AC220V 60HZ.<br>▪ Potencia total de 6000w.",
                     "descripcion_general":"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio repellendus numquam distinctio quibusdam quo utiusto\n reprehenderit voluptas provident quidem, totam, blanditiis omnis eum aspernatur consequatur natus iure!",
                     "imagen": "https://i.postimg.cc/NFrVsk51/LASER-200-W.png",
-                    "video": "https://www.youtube.com/embed/3NMRCS0fx3I" 
+                    "video": "https://www.youtube.com/embed/3NMRCS0fx3I",
+                    "folleto": "https://cprmerida.educarex.es/manual.pdf" 
                 }
             ],
             "PLANCHAS_TRANSFER" :[
@@ -205,7 +216,8 @@
                     "descripcion": "▪ Es una máquina para alta producción.<br>▪ Totalmente operado por aire para la transferencia de calor.<br>▪ Diseñado para una óptima eficiencia de prensado.",
                     "descripcion_general":"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio repellendus numquam distinctio quibusdam quo utiusto\n reprehenderit voluptas provident quidem, totam, blanditiis omnis eum aspernatur consequatur natus iure!",
                     "imagen": "https://i.postimg.cc/8PSCy99k/PN-01B.png",
-                    "video": "https://www.youtube.com/embed/3NMRCS0fx3I" 
+                    "video": "https://www.youtube.com/embed/3NMRCS0fx3I",
+                    "folleto": "https://cprmerida.educarex.es/manual.pdf" 
                 },
                 {
                     "id": 17,
@@ -215,7 +227,8 @@
                     "descripcion": "▪ 2 estaciones de trabajo<br>▪ Sistema hidràulico neumàtico<br>▪ Bandeja de 40 x 50 cm",
                     "descripcion_general":"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio repellendus numquam distinctio quibusdam quo utiusto\n reprehenderit voluptas provident quidem, totam, blanditiis omnis eum aspernatur consequatur natus iure!",
                     "imagen": "https://i.postimg.cc/JnHhgLR0/PN-02B.png",
-                    "video": "https://www.youtube.com/embed/3NMRCS0fx3I" 
+                    "video": "https://www.youtube.com/embed/3NMRCS0fx3I",
+                    "folleto": "https://cprmerida.educarex.es/manual.pdf" 
                 },
                 {
                     "id": 18,
@@ -225,7 +238,8 @@
                     "descripcion": "▪ Placa extraíble para cajón.<br>▪ Proporciona mayor seguridad mientras mantiene la naturaleza compacta.<br>▪ La placa calefactora de aluminio hace que la máquina sea mucho más fuerte.",
                     "descripcion_general":"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio repellendus numquam distinctio quibusdam quo utiusto\n reprehenderit voluptas provident quidem, totam, blanditiis omnis eum aspernatur consequatur natus iure!",
                     "imagen": "https://i.postimg.cc/k4RsD1xz/2.png",
-                    "video": "https://www.youtube.com/embed/3NMRCS0fx3I" 
+                    "video": "https://www.youtube.com/embed/3NMRCS0fx3I",
+                    "folleto": "https://cprmerida.educarex.es/manual.pdf" 
                 }
             ],
             "LAMINADORA": [
@@ -237,7 +251,8 @@
                         "descripcion": "▪ Sistema de entrada inteligente.<br>▪ Función de corte vertical.<br>▪ Eje intercambiable bloqueable automáticamente.",
                         "descripcion_general":"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio repellendus numquam distinctio quibusdam quo utiusto\n reprehenderit voluptas provident quidem, totam, blanditiis omnis eum aspernatur consequatur natus iure!",
                         "imagen": "https://i.postimg.cc/7PdhKP4c/L-17.png",
-                        "video": "https://www.youtube.com/embed/3NMRCS0fx3I"
+                        "video": "https://www.youtube.com/embed/3NMRCS0fx3I",
+                        "folleto": "https://cprmerida.educarex.es/manual.pdf"
                     },
                     {
                         "id": 20,
@@ -246,7 +261,8 @@
                         "bandeja": "",
                         "descripcion": "▪ Visualización de velocidad y temperatura.<br>▪ Fácil de verificar figuras de temperatura establecida.<br>▪ Rodillo arriba y abajo.",
                         "descripcion_general":"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio repellendus numquam distinctio quibusdam quo utiusto\n reprehenderit voluptas provident quidem, totam, blanditiis omnis eum aspernatur consequatur natus iure!",
-                        "imagen": "https://i.postimg.cc/x8hPdwWC/L-17-PRO.png"
+                        "imagen": "https://i.postimg.cc/x8hPdwWC/L-17-PRO.png",
+                        "folleto": "https://cprmerida.educarex.es/manual.pdf"
                     }
             ],
             "CALANDRA": [
@@ -257,7 +273,8 @@
                         "bandeja": "",
                         "descripcion": "▪ Mesa de trabajo: 1.5m.<br>▪ Potencia: 6kw presiòn de trabajo: 0-8 KG/cm2.<br>▪ El hardware es de alta tecnologia.",
                         "descripcion_general":"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio repellendus numquam distinctio quibusdam quo utiusto\n reprehenderit voluptas provident quidem, totam, blanditiis omnis eum aspernatur consequatur natus iure!",
-                        "imagen": "https://i.postimg.cc/k4dTBWfy/CL-2017.png"
+                        "imagen": "https://i.postimg.cc/k4dTBWfy/CL-2017.png",
+                        "folleto": "https://cprmerida.educarex.es/manual.pdf"
                     },
                     {
                         "id": 22,
@@ -266,7 +283,8 @@
                         "bandeja": "",
                         "descripcion": "▪ Fuente de alimentacion dr 3 Fases 220V 380V / 3 Fase.<br>▪ Potenvia nominal 20KW.<br>▪ Material de rodillo Acero + teflón (juntas) interior aceite.",
                         "descripcion_general":"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio repellendus numquam distinctio quibusdam quo utiusto\n reprehenderit voluptas provident quidem, totam, blanditiis omnis eum aspernatur consequatur natus iure!",
-                        "imagen": "https://i.postimg.cc/5yg3MPV7/CL-2718.png"
+                        "imagen": "https://i.postimg.cc/5yg3MPV7/CL-2718.png",
+                        "folleto": "https://cprmerida.educarex.es/manual.pdf"
                     }
             ]
         },

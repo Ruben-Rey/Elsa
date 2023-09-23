@@ -254,10 +254,10 @@ function CreateCard(item, tipo){
     }
 }
 
-const dropdownContent = document.querySelector(".dropdown-content");
-    
-console.log("**********************", dropdownContent);
+const urlParams = new URLSearchParams(window.location.search);
+const id = urlParams.get("id");
 
+console.log("*****************", id);
 
 
 function capturarId(event) {
@@ -275,13 +275,15 @@ function capturarId(event) {
     } else if (id === "index") {
         window.location.href = "index.html";
     }
+
 }
 
-// Agregar un evento click a cada enlace de la barra de navegación
 const enlaces = document.querySelectorAll(".nav-links a");
 enlaces.forEach((enlace) => {
     enlace.addEventListener("click", capturarId);
+
 });
+
 
 if (!window.location.href.includes("infomaquinas.html")) {
     const enlacesCategoria = document.querySelectorAll(".contenedor-cartas a");
@@ -289,9 +291,23 @@ if (!window.location.href.includes("infomaquinas.html")) {
         enlace.addEventListener("click", capturarId);
     });
 }
-const urlParams = new URLSearchParams(window.location.search);
-const id = urlParams.get("id");
 
+const dropdownContent = document.querySelector(".dropdown-content");
+console.log("***********************************", dropdownContent);
+
+// Agregar un manejador de eventos al elemento de div con la clase "contenedor"
+dropdownContent.addEventListener("click", (event) => {
+    if (event.target.classList.contains("contenedor")) {
+        capturarId(event);
+    }
+});
+
+// Agregar un manejador de eventos al elemento de imagen dentro del div
+dropdownContent.addEventListener("click", (event) => {
+    if (event.target.tagName === "IMG" && event.target.parentElement.classList.contains("contenedor")) {
+        capturarId(event);
+    }
+});
 
 const TITULOS = {
     "DTF_TEXTIL": "IMPRESORA DTF TEXTIL",
