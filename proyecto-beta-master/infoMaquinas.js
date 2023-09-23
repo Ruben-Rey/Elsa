@@ -4,6 +4,7 @@ export function iniciar() {
     let impDTFuv = document.getElementById("maquinaUV-modal");
     let impSublimado = document.getElementById("sublimado-modal");
     let laser = document.getElementById("laser-modal");
+    let folleto = document.querySelector(".folleto a");
 
     const URL_BBDD = "./bbdd.json";
     let cont = 0;
@@ -150,6 +151,8 @@ export function iniciar() {
         contenedorInsumos.innerHTML = contentInsumo;
         insumo.appendChild(contenedorInsumos);
         insumo.appendChild(contenedorTitulo);
+
+        folleto.href = maquina.folleto;
 
 
         let titulo = `

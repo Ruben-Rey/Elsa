@@ -1245,6 +1245,9 @@ i {
 }
 
 @media screen and (max-width: 768px) {
+    .dropdown:hover .dropdown-content {
+        display: none;
+    }
     .swiper-video {
         position: relative;
         z-index: -1;

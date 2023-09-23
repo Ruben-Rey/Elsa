@@ -12,7 +12,9 @@
                     "descripcion": "▪ Àrea maxima de impresiòn: 30 cm<br>▪ Fàcil de operar<br>▪ Bajo costo de inversion",
                     "descripcion_general":"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio repellendus numquam distinctio quibusdam quo utiusto\n reprehenderit voluptas provident quidem, totam, blanditiis omnis eum aspernatur consequatur natus iure!",
                     "imagen": "https://i.postimg.cc/L6s0jjSW/OR-A3-Mini-330-DTF.png",
-                    "video": "https://www.youtube.com/embed/3NMRCS0fx3I"
+                    "video": "https://www.youtube.com/embed/3NMRCS0fx3I",
+                    "folleto": "https://cprmerida.educarex.es/manual.pdf"
+
                 },
                 {   
                     "id": 2,
@@ -24,7 +26,8 @@
                     "descripcion": "▪ Cabezal Epson i3200<br>▪ Àrea de impresiòn 30 cm<br>▪ Fàcil de operar",
                     "descripcion_general":"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio repellendus numquam distinctio quibusdam quo utiusto\n reprehenderit voluptas provident quidem, totam, blanditiis omnis eum aspernatur consequatur natus iure!",
                     "imagen": "https://i.postimg.cc/tTZgM2LM/A3-DTF-MACHINE.png",
-                    "video": "https://www.youtube.com/embed/3NMRCS0fx3I"
+                    "video": "https://www.youtube.com/embed/3NMRCS0fx3I",
+                    "folleto": "https://cprmerida.educarex.es/manual.pdf"
                 },
                 {   
                     "id": 3,
@@ -36,7 +39,8 @@
                     "descripcion": "▪ Velocidad de alta resoluciòn<br>▪ Àrea de impresiòn de 60 cm",
                     "descripcion_general":"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio repellendus numquam distinctio quibusdam quo utiusto\n reprehenderit voluptas provident quidem, totam, blanditiis omnis eum aspernatur consequatur natus iure!",
                     "imagen": "https://i.postimg.cc/fywtVx3W/OR-DTF-60-A.png",
-                    "video": "https://www.youtube.com/embed/3NMRCS0fx3I"
+                    "video": "https://www.youtube.com/embed/3NMRCS0fx3I",
+                    "folleto": "https://cprmerida.educarex.es/manual.pdf"
                 },
                 {
                     "id": 4,
@@ -48,7 +52,8 @@
                     "descripcion": "▪ Rendimiento 20m/h<br>▪ Velocidad de alta resoluciòn<br>▪ Àrea de impresiòn 60 cm",
                     "descripcion_general":"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio repellendus numquam distinctio quibusdam quo utiusto\n reprehenderit voluptas provident quidem, totam, blanditiis omnis eum aspernatur consequatur natus iure!",
                     "imagen": "https://i.postimg.cc/pTjYfYXD/CNZ-A-620.png",
-                    "video": "https://www.youtube.com/embed/3NMRCS0fx3I"
+                    "video": "https://www.youtube.com/embed/3NMRCS0fx3I",
+                    "folleto": "https://cprmerida.educarex.es/manual.pdf"
                 }
             ],
             "UV_DTF": [

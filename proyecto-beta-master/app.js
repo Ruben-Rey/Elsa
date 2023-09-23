@@ -92,6 +92,8 @@ const URL_BBDD = "./bbdd.json";
 let cont = 0;
 let maquinasJSON; 
 
+
+
 // Esta funcion se encarga de obtener la data del JSON
 async function conexion(url){
     try {
@@ -151,7 +153,9 @@ function CreateCard(item, tipo){
     // mejora la condicion
 
     if (tipo == 1){
+        let idItem = item.id;
         let div = document.createElement("div");
+        div.setAttribute("data-id", idItem);
         div.className = "contenedor";
 
         let content = `
@@ -250,6 +254,10 @@ function CreateCard(item, tipo){
     }
 }
 
+const dropdownContent = document.querySelector(".dropdown-content");
+    
+console.log("**********************", dropdownContent);
+
 
 
 function capturarId(event) {
@@ -296,7 +304,7 @@ const TITULOS = {
     "CALANDRA": "CALANDRA",
 }
 
-if (window.location.href.includes('maquinas.html') || window.location.href.includes('maquinas.html')) {
+if (window.location.href.includes('maquinas.html') || window.location.href.includes('index.html')) {
     let titulo = TITULOS[id];
     tituloBanner.innerHTML = titulo;
     if(id){
@@ -311,12 +319,11 @@ if (window.location.href.includes('maquinas.html') || window.location.href.inclu
         console.error("No se encontró un ID en los parámetros de la URL.");
     }
 
-    // Obtén una referencia a la lista de categorías
+   
+    const dropdownContent = document.querySelector(".dropdown-content");
     const categoryList = document.querySelector(".container-principal");
-    // Agrega un evento de clic a la lista de categorías
 
-    categoryList.addEventListener("click", (event) => {
-        // Comprueba si se hizo clic en un elemento <a> dentro de un <li>
+    function clickEventHandler(event) {
         if (event.target.tagName === "A") {
             event.preventDefault(); // Evita la navegación predeterminada del enlace
             // Obtén el ID de la categoría seleccionada
@@ -324,8 +331,15 @@ if (window.location.href.includes('maquinas.html') || window.location.href.inclu
             tituloBanner.innerHTML = categoryId;
             loadMachinesByCategory(categoryId);
         }
-    });
+    }
+
+    // Agregar el controlador de eventos a dropdownContent
+    dropdownContent.addEventListener("click", clickEventHandler);
+
+    // Agregar el mismo controlador de eventos a categoryList
+    categoryList.addEventListener("click", clickEventHandler);
 }
+
 
 
         
