@@ -159,7 +159,7 @@ function CreateCard(item, tipo){
         div.className = "contenedor";
 
         let content = `
-            <img src="${item.imagen}" alt="">
+            <img data-id="${idItem}" src="${item.imagen}" alt="">
             <h2>${item.nombre}</h2>
         `;
 
@@ -254,18 +254,20 @@ function CreateCard(item, tipo){
     }
 }
 
-const urlParams = new URLSearchParams(window.location.search);
-const id = urlParams.get("id");
+let urlParams = new URLSearchParams(window.location.search);
+let id = urlParams.get("id");
 
 console.log("*****************", id);
 
 
 function capturarId(event) {
+
     event.preventDefault(); // Previene el comportamiento predeterminado del enlace
 
     // Obtener el data-id del enlace
     const enlace = event.currentTarget;
     const id = enlace.getAttribute("data-id");
+    console.log("******************", id);
 
     if (id !== "nosotros" && id !== "index") {
         // Redirigir a la página "maquinas.html" y pasar el ID como parámetro en la URL
@@ -292,22 +294,34 @@ if (!window.location.href.includes("infomaquinas.html")) {
     });
 }
 
-const dropdownContent = document.querySelector(".dropdown-content");
-console.log("***********************************", dropdownContent);
 
-// Agregar un manejador de eventos al elemento de div con la clase "contenedor"
-dropdownContent.addEventListener("click", (event) => {
-    if (event.target.classList.contains("contenedor")) {
-        capturarId(event);
-    }
+
+
+
+
+
+const contenedores = document.querySelectorAll(".dropdown-content");
+
+// Agregar un event listener a los elementos .contenedor
+contenedores.forEach((contenedor) => {
+    contenedor.addEventListener("click", function(event) {
+        // Verificar si el elemento clickeado o sus padres tienen el atributo data-id
+        const id = event.target.closest("[data-id]").getAttribute("data-id");
+        
+        if (id) {
+            console.log("ID del elemento clickeado:", id);
+
+            // Realizar las acciones que necesites con el ID, como redirigir a maquinas.html con el ID
+            window.location.href = `infomaquinas.html?id=${id}`;
+            
+        }   
+    });
 });
 
-// Agregar un manejador de eventos al elemento de imagen dentro del div
-dropdownContent.addEventListener("click", (event) => {
-    if (event.target.tagName === "IMG" && event.target.parentElement.classList.contains("contenedor")) {
-        capturarId(event);
-    }
-});
+
+
+
+
 
 const TITULOS = {
     "DTF_TEXTIL": "IMPRESORA DTF TEXTIL",
