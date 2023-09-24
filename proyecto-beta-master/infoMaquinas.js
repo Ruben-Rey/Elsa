@@ -121,10 +121,11 @@ export function iniciar() {
 
     let keyInsumo;
     function renderizar(maquina){
-        
+
         keyInsumo = maquina.tipo;
         let tipoInsumo = maquinasJSON.articulos.insumos[`insumos_${keyInsumo}`];
-        
+        console.log("tipo de insumo", tipoInsumo);
+   
         let descripcionGeneral = `
         <p>${maquina.descripcion_general}</p>
         `
@@ -135,23 +136,27 @@ export function iniciar() {
         `
         descripImagen.innerHTML = imagen;
 
-        let contenedorInsumos = document.createElement("div");
-        contenedorInsumos.className = "card-insumos";
+        if(tipoInsumo != undefined){
 
-        let contentInsumo = `
-            <img src=${tipoInsumo[1].imagen} alt="">
+            let contenedorInsumos = document.createElement("div");
+            contenedorInsumos.className = "card-insumos";
             
-        `
-        let contenedorTitulo = document.createElement("div");
-        let contentTitulo = `
-            <p>${tipoInsumo[1].nombre}</p>
-            
-        `
-        contenedorTitulo.innerHTML = contentTitulo;
-        contenedorInsumos.innerHTML = contentInsumo;
-        insumo.appendChild(contenedorInsumos);
-        insumo.appendChild(contenedorTitulo);
+            let contentInsumo = `
+                <img src=${tipoInsumo[1].imagen} alt="">
+                
+            `
+            let contenedorTitulo = document.createElement("div");
+            let contentTitulo = `
+                <p>${tipoInsumo[1].nombre}</p>
+                
+            `
 
+            contenedorTitulo.innerHTML = contentTitulo;
+            contenedorInsumos.innerHTML = contentInsumo;
+            insumo.appendChild(contenedorInsumos);
+            insumo.appendChild(contenedorTitulo);
+        }  
+        
         folleto.href = maquina.folleto;
 
 

@@ -94,6 +94,7 @@
                     "descripcion_general":"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio repellendus numquam distinctio quibusdam quo utiusto\n reprehenderit voluptas provident quidem, totam, blanditiis omnis eum aspernatur consequatur natus iure!",
                     "imagen": "https://i.postimg.cc/K8NGVWQ0/CP-60-U1.png",
                     "video": "https://www.youtube.com/embed/3NMRCS0fx3I",
+                    "video2": "https://www.youtube.com/watch?v=3NMRCS0fx3I",
                     "folleto": "https://cprmerida.educarex.es/manual.pdf"
                 },
         
@@ -108,6 +109,7 @@
                     "descripcion_general":"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio repellendus numquam distinctio quibusdam quo utiusto\n reprehenderit voluptas provident quidem, totam, blanditiis omnis eum aspernatur consequatur natus iure!",
                     "imagen": "https://i.postimg.cc/k5jnMhVf/PREDATHOR-PRO-UV-DTF.png",
                     "video": "https://www.youtube.com/embed/3NMRCS0fx3I",
+                    "video2": "https://www.youtube.com/watch?v=3NMRCS0fx3I",
                     "folleto": "https://cprmerida.educarex.es/manual.pdf"
                 }
             ],
@@ -123,6 +125,7 @@
                     "descripcion_general":"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio repellendus numquam distinctio quibusdam quo utiusto\n reprehenderit voluptas provident quidem, totam, blanditiis omnis eum aspernatur consequatur natus iure!",
                     "imagen": "https://i.postimg.cc/jj87VcRr/i3200-x-4-9-C.png",
                     "video": "https://www.youtube.com/embed/3NMRCS0fx3I",
+                    "video2": "https://www.youtube.com/watch?v=3NMRCS0fx3I",
                     "folleto": "https://cprmerida.educarex.es/manual.pdf"
                 },
                 {
@@ -170,7 +173,6 @@
             "LASER": [
                 {
                     "id": 13,
-                    "tipo": "DTG",
                     "serie": "SERIE DE EPSON",
                     "nombre": "Laser de sublimación",
                     "modelo": "L-LTES-3D",
@@ -180,6 +182,7 @@
                     "descripcion_general":"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio repellendus numquam distinctio quibusdam quo utiusto\n reprehenderit voluptas provident quidem, totam, blanditiis omnis eum aspernatur consequatur natus iure!",
                     "imagen": "https://i.postimg.cc/FKvghypg/1.png",
                     "video": "https://www.youtube.com/embed/3NMRCS0fx3I",
+                    "video2": "https://www.youtube.com/watch?v=3NMRCS0fx3I",
                     "folleto": "https://cprmerida.educarex.es/manual.pdf" 
                 },
                 {
@@ -204,6 +207,7 @@
                     "descripcion_general":"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio repellendus numquam distinctio quibusdam quo utiusto\n reprehenderit voluptas provident quidem, totam, blanditiis omnis eum aspernatur consequatur natus iure!",
                     "imagen": "https://i.postimg.cc/NFrVsk51/LASER-200-W.png",
                     "video": "https://www.youtube.com/embed/3NMRCS0fx3I",
+                    "video2": "https://www.youtube.com/watch?v=3NMRCS0fx3I",
                     "folleto": "https://cprmerida.educarex.es/manual.pdf" 
                 }
             ],
@@ -262,6 +266,7 @@
                         "descripcion": "▪ Visualización de velocidad y temperatura.<br>▪ Fácil de verificar figuras de temperatura establecida.<br>▪ Rodillo arriba y abajo.",
                         "descripcion_general":"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio repellendus numquam distinctio quibusdam quo utiusto\n reprehenderit voluptas provident quidem, totam, blanditiis omnis eum aspernatur consequatur natus iure!",
                         "imagen": "https://i.postimg.cc/x8hPdwWC/L-17-PRO.png",
+                        "video": "https://www.youtube.com/embed/3NMRCS0fx3I",
                         "folleto": "https://cprmerida.educarex.es/manual.pdf"
                     }
             ],
@@ -274,6 +279,7 @@
                         "descripcion": "▪ Mesa de trabajo: 1.5m.<br>▪ Potencia: 6kw presiòn de trabajo: 0-8 KG/cm2.<br>▪ El hardware es de alta tecnologia.",
                         "descripcion_general":"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio repellendus numquam distinctio quibusdam quo utiusto\n reprehenderit voluptas provident quidem, totam, blanditiis omnis eum aspernatur consequatur natus iure!",
                         "imagen": "https://i.postimg.cc/k4dTBWfy/CL-2017.png",
+                        "video": "https://www.youtube.com/embed/3NMRCS0fx3I",
                         "folleto": "https://cprmerida.educarex.es/manual.pdf"
                     },
                     {
@@ -284,6 +290,7 @@
                         "descripcion": "▪ Fuente de alimentacion dr 3 Fases 220V 380V / 3 Fase.<br>▪ Potenvia nominal 20KW.<br>▪ Material de rodillo Acero + teflón (juntas) interior aceite.",
                         "descripcion_general":"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio repellendus numquam distinctio quibusdam quo utiusto\n reprehenderit voluptas provident quidem, totam, blanditiis omnis eum aspernatur consequatur natus iure!",
                         "imagen": "https://i.postimg.cc/5yg3MPV7/CL-2718.png",
+                        "video": "https://www.youtube.com/embed/3NMRCS0fx3I",
                         "folleto": "https://cprmerida.educarex.es/manual.pdf"
                     }
             ]

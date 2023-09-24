@@ -212,7 +212,7 @@ function CreateCard(item, tipo){
             <h2>${serie}</h2>
             <p>${item.modelo}</p>
             <h3>${item.nombre}</h3>
-            <button class="ver-video" data-video="${item.video}">Ver video</button>
+            <a class="ver-video" href="${item.video2}"><button>Ver video</button></a>
         `;
         contentDIV.innerHTML = content; // Usa textContent en lugar de innerHTML
 
@@ -268,16 +268,19 @@ function capturarId(event) {
     const enlace = event.currentTarget;
     const id = enlace.getAttribute("data-id");
     console.log("******************", id);
-
-    if (id !== "nosotros" && id !== "index") {
-        // Redirigir a la página "maquinas.html" y pasar el ID como parámetro en la URL
-        window.location.href = `maquinas.html?id=${id}`;
-    } else if (id === "nosotros") {
-        window.location.href = "nosotros.html";
-    } else if (id === "index") {
-        window.location.href = "index.html";
+    if (id == "insumos") {
+        window.location.href = `insumos.html?id=${id}`;
+        console.log("ENTRE A LA CONDICION", id )
+    }else{
+        if (id !== "nosotros" && id !== "index") {
+            // Redirigir a la página "maquinas.html" y pasar el ID como parámetro en la URL
+            window.location.href = `maquinas.html?id=${id}`;
+        } else if (id === "nosotros") {
+            window.location.href = "nosotros.html";
+        } else if (id === "index") {
+            window.location.href = "index.html";
+        }
     }
-
 }
 
 const enlaces = document.querySelectorAll(".nav-links a");
@@ -470,33 +473,5 @@ document.querySelector("#imp-machine").addEventListener("click", (event) => {
         // Redirige a la página HTML correspondiente con el ID como parámetro
         window.location.href = url;
     }
-});
-
-
-
-
-// Obtén una referencia al contenedor principal que contiene todas las cards
-const contenedorPrincipal = document.querySelector("#imp-machine");
-
-// Agrega un evento de clic al contenedor principal utilizando la delegación de eventos
-contenedorPrincipal.addEventListener("click", (event) => {
-  // Comprueba si el clic se hizo en un botón con la clase "ver-video"
-  if (event.target.classList.contains("ver-video")) {
-    // Obtiene la URL del video desde el atributo data-video
-    const videoUrl = event.target.getAttribute("data-video");
-
-    // Crea un elemento iframe para mostrar el video de YouTube
-    const videoIframe = document.createElement("iframe");
-    videoIframe.src = videoUrl;
-    videoIframe.width = "560"; // Ancho del reproductor de video
-    videoIframe.height = "315"; // Alto del reproductor de video
-    videoIframe.allowFullscreen = true;
-
-    // Limpia el contenido actual del contenedor principal
-    contenedorPrincipal.innerHTML = "";
-
-    // Agrega el elemento iframe al contenedor principal para mostrar el video
-    contenedorPrincipal.appendChild(videoIframe);
-  }
 });
 
